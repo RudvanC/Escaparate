@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para todo el documento en general */
+  html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+      font-family: 'Lato', sans-serif;
+      height: 100vh;
+      margin: 0 auto;
+  }
+ 
+.announcements{
+    background-color: #DDD0C8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fffefe;
+    padding: 1rem;
+    border-bottom: 2px solid #000000;
+}
+
+.search{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
