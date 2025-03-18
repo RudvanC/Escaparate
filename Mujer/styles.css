@@ -1,20 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Estilo para todo el documento en general */
-  html, body {
-      width: 100%;
-      overflow-x: hidden;
-      background: #ffffff;
-      font-family: 'Lato', sans-serif;
-      height: 100vh;
-      margin: 0 auto;
-  }
- 
-.announcements{
+}
+
+/* Estilo para todo el documento en general */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+}
+
+.announcements {
     background-color: #DDD0C8;
     padding: 1rem;
     justify-content: center;
@@ -33,7 +32,7 @@
     border-bottom: 2px solid #000000;
 }
 
-.search{
+.search {
     display: flex;
     justify-content: space-around;
     width: 100vw;
@@ -43,8 +42,102 @@
 
 main {
     display: flex;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    padding: 20px; /* Agregado padding para espaciado */
+}
+
+.product-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las categorías se envuelvan en pantallas pequeñas */
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px; /* Agregado margen inferior para espaciado entre secciones */
+}
+
+.product-category {
+    width: 20%; /* Cada categoría ocupa el 20% del ancho */
+    min-width: 200px; /* Ancho mínimo para evitar que se vean muy pequeñas */
+    margin: 10px; /* Agregado margen para espaciado entre categorías */
+    text-align: center;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en pantallas pequeñas */
+}
+
+.product-images img {
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px;
+    object-fit: cover; /* Recorta y ajusta las imágenes para que se vean bien */
+    margin: 5px; /* Agregado margen para espaciado entre imágenes */
+}
+
+footer {
+    background-color: var(--color-primario);
+    border-top: 1px solid #000000;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-columna {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-columna h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 10px;
+}
+
+.footer-columna ul li a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-columna ul li a:hover {
+    text-decoration: underline;
+}
+
+.after-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.after-footer p {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-footer {
+    width: 25px;
+    height: 25px;
+}
+
+:root {
+    --color-primario: #DDD0C8; /* beige */
+    --color-secundario: #323232; /* gris oscuro */
+    --color-terciario: #000000; /* negro */
 }
