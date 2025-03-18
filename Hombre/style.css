@@ -52,6 +52,13 @@ body {
     border-bottom: 2px solid #000000;
 }
 
+a{
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #000000;
+}
+
 .search {
     display: flex;
     justify-content: space-around;
@@ -207,7 +214,7 @@ main {
 
 .pants {
     width: 100vw;
-    
+
     .title {
         margin: 2rem;
         padding-left: 2rem;
