@@ -5,6 +5,23 @@
 }
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para todo el documento en general */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
 .announcements{
     background-color: #DDD0C8;
     padding: 1rem;
@@ -30,19 +47,47 @@
     width: 100vw;
     color: rgb(0, 0, 0);
     font-weight: bold;
-}
-NUEVO
-Enviar mensaje a #general
+}   
 
-body {
-    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
-    margin: 0;
+
+/* Contenedor principal */
+main {    
+    
+}
+
+.fotos {
     display: flex;
-    flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+    
 }
 
+.fotos img {
+    flex: 1 1 calc(20% - 20px); /* Cada imagen ocupa el 20% del ancho, menos el espacio del gap */
+    
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
+.contenedor {
+    display: flex;
+    flex-direction: column;    
+    gap: 40px; /* Espacio entre categorías */    
+    padding: 20px;    
+    align-items: center;
+}
+
+.categoria {
+  
+    display: flex;
+    flex-wrap: wrap; /* Hace que las imágenes se ajusten al tamaño del contenedor */
+    gap: 20px; /* Espacio entre el título y las imágenes */ 
+    justify-content: space-around;
+    
+}
 
 footer {
     background-color: var(--color-primario);
