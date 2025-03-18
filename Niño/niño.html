@@ -8,34 +8,83 @@
     <link rel="icon" type="image/png" href="/Imagenes/favicon.png">
 
 <body>
-    <header class="navbar-header">
+    <header class="header">
         <section class="announcements">
-            <p>
-                TE damos la bienvenida a
-                LATAMCODERS, la tienda de ropa
-                en linea mas grande de latinoamerica
-            </p>
+            <p>Te damos la bienvenida a <strong>LATAMCODERS</strong>, la tienda de ropa en línea más grande de
+                Latinoamérica.</p>
+            <p>Envíos gratis a toda Latinoamérica por compras mayores a $50.</p>
+            <p>¡Nuevas colecciones disponibles! No te pierdas nuestras ofertas.</p>
+            <p>Regístrate y obtén un 10% de descuento en tu primera compra.</p>
         </section>
 
-        <section class="navbar">
+        <nav class="navbar">
             <div class="logo-image">
-                <img src="/Imagenes/logo.png" alt="Logo">
+                <a href="/Index/hombre.html"><img src="/Imagenes/logo.png" alt="Logo"></a>
             </div>
 
             <div class="search">
-                <p>HOMBRE</p>
-                <p>MUJER</p>
-                <p>NIÑO</p>
+
+                <div class="menu-container">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-button">Hombre ▼</label>
+
+                    <!-- Menú desplegable -->
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#shoes">Zapatillas</a></li>
+                            <li><a href="#shirts">Camisetas</a></li>
+                            <li><a href="#pants">Pantalones</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="/Mujer/index.html">
+                    <p>MUJER</p>
+                </a>
+                <a href="/Niño/niño.html">
+                    <p>NIÑO</p>
+                </a>
             </div>
 
             <div class="home-logo">
-                <img src="/Imagenes/bx--home.svg" alt="Home">
+                <a href="/Index/hombre.html"><img src="/Imagenes/bx--home.svg" alt="Home"></a>
             </div>
-        </section>
+        </nav>
     </header>
+
+
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="/Imagenes/camisa-niño1.jpeg" alt="Imagen 1">
+            <img src="/Imagenes/pantalon-niño1.jpeg" alt="Imagen 2">
+            <img src="/Imagenes/short-niño1.jpeg" alt="Imagen 3">
+            <img src="/Imagenes/zapatos-niño1.jpeg" alt="Imagen 4">
+            <img src="/Imagenes/camisa-niño2.jpeg" alt="Imagen 5">
+            <img src="/Imagenes/pantalon-niño2.jpeg" alt="Imagen 6">
+            <img src="/Imagenes/short-niño2.jpeg" alt="Imagen 7">
+            <img src="/Imagenes/zapatos-niño2.jpeg" alt="Imagen 8">
+            <img src="/Imagenes/camisa-niño3.jpeg" alt="Imagen 9">
+            <img src="/Imagenes/pantalon-niño3.jpeg" alt="Imagen 10">
+            <img src="/Imagenes/short-niño3.jpeg" alt="Imagen 11">
+    
+            <!-- Duplicamos imágenes directamente en el HTML -->
+            <img src="/Imagenes/camisa-niño1.jpeg" alt="Imagen 1">
+            <img src="/Imagenes/pantalon-niño1.jpeg" alt="Imagen 2">
+            <img src="/Imagenes/short-niño1.jpeg" alt="Imagen 3">
+            <img src="/Imagenes/zapatos-niño1.jpeg" alt="Imagen 4">
+            <img src="/Imagenes/camisa-niño2.jpeg" alt="Imagen 5">
+            <img src="/Imagenes/pantalon-niño2.jpeg" alt="Imagen 6">
+            <img src="/Imagenes/short-niño2.jpeg" alt="Imagen 7">
+            <img src="/Imagenes/zapatos-niño2.jpeg" alt="Imagen 8">
+            <img src="/Imagenes/camisa-niño3.jpeg" alt="Imagen 9">
+            <img src="/Imagenes/pantalon-niño3.jpeg" alt="Imagen 10">
+            <img src="/Imagenes/short-niño3.jpeg" alt="Imagen 11">
+        </div>
+    </div>
     
     <main>
 
+        
+        
         <div class="contenedor">
             <h1>Ropa para Niños</h1>
             
