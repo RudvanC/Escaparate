@@ -1,28 +1,147 @@
 :root {
-    --color-primario: #DDD0C8; /* beige */
-    --color-secundario: #323232; /* gris oscuro */
-    --color-terciario: #000000; /* negro */
+    --color-primario: #DDD0C8;
+    /* beige */
+    --color-secundario: #323232;
+    /* gris oscuro */
+    --color-terciario: #000000;
+    /* negro */
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.montserrat-montserratfont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: bold;
+}
+
 /* Estilo para todo el documento en general */
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
     background: #ffffff;
     font-family: 'Lato', sans-serif;
+    height: 100vh;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fffefe;
+    padding: 1rem;
+    border-bottom: 2px solid #000000;
+}
+
+a {
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/*Inicio de menu paar desplegar al dar click en mujer*/
+
+.menu-container {
+    position:absolute;
+    display:block;
+    z-index: 1000; /* Un valor alto para asegurar que esté encima */
+    width: 10%;
+}
+
+
+#menu-toggle {
+    /* Checkbox oculto para controlar el menú */
+    display: none;
+}
+
+
+.menu-button {
+    /* Botón estilo hamburguesa */
+    display: block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+    max-height: 1000px; /* Aumenta este valor según sea necesario */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+.menu {
+    /* Estilo del menú desplegable */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+#menu-toggle:checked+.menu-button+.menu {
+    /* Mostrar menú cuando se activa el checkbox */
+    max-height: 200px;
+    /* Ajusta según el contenido */
+}
+
+
+.menu ul {
+    /* Estilos de los enlaces del menú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu a:hover {
+    background: #f4f4f4;
+}
+
+/*final del estilo del menu desplegable*/
 
 .announcements {
     width: 100%;
-    height: 50px; /* Ajusta la altura según tu necesidad */
+    height: 50px;
     overflow: hidden;
     position: relative;
+    background-color: #DDD0C8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .announcements p {
@@ -30,29 +149,59 @@ html, body {
     width: 100%;
     text-align: center;
     opacity: 0;
-    animation: textChange 32s infinite;
+    animation: textChange 20s infinite;
 }
 
 /* Definimos la animación */
 @keyframes textChange {
-    0% { opacity: 0; }
-    5% { opacity: 1; }
-    20% { opacity: 1; }
-    25% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
 }
 
 /* Aplicamos el retraso a cada párrafo */
-.announcements p:nth-child(1) { animation-delay: 0s; }
-.announcements p:nth-child(2) { animation-delay: 8s; }
-.announcements p:nth-child(3) { animation-delay: 16s; }
-.announcements p:nth-child(4) { animation-delay: 24s; }
+.announcements p:nth-child(1) {
+    animation-delay: 0s;
+}
 
+.announcements p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.announcements p:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.announcements p:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .product-section {
