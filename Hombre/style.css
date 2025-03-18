@@ -53,20 +53,20 @@ a {
 }
 
 
-/*Para desplegar el menu al dar click en hombre*/
+/*Inicio de menu paar desplegar al dar click en hombre*/
 
 .menu-container {
     position: relative;
     display: inline-block;
 }
 
-/* Checkbox oculto para controlar el menú */
-#menu-toggle {
+
+#menu-toggle {/* Checkbox oculto para controlar el menú */
     display: none;
 }
 
-/* Botón estilo hamburguesa */
-.menu-button {
+
+.menu-button {/* Botón estilo hamburguesa */
     display: block;
     padding: 10px 20px;
     background: #333;
@@ -77,8 +77,8 @@ a {
     user-select: none;
 }
 
-/* Estilo del menú desplegable */
 .menu {
+    /* Estilo del menú desplegable */
     position: absolute;
     top: 100%;
     left: 0;
@@ -88,16 +88,16 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.7s ease-out;
 }
 
-/* Mostrar menú cuando se activa el checkbox */
-#menu-toggle:checked + .menu-button + .menu {
+
+#menu-toggle:checked + .menu-button + .menu {/* Mostrar menú cuando se activa el checkbox */
     max-height: 200px; /* Ajusta según el contenido */
 }
 
-/* Estilos de los enlaces del menú */
-.menu ul {
+
+.menu ul {/* Estilos de los enlaces del menú */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -122,6 +122,8 @@ a {
 .menu a:hover {
     background: #f4f4f4;
 }
+
+/*final del estilo del menu desplegable*/
 
 .announcements {
     width: 100%;
@@ -164,6 +166,7 @@ a {
 .search {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100vw;
     color: rgb(0, 0, 0);
     font-weight: bold;
