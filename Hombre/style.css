@@ -1,3 +1,12 @@
+:root {
+    --color-primario: #DDD0C8;
+    /* beige */
+    --color-secundario: #323232;
+    /* gris oscuro */
+    --color-terciario: #000000;
+    /* negro */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +30,7 @@ body {
     height: 100vh;
     margin: 0 auto;
 }
+
 
 
 .announcements {
@@ -55,10 +65,11 @@ body {
 main {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 
@@ -70,17 +81,14 @@ main {
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    height: 100%;
     vertical-align: top;
 }
 
 .shoes {
     width: 100vw;
-    height: 300px;
 
     .title {
         margin: 2rem;
-        padding-bottom: 2rem;
         padding-left: 2rem;
         font-size: 1.5rem;
         font-weight: bold;
@@ -99,7 +107,7 @@ main {
 
     img {
         width: 100%;
-        height: 100%;
+       
     }
 
     .desc-text {
@@ -133,17 +141,14 @@ main {
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    height: 100%;
     vertical-align: top;
 }
 
 .shirts {
     width: 100vw;
-    height: 300px;
 
     .title {
         margin: 2rem;
-        padding-bottom: 2rem;
         padding-left: 2rem;
         font-size: 1.5rem;
         font-weight: bold;
@@ -187,3 +192,137 @@ main {
 
 
 /*Aqui termina la seccion de camisetas*/
+
+
+/*Aqui empieza la seccion de pantalones*/
+
+.pants-items {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.pants {
+    width: 100vw;
+    
+    .title {
+        margin: 2rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: montserrat;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desc-text {
+        width: 100%;
+        padding-top: 1rem;
+
+        h3 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: montserrat;
+            font-size: 0.8rem;
+            text-align: left;
+
+        }
+    }
+}
+
+/*Aqui termina la seccion de pantalones*/
+
+
+
+
+
+
+/*Aqui empieza el footer*/
+footer {
+    background-color: var(--color-primario);
+    border-top: 1px solid #000000;
+    /* Línea más gruesa y visible */
+    padding: 20px 0;
+    margin-top: 40rem;
+
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+    }
+
+    .footer-columna {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .footer-columna h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .footer-columna ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-columna ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-columna ul li a {
+        color: var(--color-secundario);
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-columna ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .after-footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .after-footer p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-footer {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+/*Aqui termina el footer*/
