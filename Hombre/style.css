@@ -58,6 +58,7 @@ a {
 .menu-container {
     position: relative;
     display: inline-block;
+    z-index: 5;
 }
 
 
@@ -534,8 +535,9 @@ video {
   }
   
   .btn-2 a:hover {
-    color: #bbb8c5;
+    color: #000000;
     transition: all 0.5s ease-in-out;
+    background-color: white;
   }
   
   .btn-2 a::before {
@@ -545,7 +547,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #ffffff;
     transition: all 0.5s ease-in-out;
     transform: scaleY(1);
   }
@@ -569,7 +571,7 @@ video {
     transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     display: flex;
     justify-content: center;
