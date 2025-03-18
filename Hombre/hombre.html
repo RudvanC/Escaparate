@@ -7,6 +7,10 @@
     <title>Hombre</title>
     <link rel="stylesheet" href="/Hombre/style.css">
     <link rel="icon" type="image/png" href="/Imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -14,35 +18,323 @@
 <body>
     <header class="header">
         <section class="announcements">
-            <p>
-                TE damos la bienvenida a
-                LATAMCODERS, la tienda de ropa
-                en linea mas grande de latinoamerica
-            </p>
+            <p>Te damos la bienvenida a <strong>LATAMCODERS</strong>, la tienda de ropa en línea más grande de
+                Latinoamérica.</p>
+            <p>Envíos gratis a toda Latinoamérica por compras mayores a $50.</p>
+            <p>¡Nuevas colecciones disponibles! No te pierdas nuestras ofertas.</p>
+            <p>Regístrate y obtén un 10% de descuento en tu primera compra.</p>
         </section>
 
         <nav class="navbar">
             <div class="logo-image">
-                <img src="/Imagenes/logo.png" alt="Logo">
+                <a href="/Index/hombre.html"><img src="/Imagenes/logo.png" alt="Logo"></a>
             </div>
 
             <div class="search">
-                <p>HOMBRE</p>
-                <p>MUJER</p>
-                <p>NIÑO</p>
+
+                <div class="menu-container">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-button">Hombre ▼</label>
+
+                    <!-- Menú desplegable -->
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#shoes">Zapatillas</a></li>
+                            <li><a href="#shirts">Camisetas</a></li>
+                            <li><a href="#pants">Pantalones</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="/Mujer/index.html">
+                    <p>MUJER</p>
+                </a>
+                <a href="/Niño/niño.html">
+                    <p>NIÑO</p>
+                </a>
             </div>
 
             <div class="home-logo">
-                <img src="/Imagenes/bx--home.svg" alt="Home">
+                <a href="/Index/hombre.html"><img src="/Imagenes/bx--home.svg" alt="Home"></a>
             </div>
         </nav>
     </header>
+
+
     <main>
+        <section id="video-container" class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="/Videos/videoloop.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="button-container">
+                <div class="btn-2">
+                    <a href="https://www.adidas.es/"><span>DESCUBRIR</span></a>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section id="shoes" class="shoes">
+
+            <div class="title">
+                <h2>Zapatillas</h2>
+            </div>
+
+            <section class="shoes-items">
+                <article class="first-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4ad06167-fb6c-47d7-b594-aa140c4ca041/JORDAN+SPIZIKE+LOW.png"
+                        alt="Zapato 1">
+                    <div class="desc-text">
+                        <h3>Jordan Spizike Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>120.00€</h5>
+                    </div>
+                </article>
+
+                <article class="second-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9161d4e2-db39-4bca-8d02-d58abe6cfc18/AIR+JORDAN+1+MID.png"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Mid</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>149.99€</h5>
+                    </div>
+                </article>
+
+                <article class="third-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ab3ec819-7808-4cd8-ba1c-b1e9386c8540/AIR+JORDAN+1+LOW.png"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>80.00€</h5>
+                    </div>
+                </article>
+
+                <article class="fourth-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fc50c2c5-a30b-4de7-970f-a1525baf13bd/NIKE+AIR+MAX+95.png"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Air Max 95</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>130.00€</h5>
+                    </div>
+                </article>
+
+                <article class="fifth-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/389b709e-5102-4e55-aa5d-07099b500831/BLAZER+MID+%2777+VNTG.png"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Blazer Mid '77 Vintage</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+            </section>
+        </section>
+
+        <section id="shirts" class="shirts">
+            <div class="title">
+                <h2>Camisetas</h2>
+            </div>
+
+            <section class="shirts-items">
+                <article class="first-shirt">
+                    <img src="//img.ltwebstatic.com/images3_pi/2024/09/14/f1/1726310497fa27930e2bfce3d5abb34d76361ecb11_thumbnail_900x.webp"
+                        alt="Zapato 1">
+                    <div class="desc-text">
+                        <h3>Jordan Spizike Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="second-shirt">
+                    <img src="//img.ltwebstatic.com/images3_pi/2024/11/23/ee/17323550999c7fba5d550e5d1ee466f6240ebba389_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Mid</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="third-shirt">
+                    <img src="//img.ltwebstatic.com/images3_pi/2024/11/26/73/1732606119f7a8c06a432ff067ca8f9eb4b32d0ed6_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="fourth-shirt">
+                    <img src="https://img.ltwebstatic.com/images3_pi/2024/12/31/db/1735629290748f7af7379bfbbbd17979ed15521c69_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Air Max 95</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="fifth-shirt">
+                    <img src="//img.ltwebstatic.com/images3_pi/2025/02/17/16/1739759678840c8648e2c89668e6702b3401377ce8_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Blazer Mid '77 Vintage</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+
+        <section id="pants" class="pants">
+            <div class="title">
+                <h2>Pantalones</h2>
+            </div>
+
+            <section class="pants-items">
+                <article class="first-pants">
+                    <img src="//img.ltwebstatic.com/images3_pi/2025/01/20/60/1737361406b60b62f751892cfcb59beda96a5fd4bc_thumbnail_900x.webp"
+                        alt="Zapato 1">
+                    <div class="desc-text">
+                        <h3>Jordan Spizike Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="second-pants">
+                    <img src="//img.ltwebstatic.com/images3_spmp/2024/08/20/d7/1724147088de29b6089ef8e1e4d1ad8cebbd7a55b5_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Mid</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="third-pants">
+                    <img src="//img.ltwebstatic.com/images3_spmp/2024/11/13/fb/1731477152b18b2a396af1e1e9e176e424d7304493_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Air Jordan 1 Low</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="fourth-pants">
+                    <img src="//img.ltwebstatic.com/images3_pi/2025/02/08/8d/17389909307dcf4aff6da990dbc2f3176166498db6_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Air Max 95</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+
+                <article class="fifth-pants">
+                    <img src="//img.ltwebstatic.com/images3_pi/2025/02/28/fc/1740706121293c7d737a1116f0eca8d70e3a73e7c0_thumbnail_900x.webp"
+                        alt="Zapato 2">
+                    <div class="desc-text">
+                        <h3>Nike Blazer Mid '77 Vintage</h3>
+                        <p>Zapatillas - Hombre</p>
+                        <p>2 colores</p>
+                        <h5>99.99€</h5>
+                    </div>
+                </article>
+            </section>
+        </section>
 
     </main>
-    <footer>
 
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1 -->
+            <div class="footer-columna">
+                <h3>Conócenos</h3>
+                <ul>
+                    <li><a href="#">Inside Latan Coders</a></li>
+                    <li><a href="#">Latan Coders Group</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Visite Seguro</a></li>
+                    <li><a href="#">Media & Press</a></li>
+                    <li><a href="#">Mapa del Sitio</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-columna">
+                <h3>Atencion al Cliente</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Localizar mi Pedido</a></li>
+                    <li><a href="#">Envio</a></li>
+                    <li><a href="#">Pago</a></li>
+                    <li><a href="#">Devolucione</a></li>
+                    <li><a href="#">Guia de Tallas</a></li>
+                    <li><a href="#">Contacta con nosotros</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-columna">
+                <h3>Legal & Cookies</h3>
+                <ul>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Condiciones de Uso</a></li>
+                    <li><a href="#">Condiciones de Venta</a></li>
+                    <li><a href="#">Informacion Legal</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4 -->
+            <div class="footer-columna">
+                <h3>Stay in Touch</h3>
+                <ul>
+                    <li><a href="#">Encuentra una Tienda</a></li>
+                    <li><a href="#">Abrir una Tienda</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                    <li><a href="#">The Coders Club</a></li>
+                    <li><a href="#">APP Coders</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="after-footer">
+            <ul>
+                <li><img class="logo-footer" src="/Imagenes/facebook.png" alt="facebook"></li>
+                <li><img class="logo-footer" src="/Imagenes/instagram.png" alt="instagram"></li>
+                <li><img class="logo-footer" src="/Imagenes/whatsapp.png" alt="whatsapp"></li>
+                <li><img class="logo-footer" src="/Imagenes/x.png" alt="x"></li>
+                <li><img class="logo-footer" src="/Imagenes/youtube.png" alt="youtube"></li>
+            </ul>
+            <p>© 2025 LATAMCODERS. Todos los derechos reservados</p>
+        </div>
     </footer>
+    <script src="/Hombre/scripts.js"></script>
 </body>
 
 </html>

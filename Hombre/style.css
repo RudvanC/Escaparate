@@ -1,28 +1,39 @@
+:root {
+    --color-primario: #DDD0C8;
+    /* beige */
+    --color-secundario: #323232;
+    /* gris oscuro */
+    --color-terciario: #000000;
+    /* negro */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.montserrat-montserratfont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: bold;
+}
+
 /* Estilo para todo el documento en general */
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
     background: #ffffff;
     font-family: 'Lato', sans-serif;
     height: 100vh;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 
-.announcements{
-    background-color: #DDD0C8;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-}
+
 
 .navbar {
     width: 100%;
@@ -34,21 +45,535 @@ html, body {
     border-bottom: 2px solid #000000;
 }
 
-.search{
+a {
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/*Inicio de menu paar desplegar al dar click en hombre*/
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+#menu-toggle {
+    /* Checkbox oculto para controlar el menú */
+    display: none;
+}
+
+
+.menu-button {
+    /* Botón estilo hamburguesa */
+    display: block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.menu {
+    /* Estilo del menú desplegable */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+}
+
+
+#menu-toggle:checked+.menu-button+.menu {
+    /* Mostrar menú cuando se activa el checkbox */
+    max-height: 200px;
+    /* Ajusta según el contenido */
+}
+
+
+.menu ul {
+    /* Estilos de los enlaces del menú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu a:hover {
+    background: #f4f4f4;
+}
+
+/*final del estilo del menu desplegable*/
+
+.announcements {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background-color: #DDD0C8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.announcements p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: textChange 20s infinite;
+}
+
+/* Definimos la animación */
+@keyframes textChange {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+}
+
+/* Aplicamos el retraso a cada párrafo */
+.announcements p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.announcements p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.announcements p:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.announcements p:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.search {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100vw;
     color: rgb(0, 0, 0);
     font-weight: bold;
-}   
+}
 
 
 /* Contenedor principal */
 main {
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+/*Aqui empieza la seccion de zapatillas*/
+
+.shoes-items {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.shoes {
+    width: 100vw;
+
+    .title {
+        margin: 2rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: montserrat;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+
+    }
+
+    img {
+        width: 100%;
+
+    }
+
+    .desc-text {
+        width: 100%;
+        padding-top: 1rem;
+
+        h3 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: montserrat;
+            font-size: 0.8rem;
+            text-align: left;
+
+        }
+    }
+}
+
+/*Aqui termina la seccion de zapatillas*/
+
+
+/*Aqui comienza seccion de camisetas*/
+
+.shirts-items {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.shirts {
+    width: 100vw;
+
+    .title {
+        margin: 2rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: montserrat;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desc-text {
+        width: 100%;
+        padding-top: 1rem;
+
+        h3 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: montserrat;
+            font-size: 0.8rem;
+            text-align: left;
+
+        }
+    }
+}
+
+
+/*Aqui termina la seccion de camisetas*/
+
+
+/*Aqui empieza la seccion de pantalones*/
+
+.pants-items {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.pants {
+    width: 100vw;
+
+    .title {
+        margin: 2rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: montserrat;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desc-text {
+        width: 100%;
+        padding-top: 1rem;
+
+        h3 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: montserrat;
+            font-size: 0.8rem;
+            text-align: left;
+
+        }
+    }
+}
+
+/*Aqui termina la seccion de pantalones*/
+
+
+
+
+
+
+/*Aqui empieza el footer*/
+footer {
+    background-color: var(--color-primario);
+    border-top: 1px solid #000000;
+    /* Línea más gruesa y visible */
+    padding: 20px 0;
+    margin-top: 70rem;
+
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+    }
+
+    .footer-columna {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .footer-columna h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .footer-columna ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-columna ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-columna ul li a {
+        color: var(--color-secundario);
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-columna ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .after-footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .after-footer p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-footer {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+/*Aqui termina el footer*/
+
+
+
+/*Estilo para la caja de video*/
+.video-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 400px;
+    /* Ajusta la altura según necesidad */
+    background-color: rgb(255, 255, 255);
+    /* Opcional: para que no se vea fondo blanco */
+    position: relative;
 }
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+/*Estilo para la caja de video*/
+
+
+
+.btn-2 {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* Created by http://grohit.com/  */
+
+  
+  .btn-2 a {
+    text-decoration: none;
+    border: 2px solid #010100;
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  span {
+    position: relative;
+    /* z-index coz when we put bg to before and after this span text will not be visible */
+    z-index: 3;
+  }
+  
+
+  .btn-2 a:hover::before {
+    transform: scaleY(0);
+  }
+  
+ 
+  .btn-2 a:hover::after {
+    transform: scaleX(0);
+  }
+  
+  /* Button 2 styles */
+  
+  .btn-2 a {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-2 a:hover {
+    color: #bbb8c5;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-2 a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(1);
+  }
+  
+  .btn-2 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
+  }
+  
+  .button-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
