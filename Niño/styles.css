@@ -28,18 +28,6 @@ body {
     margin: 0 auto;
     scroll-behavior: smooth;
 }
-<<<<<<< HEAD
-=======
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
 
 .navbar {
     width: 100%;
@@ -58,59 +46,17 @@ a {
     color: #000000;
 }
 
-<<<<<<< HEAD
-
-/*Inicio de menu paar desplegar al dar click en hombre*/
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Inicio de menu para desplegar al dar click en hombre */
-=======
-
-/*Inicio de menu paar desplegar al dar click en hombre*/
-
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
-
-/*Inicio de menu paar desplegar al dar click en hombre*/
-
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
 .menu-container {
     position: relative;
     display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 #menu-toggle {
     display: none;
 }
 
 .menu-button {
-=======
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
-
-#menu-toggle {
-    /* Checkbox oculto para controlar el menú */
-    display: none;
-}
-
-
-.menu-button {
-    /* Botón estilo hamburguesa */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
     display: block;
     padding: 10px 20px;
     background: #333;
@@ -122,18 +68,6 @@ a {
 }
 
 .menu {
-<<<<<<< HEAD
-    /* Estilo del menú desplegable */
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    /* Estilo del menú desplegable */
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
-    /* Estilo del menú desplegable */
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
     position: absolute;
     top: 100%;
     left: 0;
@@ -146,36 +80,11 @@ a {
     transition: max-height 0.7s ease-out;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 #menu-toggle:checked+.menu-button+.menu {
     max-height: 200px;
 }
 
 .menu ul {
-=======
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
-
-#menu-toggle:checked+.menu-button+.menu {
-    /* Mostrar menú cuando se activa el checkbox */
-    max-height: 200px;
-    /* Ajusta según el contenido */
-}
-
-
-.menu ul {
-    /* Estilos de los enlaces del menú */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
     list-style: none;
     padding: 0;
     margin: 0;
@@ -201,22 +110,7 @@ a {
     background: #f4f4f4;
 }
 
-<<<<<<< HEAD
-/*final del estilo del menu desplegable*/
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* final del estilo del menu desplegable */
-=======
-/*final del estilo del menu desplegable*/
-
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
-/*final del estilo del menu desplegable*/
-
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
 .announcements {
     width: 100%;
     height: 50px;
@@ -238,18 +132,6 @@ a {
     animation: textChange 20s infinite;
 }
 
-<<<<<<< HEAD
-/* Definimos la animación */
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Definimos la animación */
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
-/* Definimos la animación */
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
 @keyframes textChange {
     0% {
         opacity: 0;
@@ -268,18 +150,6 @@ a {
     }
 }
 
-<<<<<<< HEAD
-/* Aplicamos el retraso a cada párrafo */
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Aplicamos el retraso a cada párrafo */
->>>>>>> 220eaa0 (cambios header rud 3)
-=======
-/* Aplicamos el retraso a cada párrafo */
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
 .announcements p:nth-child(1) {
     animation-delay: 0s;
 }
@@ -303,32 +173,11 @@ a {
     width: 100vw;
     color: rgb(0, 0, 0);
     font-weight: bold;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 220eaa0 (cambios header rud 3)
->>>>>>> dani
-}
-
-
-/* Contenedor principal */
-main {    
-    
->>>>>>> 220eaa0 (cambios header rud 3)
 }
 
 /* Contenedor principal */
 main {}
 
-.contenedor h2 {
-    width: 100%; /* Hace que el h2 ocupe todo el ancho disponible */
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin-left: 440px;
-    
-}
 .fotos {
     display: flex;
     justify-content: center;
@@ -448,5 +297,3 @@ footer {
     width: 25px;
     height: 25px;
 }
-
-
