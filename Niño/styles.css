@@ -207,13 +207,7 @@ main {}
 
 .contenedor h1 {
     padding-top: 25px;
-    
-}
-
-.contenedor h2 {    
-    margin-left: auto;
-    margin-right: auto;
-    
+    font-size: 2,5rem;
     
 }
 
