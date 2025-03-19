@@ -201,12 +201,25 @@ main {}
     align-items: center;
 }
 
+.contenedor h1 {
+    padding-top: 25px;
+    
+}
+
+.contenedor h2 {
+    width: 100%;
+    margin-left: 530px;
+    
+}
+
 .categoria {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
+
+
 
 .carousel-container {
     width: 100%;
