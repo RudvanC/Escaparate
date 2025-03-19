@@ -4,52 +4,29 @@
     --color-terciario: #000000; /* negro */
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.montserrat-montserratfont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: bold;
+}
+
 /* Estilo para todo el documento en general */
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
     background: #ffffff;
     font-family: 'Lato', sans-serif;
     height: 100vh;
     margin: 0 auto;
-}
-
-
-.announcements {
-    width: 100%;
-    height: 50px; /* Ajusta la altura según tu necesidad */
-    overflow: hidden;
-    position: relative;
-}
-
-.announcements p {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    animation: textChange 32s infinite;
-}
-
-/* Definimos la animación */
-@keyframes textChange {
-    0% { opacity: 0; }
-    5% { opacity: 1; }
-    20% { opacity: 1; }
-    25% { opacity: 0; }
-}
-
-/ Aplicamos el retraso a cada párrafo */
-.announcements p:nth-child(1) { animation-delay: 0s; }
-.announcements p:nth-child(2) { animation-delay: 8s; }
-.announcements p:nth-child(3) { animation-delay: 16s; }
-.announcements p:nth-child(4) { animation-delay: 24s; }
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -62,43 +39,171 @@ html, body {
     border-bottom: 2px solid #000000;
 }
 
-.search{
+a {
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Inicio de menu para desplegar al dar click en hombre */
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+}
+
+#menu-toggle:checked+.menu-button+.menu {
+    max-height: 200px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu a:hover {
+    background: #f4f4f4;
+}
+
+/* final del estilo del menu desplegable */
+.announcements {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background-color: #DDD0C8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.announcements p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: textChange 20s infinite;
+}
+
+@keyframes textChange {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+}
+
+.announcements p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.announcements p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.announcements p:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.announcements p:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.search {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100vw;
     color: rgb(0, 0, 0);
     font-weight: bold;
-}   
-
-
-/* Contenedor principal */
-main {    
-    
 }
 
+/* Contenedor principal */
+main {}
+
+.contenedor h2 {
+    width: 100%; /* Hace que el h2 ocupe todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 440px;
+    
+}
 .fotos {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
     gap: 20px;
-    
 }
 
 .fotos img {
-    flex: 1 1 calc(20% - 20px); /* Cada imagen ocupa el 20% del ancho, menos el espacio del gap */
-    
-    height: 350px;
+    width: 200px;
+    height: 250px;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .contenedor {
     display: flex;
-    flex-direction: column; 
-      
-    gap: 40px; /* Espacio entre categorías */    
-    padding: 20px;    
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
     align-items: center;
 }
 
@@ -111,45 +216,38 @@ main {
 
 .carousel-container {
     width: 100%;
-    overflow: hidden; /* Oculta las imágenes fuera del área visible */
+    overflow: hidden;
     position: relative;
     white-space: nowrap;
 }
 
 .carousel-track {
     display: flex;
-    animation: scroll 20s linear infinite; /* Desplazamiento continuo */
-    width: max-content; /* Se ajusta al total de imágenes */
+    animation: scroll 20s linear infinite;
+    width: max-content;
 }
 
-/* Duplicamos imágenes dinámicamente */
 .carousel-track img {
-    width: 300px;
-    height: 400px;
-    flex-shrink: 0;
+    width: 25%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
 }
 
-/* Animación infinita y sin saltos */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-50%); /* Solo mueve la mitad del contenido duplicado */
+        transform: translateX(-50%);
     }
 }
 
-
 footer {
     background-color: var(--color-primario);
-    border-top: 1px solid #000000; /* Línea más gruesa y visible */
+    border-top: 1px solid #000000;
     padding: 20px 0;
-    footer {
-    background-color: var(--color-primario);
-    border-top: 1px solid #000000; /* Línea más gruesa y visible */
-    padding: 20px 0;
-    
-    
 }
 
 .footer-container {
@@ -158,7 +256,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    
 }
 
 .footer-columna {
@@ -195,7 +292,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
 }
 
 .after-footer p {
@@ -206,75 +302,6 @@ footer {
 .logo-footer {
     width: 25px;
     height: 25px;
-
 }
-
-
-
-
-
-  
-    
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-}
-
-.footer-columna {
-    flex: 1;
-    margin: 0 10px;
-}
-
-.footer-columna h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.footer-columna ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-columna ul li {
-    margin-bottom: 10px;
-}
-
-.footer-columna ul li a {
-    color: var(--color-secundario);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footer-columna ul li a:hover {
-    text-decoration: underline;
-}
-
-.after-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    
-}
-
-.after-footer p {
-    display: flex;
-    justify-content: center;
-}
-
-.logo-footer {
-    width: 25px;
-    height: 25px;
-
-}
-
-
-
 
 
