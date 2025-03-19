@@ -33,6 +33,9 @@ body {
 
 
 
+<<<<<<< HEAD
+>>>>>>> 220eaa0 (cambios header rud 3)
+=======
 >>>>>>> 220eaa0 (cambios header rud 3)
 
 .navbar {
@@ -53,7 +56,13 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Inicio de menu para desplegar al dar click en hombre */
+=======
+
+/*Inicio de menu paar desplegar al dar click en hombre*/
+
+>>>>>>> 220eaa0 (cambios header rud 3)
 =======
 
 /*Inicio de menu paar desplegar al dar click en hombre*/
@@ -65,12 +74,15 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #menu-toggle {
     display: none;
 }
 
 .menu-button {
 =======
+=======
+>>>>>>> 220eaa0 (cambios header rud 3)
 
 #menu-toggle {
     /* Checkbox oculto para controlar el menú */
@@ -80,6 +92,9 @@ a {
 
 .menu-button {
     /* Botón estilo hamburguesa */
+<<<<<<< HEAD
+>>>>>>> 220eaa0 (cambios header rud 3)
+=======
 >>>>>>> 220eaa0 (cambios header rud 3)
     display: block;
     padding: 10px 20px;
@@ -93,6 +108,10 @@ a {
 
 .menu {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /* Estilo del menú desplegable */
+>>>>>>> 220eaa0 (cambios header rud 3)
 =======
     /* Estilo del menú desplegable */
 >>>>>>> 220eaa0 (cambios header rud 3)
@@ -109,12 +128,15 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #menu-toggle:checked+.menu-button+.menu {
     max-height: 200px;
 }
 
 .menu ul {
 =======
+=======
+>>>>>>> 220eaa0 (cambios header rud 3)
 
 #menu-toggle:checked+.menu-button+.menu {
     /* Mostrar menú cuando se activa el checkbox */
@@ -125,6 +147,9 @@ a {
 
 .menu ul {
     /* Estilos de los enlaces del menú */
+<<<<<<< HEAD
+>>>>>>> 220eaa0 (cambios header rud 3)
+=======
 >>>>>>> 220eaa0 (cambios header rud 3)
     list-style: none;
     padding: 0;
@@ -152,7 +177,12 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* final del estilo del menu desplegable */
+=======
+/*final del estilo del menu desplegable*/
+
+>>>>>>> 220eaa0 (cambios header rud 3)
 =======
 /*final del estilo del menu desplegable*/
 
@@ -179,6 +209,10 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* Definimos la animación */
+>>>>>>> 220eaa0 (cambios header rud 3)
 =======
 /* Definimos la animación */
 >>>>>>> 220eaa0 (cambios header rud 3)
@@ -201,6 +235,10 @@ a {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* Aplicamos el retraso a cada párrafo */
+>>>>>>> 220eaa0 (cambios header rud 3)
 =======
 /* Aplicamos el retraso a cada párrafo */
 >>>>>>> 220eaa0 (cambios header rud 3)
@@ -228,7 +266,10 @@ a {
     color: rgb(0, 0, 0);
     font-weight: bold;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 220eaa0 (cambios header rud 3)
 }
 
 
