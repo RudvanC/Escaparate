@@ -190,7 +190,7 @@ a {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    color: rgb(0, 0, 0);
+    color: #323232;
     font-weight: bold;
 }
 
@@ -220,6 +220,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+   
+    
+
+
 }
 
 .title {
@@ -228,6 +233,7 @@ main {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: montserrat;
+    color: #000000;
 }
 
 article {
@@ -424,3 +430,4 @@ span {
     justify-content: center;
     align-items: center;
 }
+
