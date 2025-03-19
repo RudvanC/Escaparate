@@ -50,24 +50,21 @@ a {
 }
 
 
-/*Inicio de menu paar desplegar al dar click en mujer*/
-
+/* Inicio de menu para desplegar al dar click en mujer */
 .menu-container {
-    position:absolute;
-    display:block;
-    z-index: 1000; /* Un valor alto para asegurar que esté encima */
-    width: 10%;
+    position: relative; /* Cambiado a relative para el posicionamiento correcto */
+    display: inline-block; /* Permite que el contenedor se ajuste al contenido */
+    z-index: 1000;
+    width: auto; /* Permite que el ancho se ajuste al contenido */
 }
 
-
-#menu-toggle {
-    /* Checkbox oculto para controlar el menú */
+#menu-toggle-hombres,
+#menu-toggle-mujeres,
+#menu-toggle-ninos {
     display: none;
 }
 
-
 .menu-button {
-    /* Botón estilo hamburguesa */
     display: block;
     padding: 10px 20px;
     background: #333;
@@ -76,12 +73,9 @@ a {
     text-align: center;
     border-radius: 5px;
     user-select: none;
-    max-height: 1000px; /* Aumenta este valor según sea necesario */
-    overflow-y: auto; /* Habilita el desplazamiento vertical */
 }
 
 .menu {
-    /* Estilo del menú desplegable */
     position: absolute;
     top: 100%;
     left: 0;
@@ -92,18 +86,17 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease-out;
+    z-index: 1001; /* Asegura que el menú esté encima del botón */
+}
+
+#menu-toggle-hombres:checked + .menu-button + .menu,
+#menu-toggle-mujeres:checked + .menu-button + .menu,
+#menu-toggle-ninos:checked + .menu-button + .menu {
+    max-height: 200px; /* Ajusta según el contenido */
     overflow-y: auto; /* Habilita el desplazamiento vertical */
 }
 
-#menu-toggle:checked+.menu-button+.menu {
-    /* Mostrar menú cuando se activa el checkbox */
-    max-height: 200px;
-    /* Ajusta según el contenido */
-}
-
-
 .menu ul {
-    /* Estilos de los enlaces del menú */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -129,8 +122,7 @@ a {
     background: #f4f4f4;
 }
 
-/*final del estilo del menu desplegable*/
-
+/* final del estilo del menu desplegable */
 .announcements {
     width: 100%;
     height: 50px;
@@ -192,10 +184,16 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%; /* Ajustado a 100% para ocupar el ancho completo */
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
+
+.home-logo img {
+    width: 30px;
+    height: 30px;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -306,3 +304,19 @@ footer {
     height: 25px;
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .product-category {
+        width: 100%; /* Cada categoría ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .carousel-track img {
+        width: 50%; /* Imágenes más grandes en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track img {
+        width: 75%; /* Imágenes aún más grandes en pantallas muy pequeñas */
+    }
+}
