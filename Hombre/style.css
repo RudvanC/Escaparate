@@ -58,13 +58,6 @@ a {
     z-index: 5;
 }
 
-
-#menu-toggle {
-    /* Checkbox oculto para controlar el menú */
-    display: none;
-}
-
-
 .menu-button {
     /* Botón estilo hamburguesa */
     display: block;
@@ -92,10 +85,17 @@ a {
 }
 
 
-#menu-toggle:checked+.menu-button+.menu {
-    /* Mostrar menú cuando se activa el checkbox */
-    max-height: 200px;
-    /* Ajusta según el contenido */
+#menu-toggle-hombres:checked + .menu-button + .menu,
+#menu-toggle-mujeres:checked + .menu-button + .menu,
+#menu-toggle-ninos:checked + .menu-button + .menu {
+    max-height: 200px; /* Ajusta según el contenido */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+#menu-toggle-hombres,
+#menu-toggle-mujeres,
+#menu-toggle-ninos {
+    display: none;
 }
 
 
