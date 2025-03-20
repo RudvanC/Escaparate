@@ -71,6 +71,7 @@ a {
     z-index: 5;
 }
 
+<<<<<<< HEAD
 
 #menu-toggle {
     /* Checkbox oculto para controlar el menú */
@@ -79,6 +80,8 @@ a {
 }
 
 
+=======
+>>>>>>> f0b9041 (cambios en login)
 .menu-button {
     /* Botón estilo hamburguesa */
     display: block;
@@ -114,11 +117,25 @@ a {
     overflow-y: auto; /* Habilita el desplazamiento vertical */
 =======
 
+<<<<<<< HEAD
 #menu-toggle:checked+.menu-button+.menu {
     /* Mostrar menú cuando se activa el checkbox */
     max-height: 200px;
     /* Ajusta según el contenido */
 >>>>>>> dd0cf59 (cambios en login)
+=======
+#menu-toggle-hombres:checked + .menu-button + .menu,
+#menu-toggle-mujeres:checked + .menu-button + .menu,
+#menu-toggle-ninos:checked + .menu-button + .menu {
+    max-height: 200px; /* Ajusta según el contenido */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+#menu-toggle-hombres,
+#menu-toggle-mujeres,
+#menu-toggle-ninos {
+    display: none;
+>>>>>>> f0b9041 (cambios en login)
 }
 
 
