@@ -230,8 +230,8 @@ main {
   }
   
   .carousel-track img {
-    width: 200px;
-    height: 200px; /* Agregado alto fijo */
+    width: 100px;
+    height: 120px; /* Agregado alto fijo */
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -244,6 +244,157 @@ main {
         transform: translateX(-50%);
   }
 }
+
+/*tienda*/
+
+/* Estilos generales para las secciones */
+
+#cart {
+    padding: 20px;
+    font-family: sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 100%; /* Hace que el carrito sea redondo */
+    width: 200px; /* Ajusta el ancho para que coincida con el alto */
+    height: 200px; /* Ajusta el alto para que coincida con el ancho */
+    display: flex; /* Para centrar el contenido */
+    flex-direction:column-reverse; /* Para alinear el contenido en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+#cart h2 {
+    margin-bottom: 15px;
+    color: #333; /* Color del título */
+    text-align: center; /* Centra el título */
+}
+
+
+#cart h2 img { /* Para imágenes SVG */
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+
+#cart-total {
+    font-weight: bold;
+    color: #39b12edf; /* Color del total */
+}
+
+#print-budget {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: block; /* Para que el botón ocupe todo el ancho */
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#print-budget:hover {
+    background-color: #1e7e34;
+}
+
+section[id] {
+    margin-bottom: 30px;
+    padding: 20px;
+    display: block; /* Asegura que cada sección sea un bloque */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+section[id] .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los contenedores de artículos */
+section[class] > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para los artículos */
+section[class] > section article {
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+section[class] > section img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto descriptivo */
+section[class] > section .desc-text {
+    flex-grow: 1;
+}
+
+/* Estilos para todos los h2 dentro de las secciones con id */
+section[id] .title h2 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section[id] .title h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+section[class] > section h3 {
+    margin-bottom: 5px;
+}
+
+section[class] > section p {
+    margin-bottom: 5px;
+}
+
+section[class] > section h5 {
+    font-weight: bold;
+}
+
+.product button {
+    background-color: #919191;
+    color: rgb(241, 247, 242);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Tahoma, sans-serif, Verdana, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+
+/*tienda*/
+
+
+/*footer*/
+
 footer {
     background-color: var(--color-primario);
     border-top: 1px solid #000000;
@@ -303,6 +454,8 @@ footer {
     width: 25px;
     height: 25px;
 }
+
+/*footer*/
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {

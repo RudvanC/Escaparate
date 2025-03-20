@@ -39,7 +39,7 @@
 
                 <div class="menu-container">
                     <input type="checkbox" id="menu-toggle-mujeres">
-                    <label for="menu-toggle-mujeres" class="menu-button">MUJERES ▼  </label>
+                    <label for="menu-toggle-mujeres" class="menu-button">MUJERES ▼ </label>
                     <nav class="menu">
                         <ul>
                             <li><a href="/Mujer/index.html#shoes">Chaquetas</a></li>
@@ -67,11 +67,11 @@
                     </nav>
                 </div>
 
-            
 
-            <div class="home-logo">
-                <a href="/Index/home.html"><img src="/Imagenes/bx--home.svg" alt="Home"></a>
-            </div>
+
+                <div class="home-logo">
+                    <a href="/Index/home.html"><img src="/Imagenes/bx--home.svg" alt="Home"></a>
+                </div>
         </nav>
     </header>
 
@@ -198,6 +198,465 @@
                 </div>
             </section>
         </div>
+
+
+
+
+        <div id="cart">
+            <h2><img src="/Imagenes/carro.svg" alt="Carrito">Happy Carrito</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: €<span id="cart-total">0.00</span></p>
+            <button id="print-budget">Imprimir Ticket</button>
+        </div>
+
+
+        <section id="Chaqueta" class="Chaquetas">
+
+            <div class="title">
+                <h2>Chaquetas</h2>
+            </div>
+
+            <section class="chaqueta">
+                <article class="chaqueta">
+                    <img src="/Imagenes/chaqueta.jpg" alt="chaqueta">
+                    <div class="desc-text">
+                        <h3>Chaqueta Casual Style</h3>
+                        <p>2 colores</p>
+                        <h5>25.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="chaqueta2">
+                    <img src="/Imagenes/chaqueta2.jpg" alt="chaqueta2">
+                    <div class="desc-text">
+                        <h3>Chaqueta Larga</h3>
+                        <p>2 colores</p>
+                        <h5>70.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="chaqueta3">
+                    <img src="/Imagenes/chaqueta3.jpg" alt="chaqueta3">
+                    <div class="desc-text">
+                        <h3>Chaqueta Corta</h3>
+                        <p>2 colores</p>
+                        <h5>30.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="chaqueta4">
+                    <img src="/Imagenes/chaqueta4.jpg" alt="chaqueta4">
+                    <div class="desc-text">
+                        <h3>Blazer</h3>
+                        <p>2 colores</p>
+                        <h5>30.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+            </section>
+        </section>
+
+        <section id="Pantalones" class="Pantalones">
+            <div class="title">
+                <h2>Pantalones</h2>
+            </div>
+
+            <section class="pantalon">
+                <article class="pantalon">
+                    <img src="/Imagenes/pantalon.jpg" alt="pantalon">
+                    <div class="desc-text">
+                        <h3>Pantalones Chinos</h3>
+                        <p>2 colores</p>
+                        <h5>25.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="pantalon2">
+                    <img src="/Imagenes/pantalon2.jpg" alt="pantalon2">
+                    <div class="desc-text">
+                        <h3>Jeans</h3>
+                        <p>2 colores</p>
+                        <h5>25.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="pantalon3">
+                    <img src="/Imagenes/pantalon3.jpg" alt="pantalon3">
+                    <div class="desc-text">
+                        <h3>Pantalones Anchos</h3>
+                        <p>2 colores</p>
+                        <h5>35.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="pantalon4">
+                    <img src="/Imagenes/pantalon4.jpg" alt="pantalon4">
+                    <div class="desc-text">
+                        <h3>Shores</h3>
+                        <p>2 colores</p>
+                        <h5>15.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+
+        <section id="Camisetas" class="Camisetas">
+            <div class="title">
+                <h2>Camisas y Camisetas</h2>
+            </div>
+
+            <section class="camiseta">
+                <article class="camiseta">
+                    <img src="/Imagenes/camiseta.jpg" alt="camiseta">
+                    <div class="desc-text">
+                        <h3>Camiseta LV</h3>
+                        <p>2 colores</p>
+                        <h5>35.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="camiseta">
+                    <img src="/Imagenes/camiseta2.jpg" alt="camiseta2">
+                    <div class="desc-text">
+                        <h3>Camisa</h3>
+                        <p>2 colores</p>
+                        <h5>15.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="camiseta3">
+                    <img src="/Imagenes/camiseta3.jpg" alt="camiseta3">
+                    <div class="desc-text">
+                        <h3>Camiseta Casual</h3>
+                        <p>2 colores</p>
+                        <h5>15.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="camiseta4">
+                    <img src="/Imagenes/camiseta4.jpg" alt="camiseta4">
+                    <div class="desc-text">
+                        <h3>Blusa</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="Faldas" class="Faldas">
+            <div class="title">
+                <h2>Faldas</h2>
+            </div>
+
+            <section class="falda">
+                <article class="falda">
+                    <img src="/Imagenes/falda.jpg" alt="falda">
+                    <div class="desc-text">
+                        <h3>Falda larga verano</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="falda2">
+                    <img src="/Imagenes/falda2.jpg" alt="falda2">
+                    <div class="desc-text">
+                        <h3>falda Corta</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="falda3">
+                    <img src="/Imagenes/falda3.jpg" alt="falda3">
+                    <div class="desc-text">
+                        <h3>Falda corta lisa</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                </article>
+
+                <article class="falda4">
+                    <img src="/Imagenes/falda4.jpg" alt="falda4">
+                    <div class="desc-text">
+                        <h3>Falda traje</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="Vestidos" class="Vestidos">
+            <div class="title">
+                <h2>Vestidos</h2>
+            </div>
+
+            <section class="vestido">
+                <article class="vestido">
+                    <img src="/Imagenes/vestido.jpg" alt="vestido">
+                    <div class="desc-text">
+                        <h3>Vestido verano</h3>
+                        <p>2 colores</p>
+                        <h5>25.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="vestido2">
+                    <img src="/Imagenes/vestido2.jpg" alt="vestido2">
+                    <div class="desc-text">
+                        <h3>Vestido Fiesta</h3>
+                        <p>2 colores</p>
+                        <h5>30.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+                <article class="vestido3">
+                    <img src="/Imagenes/vestido3.jpg" alt="vestido3">
+                    <div class="desc-text">
+                        <h3>Vestido noche</h3>
+                        <p>2 colores</p>
+                        <h5>40.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="vestido4">
+                    <img src="/Imagenes/vestido4.jpg" alt="vestido4">
+                    <div class="desc-text">
+                        <h3>Vestido Casual</h3>
+                        <p>2 colores</p>
+                        <h5>50.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="Deporte" class="Deporte">
+            <div class="title">
+                <h2>deporte</h2>
+            </div>
+
+            <section class="deporte">
+                <article class="Deporte">
+                    <img src="/Imagenes/deporte.jpg" alt="deporte">
+                    <div class="desc-text">
+                        <h3>Mallas</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="deporte2">
+                    <img src="/Imagenes/deporte2.jpg" alt="deporte2">
+                    <div class="desc-text">
+                        <h3>Falda Deporte</h3>
+                        <p>2 colores</p>
+                        <h5>25.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="deporte3">
+                    <img src="/Imagenes/deporte3.jpg" alt="deporte3">
+                    <div class="desc-text">
+                        <h3>Sudadera Sport</h3>
+                        <p>2 colores</p>
+                        <h5>30.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="deporte4">
+                    <img src="/Imagenes/deporte4.jpg" alt="deporte4">
+                    <div class="desc-text">
+                        <h3>Sujetador Deportivo</h3>
+                        <p>2 colores</p>
+                        <h5>15.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="Conjuntos" class="Conjuntos">
+            <div class="title">
+                <h2>Conjuntos</h2>
+            </div>
+
+            <section class="conjunto">
+                <article class="conjunto">
+                    <img src="/Imagenes/conjunto.jpg" alt="conjunto">
+                    <div class="desc-text">
+                        <h3>Conjunto traje</h3>
+                        <p>2 colores</p>
+                        <h5>40.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="conjunto2">
+                    <img src="/Imagenes/conjunto2.jpg" alt="conjunto2">
+                    <div class="desc-text">
+                        <h3>Conjunto verano</h3>
+                        <p>2 colores</p>
+                        <h5>20.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="conjunto3">
+                    <img src="/Imagenes/conjunto3.jpg" alt="conjunto3">
+                    <div class="desc-text">
+                        <h3>Conjunto Chandal</h3>
+                        <p>2 colores</p>
+                        <h5>35.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="conjunto4">
+                    <img src="/Imagenes/conjunto4.jpg" alt="conjunto4">
+                    <div class="desc-text">
+                        <h3>Enterizo</h3>
+                        <p>2 colores</p>
+                        <h5>40.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="lenceria" class="lenceria">
+            <div class="title">
+                <h2>Lencería</h2>
+            </div>
+
+            <section class="lenceria">
+                <article class="lenceria">
+                    <img src="/Imagenes/lenceria.jpg" alt="lenceria">
+                    <div class="desc-text">
+                        <h3>Jordan Spizike Low</h3>
+                        <p>2 colores</p>
+                        <h5>50.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="lenceria2">
+                    <img src="/Imagenes/lenceria2.jpg" alt="lenceria2">
+                    <div class="desc-text">
+                        <h3>Lenceria Encaje</h3>
+                        <p>2 colores</p>
+                        <h5>50.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="lenceria3">
+                    <img src="/Imagenes/lenceria3.jpg" alt="lenceria3">
+                    <div class="desc-text">
+                        <h3>Lenceria Encaje</h3>
+                        <p>2 colores</p>
+                        <h5>50.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="lenceria4">
+                    <img src="/Imagenes/lenceria4.jpg" alt="lenceria4">
+                    <div class="desc-text">
+                        <h3>Lenceria Encaje</h3>
+                        <p>2 colores</p>
+                        <h5>50.00€</h5>
+                    </div>
+                    <div class="product">
+                        <button onclick="addToCart('Nombre del Producto', XX.XX)">Añadir al carrito</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
     </main>
     <footer>
         <div class="footer-container">
@@ -258,4 +717,5 @@
     </footer>
     <script src="/Mujer/scripts.js"></script>
 </body>
+
 </html>
