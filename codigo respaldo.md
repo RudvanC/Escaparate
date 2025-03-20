@@ -787,3 +787,14 @@
     }
   ]
 }
+
+
+
+chaquetas
+pantalones
+camisetas
+faldas
+vestidos
+deporte
+conjuntos
+lenceria

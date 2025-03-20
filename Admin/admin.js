@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Admin/products.json'; // Ruta al archivo JSON
+    const jsonPath = '/Admin/JSON/products-hombre.json'; // Ruta al archivo JSON
     const adminContainer = document.getElementById('admin-products-container');
     const saveButton = document.getElementById('save-visibility');
     const addSectionForm = document.getElementById('add-section-form');
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 content.classList.toggle('visible');
             });
 
-            
             // Contenedor del contenido (inicialmente oculto)
             const categoryContent = document.createElement('div');
             categoryContent.classList.add('category-content');
