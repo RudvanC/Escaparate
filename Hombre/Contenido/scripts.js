@@ -1,32 +1,25 @@
- // Obtener todos los enlaces del menú
- const menuLinks = document.querySelectorAll('.menu a');
-
- // Obtener el checkbox del menú
- const menuCheckbox = document.getElementById('menu-toggle');
-
- // Añadir un event listener a cada enlace del menú
- menuLinks.forEach(link => {
-     link.addEventListener('click', function() {
-         menuCheckbox.checked = false; // Desmarcar el checkbox para cerrar el menú
-     });
- });
-
- document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = 'products.json';
+document.addEventListener("DOMContentLoaded", () => {
+    const jsonPath = '/Hombre/Contenido/products.json'; // Ruta al archivo JSON
     const containerShoes = document.getElementById('products-container-shoes');
     const containerShirts = document.getElementById('products-container-shirts');
     const containerPants = document.getElementById('products-container-pants');
 
     let products = [];
 
-    // Cargar productos desde el JSON
-    fetch(jsonPath)
-        .then(response => response.json())
-        .then(data => {
-            products = data;
-            renderProducts();
-        })
-        .catch(error => console.error('Error al cargar los productos:', error));
+    // Cargar productos desde localStorage o JSON
+    const savedProducts = JSON.parse(localStorage.getItem('products'));
+    if (savedProducts) {
+        products = savedProducts;
+        renderProducts();
+    } else {
+        fetch(jsonPath)
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                renderProducts();
+            })
+            .catch(error => console.error('Error al cargar los productos:', error));
+    }
 
     // Función para renderizar los productos en la página principal
     function renderProducts() {

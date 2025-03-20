@@ -4,16 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Productos</title>
-    <link rel="stylesheet" href="/Hombre/style.css"> <!-- CSS general -->
-    <link rel="stylesheet" href="/Hombre/Admin/admin.css"> <!-- CSS específico de admin -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- CSS general -->
+    <link rel="stylesheet" href="admin.css"> <!-- CSS específico de admin -->
 </head>
 <body>
     <h1>Administración de Productos</h1>
+
+   
+
+    <!-- Lista de productos existentes -->
     <div id="admin-products-container">
         <!-- Secciones por categoría se cargarán aquí -->
     </div>
+
     <button id="save-visibility">Guardar Cambios</button>
 
-    <script src="/Hombre/Admin/admin.js"></script>
+     <!-- Formulario para agregar nuevas secciones -->
+     <div class="form-container">
+        <h2>Agregar Nueva Sección</h2>
+        <form id="add-section-form">
+            <input type="text" id="section-name" placeholder="Nombre de la sección" required>
+            <button type="submit">Agregar Sección</button>
+        </form>
+    </div>
+
+    <!-- Formulario para agregar nuevos productos -->
+    <div class="form-container">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="add-product-form">
+            <select id="product-category" required>
+                <option value="">Selecciona una categoría</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+            <input type="text" id="product-title" placeholder="Título del producto" required>
+            <input type="text" id="product-description" placeholder="Descripción del producto" required>
+            <input type="text" id="product-colors" placeholder="Colores disponibles" required>
+            <input type="text" id="product-price" placeholder="Precio del producto" required>
+            <input type="text" id="product-image" placeholder="URL de la imagen" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+
+    <script src="admin.js"></script>
 </body>
 </html>
