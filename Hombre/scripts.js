@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Hombre/products.json'; // Ruta al archivo JSON
+    const jsonPath = '/Admin/products.json'; // Ruta al archivo JSON
     const mainContainer = document.querySelector('main'); // Contenedor principal
 
     let products = [];
