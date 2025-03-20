@@ -148,6 +148,46 @@
       "price": "99.99€",
       "image": "//img.ltwebstatic.com/images3_pi/2025/02/28/fc/1740706121293c7d737a1116f0eca8d70e3a73e7c0_thumbnail_900x.webp",
       "visible": true
+    },
+    {
+      "id": 16,
+      "category": "pants",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2022/04/08/164938253473119bd8d65e59fa38e0d3ba5191a38e_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 17,
+      "category": "pants",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/06/13/5b/171824193337879431dc8cf6cf8483534299207fa0_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 18,
+      "category": "pants",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/12/23/f3/17349257573909b4547944dc988c78fb9164e1d0d1_thumbnail_900x.jpg",
+      "visible": true
+    },
+    {
+      "id": 19,
+      "category": "pants",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/02/12/21/1739333146b2c1b70edd526dfb1369ba96f57a132d_thumbnail_900x.webp",
+      "visible": true
     }
   ]
   
