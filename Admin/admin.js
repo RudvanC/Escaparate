@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 content.classList.toggle('visible');
             });
 
+            
             // Contenedor del contenido (inicialmente oculto)
             const categoryContent = document.createElement('div');
             categoryContent.classList.add('category-content');

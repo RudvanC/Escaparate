@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (isVisible) {
                     const card = document.createElement('article');
                     card.classList.add('product-card');
+                    card.dataset.productId = product.id; // Añadimos un atributo con el id del producto
 
                     card.innerHTML = `
                         <img src="${product.image}" alt="${product.title}">
@@ -69,7 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p>${product.colors}</p>
                             <h5>${product.price}</h5>
                         </div>
+                        <button class="toggle-visibility">Ocultar</button>
                     `;
+
+                    // Botón para alternar visibilidad
+                    const toggleButton = card.querySelector('.toggle-visibility');
+                    toggleButton.addEventListener('click', () => toggleProductVisibility(product.id));
 
                     // Agregar la tarjeta al contenedor de productos
                     productsContainer.appendChild(card);
@@ -82,5 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
             // Agregar la sección al contenedor principal
             mainContainer.appendChild(categorySection);
         }
+    }
+
+    // Función para alternar la visibilidad de un producto
+    function toggleProductVisibility(productId) {
+        const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
+        
+        // Cambiar el estado de visibilidad del producto
+        savedVisibility[productId] = !savedVisibility[productId];
+
+        // Guardar los cambios en localStorage
+        localStorage.setItem('productsVisibility', JSON.stringify(savedVisibility));
+
+        // Re-renderizar los productos para reflejar los cambios
+        renderProducts();
     }
 });
