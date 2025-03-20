@@ -1,9 +1,9 @@
 [
     {
       "id": 1,
-      "category": "Zapatillas",
+      "category": "shoes",
       "title": "Jordan Spizike Low",
-      "description": "Zapatillas - Hombre",
+      "description": "shoes - Hombre",
       "colors": "2 colores",
       "price": "120.00€",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4ad06167-fb6c-47d7-b594-aa140c4ca041/JORDAN+SPIZIKE+LOW.png",
@@ -11,9 +11,9 @@
     },
     {
       "id": 2,
-      "category": "Zapatillas",
+      "category": "shoes",
       "title": "Air Jordan 1 Mid",
-      "description": "Zapatillas - Hombre",
+      "description": "shoes - Hombre",
       "colors": "2 colores",
       "price": "149.99€",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9161d4e2-db39-4bca-8d02-d58abe6cfc18/AIR+JORDAN+1+MID.png",
@@ -21,9 +21,9 @@
     },
     {
       "id": 3,
-      "category": "Zapatillas",
+      "category": "shoes",
       "title": "Air Jordan 1 Low",
-      "description": "Zapatillas - Hombre",
+      "description": "shoes - Hombre",
       "colors": "2 colores",
       "price": "80.00€",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ab3ec819-7808-4cd8-ba1c-b1e9386c8540/AIR+JORDAN+1+LOW.png",
@@ -31,9 +31,9 @@
     },
     {
       "id": 4,
-      "category": "Zapatillas",
+      "category": "shoes",
       "title": "Nike Air Max 95",
-      "description": "Zapatillas - Hombre",
+      "description": "shoes - Hombre",
       "colors": "2 colores",
       "price": "130.00€",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fc50c2c5-a30b-4de7-970f-a1525baf13bd/NIKE+AIR+MAX+95.png",
@@ -41,9 +41,9 @@
     },
     {
       "id": 5,
-      "category": "Zapatillas",
+      "category": "shoes",
       "title": "Nike Blazer Mid '77 Vintage",
-      "description": "Zapatillas - Hombre",
+      "description": "shoes - Hombre",
       "colors": "2 colores",
       "price": "99.99€",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/389b709e-5102-4e55-aa5d-07099b500831/BLAZER+MID+%2777+VNTG.png",
@@ -51,7 +51,7 @@
     },
     {
       "id": 6,
-      "category": "Camisetas",
+      "category": "shirts",
       "title": "Camiseta Classic",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -61,7 +61,7 @@
     },
     {
       "id": 7,
-      "category": "Camisetas",
+      "category": "shirts",
       "title": "Camiseta Modern",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -71,7 +71,7 @@
     },
     {
       "id": 8,
-      "category": "Camisetas",
+      "category": "shirts",
       "title": "Camiseta Urban",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -81,7 +81,7 @@
     },
     {
       "id": 9,
-      "category": "Camisetas",
+      "category": "shirts",
       "title": "Camiseta Retro",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -91,7 +91,7 @@
     },
     {
       "id": 10,
-      "category": "Camisetas",
+      "category": "shirts",
       "title": "Camiseta Vintage",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -101,7 +101,7 @@
     },
     {
       "id": 11,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Slim Fit",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Casual",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -121,7 +121,7 @@
     },
     {
       "id": 13,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Deportivo",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -131,7 +131,7 @@
     },
     {
       "id": 14,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Cargo",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -141,7 +141,7 @@
     },
     {
       "id": 15,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -151,7 +151,7 @@
     },
     {
       "id": 16,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -161,7 +161,7 @@
     },
     {
       "id": 17,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -171,7 +171,7 @@
     },
     {
       "id": 18,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -181,7 +181,7 @@
     },
     {
       "id": 19,
-      "category": "Pantalones",
+      "category": "pants",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
