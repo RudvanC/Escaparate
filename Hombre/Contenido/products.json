@@ -1,0 +1,193 @@
+[
+    {
+      "id": 1,
+      "category": "Zapatillas",
+      "title": "Jordan Spizike Low",
+      "description": "Zapatillas - Hombre",
+      "colors": "2 colores",
+      "price": "120.00€",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4ad06167-fb6c-47d7-b594-aa140c4ca041/JORDAN+SPIZIKE+LOW.png",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "category": "Zapatillas",
+      "title": "Air Jordan 1 Mid",
+      "description": "Zapatillas - Hombre",
+      "colors": "2 colores",
+      "price": "149.99€",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9161d4e2-db39-4bca-8d02-d58abe6cfc18/AIR+JORDAN+1+MID.png",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "category": "Zapatillas",
+      "title": "Air Jordan 1 Low",
+      "description": "Zapatillas - Hombre",
+      "colors": "2 colores",
+      "price": "80.00€",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ab3ec819-7808-4cd8-ba1c-b1e9386c8540/AIR+JORDAN+1+LOW.png",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "category": "Zapatillas",
+      "title": "Nike Air Max 95",
+      "description": "Zapatillas - Hombre",
+      "colors": "2 colores",
+      "price": "130.00€",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fc50c2c5-a30b-4de7-970f-a1525baf13bd/NIKE+AIR+MAX+95.png",
+      "visible": true
+    },
+    {
+      "id": 5,
+      "category": "Zapatillas",
+      "title": "Nike Blazer Mid '77 Vintage",
+      "description": "Zapatillas - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/389b709e-5102-4e55-aa5d-07099b500831/BLAZER+MID+%2777+VNTG.png",
+      "visible": true
+    },
+    {
+      "id": 6,
+      "category": "Camisetas",
+      "title": "Camiseta Classic",
+      "description": "Camiseta - Hombre",
+      "colors": "2 colores",
+      "price": "89.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/09/14/f1/1726310497fa27930e2bfce3d5abb34d76361ecb11_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 7,
+      "category": "Camisetas",
+      "title": "Camiseta Modern",
+      "description": "Camiseta - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/11/23/ee/17323550999c7fba5d550e5d1ee466f6240ebba389_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 8,
+      "category": "Camisetas",
+      "title": "Camiseta Urban",
+      "description": "Camiseta - Hombre",
+      "colors": "2 colores",
+      "price": "79.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/11/26/73/1732606119f7a8c06a432ff067ca8f9eb4b32d0ed6_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 9,
+      "category": "Camisetas",
+      "title": "Camiseta Retro",
+      "description": "Camiseta - Hombre",
+      "colors": "2 colores",
+      "price": "69.99€",
+      "image": "https://img.ltwebstatic.com/images3_pi/2024/12/31/db/1735629290748f7af7379bfbbbd17979ed15521c69_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 10,
+      "category": "Camisetas",
+      "title": "Camiseta Vintage",
+      "description": "Camiseta - Hombre",
+      "colors": "2 colores",
+      "price": "109.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/02/17/16/1739759678840c8648e2c89668e6702b3401377ce8_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 11,
+      "category": "Pantalones",
+      "title": "Pantalón Slim Fit",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/01/20/60/1737361406b60b62f751892cfcb59beda96a5fd4bc_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 12,
+      "category": "Pantalones",
+      "title": "Pantalón Casual",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "89.99€",
+      "image": "//img.ltwebstatic.com/images3_spmp/2024/08/20/d7/1724147088de29b6089ef8e1e4d1ad8cebbd7a55b5_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 13,
+      "category": "Pantalones",
+      "title": "Pantalón Deportivo",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "79.99€",
+      "image": "//img.ltwebstatic.com/images3_spmp/2024/11/13/fb/1731477152b18b2a396af1e1e9e176e424d7304493_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 14,
+      "category": "Pantalones",
+      "title": "Pantalón Cargo",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "109.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/02/08/8d/17389909307dcf4aff6da990dbc2f3176166498db6_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 15,
+      "category": "Pantalones",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/02/28/fc/1740706121293c7d737a1116f0eca8d70e3a73e7c0_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 16,
+      "category": "Pantalones",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2022/04/08/164938253473119bd8d65e59fa38e0d3ba5191a38e_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 17,
+      "category": "Pantalones",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/06/13/5b/171824193337879431dc8cf6cf8483534299207fa0_thumbnail_900x.webp",
+      "visible": true
+    },
+    {
+      "id": 18,
+      "category": "Pantalones",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2024/12/23/f3/17349257573909b4547944dc988c78fb9164e1d0d1_thumbnail_900x.jpg",
+      "visible": true
+    },
+    {
+      "id": 19,
+      "category": "Pantalones",
+      "title": "Pantalón Clásico",
+      "description": "Pantalón - Hombre",
+      "colors": "2 colores",
+      "price": "99.99€",
+      "image": "//img.ltwebstatic.com/images3_pi/2025/02/12/21/1739333146b2c1b70edd526dfb1369ba96f57a132d_thumbnail_900x.webp",
+      "visible": true
+    }
+  ]
+  
