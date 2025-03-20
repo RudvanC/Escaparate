@@ -209,7 +209,11 @@ main {
     gap: 20px;
     justify-content: center;
     align-items: center;
+}
 
+.pants-items{
+    flex-wrap: wrap;
+    width: 1400px;
 }
 
 .shoes,
