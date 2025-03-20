@@ -50,6 +50,7 @@ a {
 }
 
 
+<<<<<<< HEAD
 /* Inicio de menu para desplegar al dar click en mujer */
 .menu-container {
     position: relative; /* Cambiado a relative para el posicionamiento correcto */
@@ -61,10 +62,25 @@ a {
 #menu-toggle-hombres,
 #menu-toggle-mujeres,
 #menu-toggle-ninos {
+=======
+/*Inicio de menu paar desplegar al dar click en hombre*/
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+    z-index: 5;
+}
+
+
+#menu-toggle {
+    /* Checkbox oculto para controlar el menú */
+>>>>>>> dd0cf59 (cambios en login)
     display: none;
 }
 
+
 .menu-button {
+    /* Botón estilo hamburguesa */
     display: block;
     padding: 10px 20px;
     background: #333;
@@ -76,6 +92,7 @@ a {
 }
 
 .menu {
+    /* Estilo del menú desplegable */
     position: absolute;
     top: 100%;
     left: 0;
@@ -89,14 +106,24 @@ a {
     z-index: 1001; /* Asegura que el menú esté encima del botón */
 }
 
+<<<<<<< HEAD
 #menu-toggle-hombres:checked + .menu-button + .menu,
 #menu-toggle-mujeres:checked + .menu-button + .menu,
 #menu-toggle-ninos:checked + .menu-button + .menu {
     max-height: 200px; /* Ajusta según el contenido */
     overflow-y: auto; /* Habilita el desplazamiento vertical */
+=======
+
+#menu-toggle:checked+.menu-button+.menu {
+    /* Mostrar menú cuando se activa el checkbox */
+    max-height: 200px;
+    /* Ajusta según el contenido */
+>>>>>>> dd0cf59 (cambios en login)
 }
 
+
 .menu ul {
+    /* Estilos de los enlaces del menú */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -122,7 +149,8 @@ a {
     background: #f4f4f4;
 }
 
-/* final del estilo del menu desplegable */
+/*final del estilo del menu desplegable*/
+
 .announcements {
     width: 100%;
     height: 50px;
@@ -184,8 +212,13 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+<<<<<<< HEAD
     width: 100%; /* Ajustado a 100% para ocupar el ancho completo */
     color: rgb(0, 0, 0);
+=======
+    width: 100vw;
+    color: #323232;
+>>>>>>> dd0cf59 (cambios en login)
     font-weight: bold;
 }
 

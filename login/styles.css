@@ -5,6 +5,8 @@
     /* gris oscuro */
     --color-terciario: #000000;
     /* negro */
+    --color-quinto: #ddd;
+     
 }
 
 * {
@@ -194,30 +196,51 @@ a {
     font-weight: bold;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     font-family: 'Lato', sans-serif;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0;
     scroll-behavior: smooth;
-    background: linear-gradient(150deg, var(--color-primario), var(--color-secundario));
+    
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    background: linear-gradient(150deg, #ffffff, #d6c9c9);
 }
 
 .formulario {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: #ddd;
+    width: 40%;
+    height: 60%;
+    
+}
+
+.formulario h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 1px solid #000000;
+}
+
+.formulario form {
+    padding: 0 40px;
+}
+
+form .nombre {
+  
 }
 
 footer {
     background-color: var(--color-primario);
     border-top: 1px solid #000000;
     padding: 20px 0;
-    margin-top: 100px;
+    
 }
 
 .footer-container {
