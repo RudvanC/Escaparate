@@ -27,24 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
         // Recuperar la visibilidad guardada en localStorage
         const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
 
-        // Agrupar productos por categoría
+        // Agrupar productos por categoría interna
         const groupedProducts = products.reduce((acc, product) => {
             if (!acc[product.category]) acc[product.category] = [];
             acc[product.category].push(product);
             return acc;
         }, {});
 
-        // Renderizar cada categoría
+        // Renderizar cada categoría interna
         for (const [category, productsInCategory] of Object.entries(groupedProducts)) {
             // Crear la sección de la categoría
             const categorySection = document.createElement('section');
             categorySection.id = category;
             categorySection.classList.add(category);
 
-            // Título de la categoría
+            // Obtener el nombre visible desde el primer producto de la categoría
+            const categoryDisplay = productsInCategory[0].categoryDisplay;
+
+            // Título de la categoría visible
             const categoryTitle = document.createElement('div');
             categoryTitle.classList.add('title');
-            categoryTitle.innerHTML = `<h2>${category}</h2>`;
+            categoryTitle.innerHTML = `<h2>${categoryDisplay}</h2>`;
             categorySection.appendChild(categoryTitle);
 
             // Contenedor de productos
@@ -52,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             productsContainer.classList.add(`${category}-items`);
             productsContainer.id = `products-container-${category}`;
 
-            // Renderizar productos de la categoría
+            // Renderizar productos visibles de la categoría
             productsInCategory.forEach(product => {
                 const isVisible = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
 
