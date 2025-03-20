@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Hombre/Contenido/products.json'; // Ruta al archivo JSON
-    const containerShoes = document.getElementById('products-container-shoes');
-    const containerShirts = document.getElementById('products-container-shirts');
-    const containerPants = document.getElementById('products-container-pants');
+    const jsonPath = 'products.json'; // Ruta al archivo JSON
+    const mainContainer = document.querySelector('main'); // Contenedor principal
 
     let products = [];
 
@@ -23,41 +21,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para renderizar los productos en la página principal
     function renderProducts() {
-        // Limpiar contenedores
-        containerShoes.innerHTML = '';
-        containerShirts.innerHTML = '';
-        containerPants.innerHTML = '';
+        // Limpiar el contenedor principal
+        mainContainer.innerHTML = '';
 
         // Recuperar la visibilidad guardada en localStorage
         const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
 
-        // Filtrar y renderizar solo los productos visibles
-        products.forEach(product => {
-            const isVisible = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
+        // Agrupar productos por categoría
+        const groupedProducts = products.reduce((acc, product) => {
+            if (!acc[product.category]) acc[product.category] = [];
+            acc[product.category].push(product);
+            return acc;
+        }, {});
 
-            if (isVisible) {
-                const card = document.createElement('article');
-                card.classList.add('product-card');
+        // Renderizar cada categoría
+        for (const [category, productsInCategory] of Object.entries(groupedProducts)) {
+            // Crear la sección de la categoría
+            const categorySection = document.createElement('section');
+            categorySection.id = category;
+            categorySection.classList.add(category);
 
-                card.innerHTML = `
-                    <img src="${product.image}" alt="${product.title}">
-                    <div class="desc-text">
-                        <h3>${product.title}</h3>
-                        <p>${product.description}</p>
-                        <p>${product.colors}</p>
-                        <h5>${product.price}</h5>
-                    </div>
-                `;
+            // Título de la categoría
+            const categoryTitle = document.createElement('div');
+            categoryTitle.classList.add('title');
+            categoryTitle.innerHTML = `<h2>${category}</h2>`;
+            categorySection.appendChild(categoryTitle);
 
-                // Agregar la tarjeta al contenedor correspondiente
-                if (product.category === 'shoes') {
-                    containerShoes.appendChild(card);
-                } else if (product.category === 'shirts') {
-                    containerShirts.appendChild(card);
-                } else if (product.category === 'pants') {
-                    containerPants.appendChild(card);
+            // Contenedor de productos
+            const productsContainer = document.createElement('div');
+            productsContainer.classList.add(`${category}-items`);
+            productsContainer.id = `products-container-${category}`;
+
+            // Renderizar productos de la categoría
+            productsInCategory.forEach(product => {
+                const isVisible = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
+
+                if (isVisible) {
+                    const card = document.createElement('article');
+                    card.classList.add('product-card');
+
+                    card.innerHTML = `
+                        <img src="${product.image}" alt="${product.title}">
+                        <div class="desc-text">
+                            <h3>${product.title}</h3>
+                            <p>${product.description}</p>
+                            <p>${product.colors}</p>
+                            <h5>${product.price}</h5>
+                        </div>
+                    `;
+
+                    // Agregar la tarjeta al contenedor de productos
+                    productsContainer.appendChild(card);
                 }
-            }
-        });
+            });
+
+            // Agregar el contenedor de productos a la sección
+            categorySection.appendChild(productsContainer);
+
+            // Agregar la sección al contenedor principal
+            mainContainer.appendChild(categorySection);
+        }
     }
 });

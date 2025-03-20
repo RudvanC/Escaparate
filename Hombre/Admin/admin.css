@@ -12,7 +12,45 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Título de la categoría (clickeable) */
+/* Formularios */
+.form-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-top: 0;
+    color: #323232;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    background-color: #323232;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #000000;
+}
+
+/* Secciones desplegables */
 .category-title {
     cursor: pointer;
     padding: 10px;
@@ -27,19 +65,17 @@ h1 {
     background-color: #000000;
 }
 
-/* Contenedor del contenido (inicialmente oculto) */
 .category-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
 
-/* Clase para mostrar el contenido */
 .category-content.visible {
-    max-height: none; /* Ajusta según el contenido */
+    max-height: none; /* Altura automática */
 }
 
-/* Estilos para cada producto */
+/* Productos */
 .admin-product {
     display: flex;
     align-items: center;
@@ -99,43 +135,5 @@ h1 {
 }
 
 #save-visibility:hover {
-    background-color: #000000;
-}
-
-/* Estilos para los formularios */
-.form-container {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h2 {
-    margin-top: 0;
-    color: #323232;
-}
-
-.form-container input,
-.form-container select,
-.form-container button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-container button {
-    background-color: #323232;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-container button:hover {
     background-color: #000000;
 }

@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sectionName = document.getElementById('section-name').value.trim();
         if (sectionName && !categories.includes(sectionName)) {
             categories.push(sectionName);
+            localStorage.setItem('categories', JSON.stringify(categories)); // Guardar categorías
             populateCategorySelect();
             addSectionForm.reset();
             alert(`Sección "${sectionName}" agregada correctamente.`);

@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "category": "shoes",
+      "category": "Zapatillas",
       "title": "Jordan Spizike Low",
       "description": "Zapatillas - Hombre",
       "colors": "2 colores",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "category": "shoes",
+      "category": "Zapatillas",
       "title": "Air Jordan 1 Mid",
       "description": "Zapatillas - Hombre",
       "colors": "2 colores",
@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "category": "shoes",
+      "category": "Zapatillas",
       "title": "Air Jordan 1 Low",
       "description": "Zapatillas - Hombre",
       "colors": "2 colores",
@@ -31,7 +31,7 @@
     },
     {
       "id": 4,
-      "category": "shoes",
+      "category": "Zapatillas",
       "title": "Nike Air Max 95",
       "description": "Zapatillas - Hombre",
       "colors": "2 colores",
@@ -41,7 +41,7 @@
     },
     {
       "id": 5,
-      "category": "shoes",
+      "category": "Zapatillas",
       "title": "Nike Blazer Mid '77 Vintage",
       "description": "Zapatillas - Hombre",
       "colors": "2 colores",
@@ -51,7 +51,7 @@
     },
     {
       "id": 6,
-      "category": "shirts",
+      "category": "Camisetas",
       "title": "Camiseta Classic",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -61,7 +61,7 @@
     },
     {
       "id": 7,
-      "category": "shirts",
+      "category": "Camisetas",
       "title": "Camiseta Modern",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -71,7 +71,7 @@
     },
     {
       "id": 8,
-      "category": "shirts",
+      "category": "Camisetas",
       "title": "Camiseta Urban",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -81,7 +81,7 @@
     },
     {
       "id": 9,
-      "category": "shirts",
+      "category": "Camisetas",
       "title": "Camiseta Retro",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -91,7 +91,7 @@
     },
     {
       "id": 10,
-      "category": "shirts",
+      "category": "Camisetas",
       "title": "Camiseta Vintage",
       "description": "Camiseta - Hombre",
       "colors": "2 colores",
@@ -101,7 +101,7 @@
     },
     {
       "id": 11,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Slim Fit",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Casual",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -121,7 +121,7 @@
     },
     {
       "id": 13,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Deportivo",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -131,7 +131,7 @@
     },
     {
       "id": 14,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Cargo",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -141,7 +141,7 @@
     },
     {
       "id": 15,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -151,7 +151,7 @@
     },
     {
       "id": 16,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -161,7 +161,7 @@
     },
     {
       "id": 17,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -171,7 +171,7 @@
     },
     {
       "id": 18,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
@@ -181,7 +181,7 @@
     },
     {
       "id": 19,
-      "category": "pants",
+      "category": "Pantalones",
       "title": "Pantalón Clásico",
       "description": "Pantalón - Hombre",
       "colors": "2 colores",
