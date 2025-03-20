@@ -2,6 +2,7 @@
     --color-primario: #DDD0C8; /* beige */
     --color-secundario: #323232; /* gris oscuro */
     --color-terciario: #000000; /* negro */
+    --color-cuarto: #ffef09;
 }
 
 * {
@@ -186,7 +187,7 @@ main {}
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    
     gap: 20px;
 }
 
@@ -218,6 +219,15 @@ main {}
     gap: 20px;
 }
 
+.agregar-carrito{
+    background-color: var(--color-cuarto);
+    color: var(--color-terciario);
+    width: 120px; 
+    height: 30px; 
+    border: var(--color-secundario) solid 2px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
 
 .carousel-container {
@@ -372,33 +382,5 @@ footer {
     }
 }
 
-/* Pantallas grandes (escritorios) */
-@media (min-width: 1025px) {
-    .announcements {
-        height: 50px; /* Altura para escritorios */
-    }
 
-    .announcements p {
-        font-size: 1.2rem; /* Tamaño de fuente para escritorios */
-    }
-    
-    
-    .fotos img {
-        width: 30%; /* Tres imágenes por fila en tablets */
-    }
 
-    .carousel-track img {
-        width: 33.33%; /* Tres imágenes por fila en tablets */
-    }
-}
-
-/* Pantallas grandes (escritorios) */
-@media (min-width: 1025px) {
-    .fotos img {
-        width: 20%; /* Cinco imágenes por fila en escritorios */
-    }
-
-    .carousel-track img {
-        width: 25%; /* Cuatro imágenes por fila en escritorios */
-    }
-}
