@@ -12,50 +12,59 @@
  });
 
  document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Hombre/products.json';
-  
-    // Contenedores para cada categoría
+    const jsonPath = 'products.json';
     const containerShoes = document.getElementById('products-container-shoes');
     const containerShirts = document.getElementById('products-container-shirts');
     const containerPants = document.getElementById('products-container-pants');
-  
+
+    let products = [];
+
+    // Cargar productos desde el JSON
     fetch(jsonPath)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('No se pudo cargar el archivo JSON');
-        }
-        return response.json();
-      })
-      .then(products => {
-        // Recorremos cada producto
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            renderProducts();
+        })
+        .catch(error => console.error('Error al cargar los productos:', error));
+
+    // Función para renderizar los productos en la página principal
+    function renderProducts() {
+        // Limpiar contenedores
+        containerShoes.innerHTML = '';
+        containerShirts.innerHTML = '';
+        containerPants.innerHTML = '';
+
+        // Recuperar la visibilidad guardada en localStorage
+        const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
+
+        // Filtrar y renderizar solo los productos visibles
         products.forEach(product => {
-          // Creamos una tarjeta para el producto
-          const card = document.createElement('article');
-          card.classList.add('product-card'); // Puedes definir estilos para .product-card en tu CSS
-  
-          card.innerHTML = `
-            <img src="${product.image}" alt="${product.title}">
-            <div class="desc-text">
-              <h3>${product.title}</h3>
-              <p>${product.description}</p>
-              <p>${product.colors}</p>
-              <h5>${product.price}</h5>
-            </div>
-          `;
-  
-          // Agregamos la tarjeta al contenedor correspondiente según la categoría
-          if (product.category === 'shoes') {
-            containerShoes.appendChild(card);
-          } else if (product.category === 'shirts') {
-            containerShirts.appendChild(card);
-          } else if (product.category === 'pants') {
-            containerPants.appendChild(card);
-          }
+            const isVisible = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
+
+            if (isVisible) {
+                const card = document.createElement('article');
+                card.classList.add('product-card');
+
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}">
+                    <div class="desc-text">
+                        <h3>${product.title}</h3>
+                        <p>${product.description}</p>
+                        <p>${product.colors}</p>
+                        <h5>${product.price}</h5>
+                    </div>
+                `;
+
+                // Agregar la tarjeta al contenedor correspondiente
+                if (product.category === 'shoes') {
+                    containerShoes.appendChild(card);
+                } else if (product.category === 'shirts') {
+                    containerShirts.appendChild(card);
+                } else if (product.category === 'pants') {
+                    containerPants.appendChild(card);
+                }
+            }
         });
-      })
-      .catch(error => {
-        console.error('Error al cargar los productos:', error);
-        // Puedes mostrar un mensaje de error en cada contenedor si lo deseas
-      });
-  });
-  
+    }
+});
