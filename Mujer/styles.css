@@ -349,6 +349,9 @@ section[class] > section .desc-text {
 section[id] .title h2 {
     position: relative;
     padding-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 section[id] .title h2::after {
@@ -399,6 +402,7 @@ footer {
     background-color: var(--color-primario);
     border-top: 1px solid #000000;
     padding: 20px 0;
+    margin-top: 30px;
 }
 
 .footer-container {
@@ -472,4 +476,77 @@ footer {
     .carousel-track img {
         width: 75%; /* Imágenes aún más grandes en pantallas muy pequeñas */
     }
+}
+
+
+.chaquetas-items,
+.pantalones-items,
+.camisas-items,
+.faldas-items,
+.vestidos-items,
+.deporte-items,
+.conjuntos-items,
+.lenceria-items {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.chaquetas,
+.pantalones,
+.camisas,
+.faldas,
+.vestidos,
+.deporte,
+.conjuntos,
+.lenceria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 2rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: montserrat;
+    color: #000000;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 85%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.desc-text {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: montserrat;
+    font-size: 0.8rem;
+    text-align: left;
 }

@@ -301,7 +301,7 @@
     },
     {
       "id": 9,
-      "category": "camisas-camisetas",
+      "category": "camisas",
       "categoryDisplay": "Camisetas",
       "title": "Camiseta LV",
       "description": "Camisas y Camisetas - Mujer",
@@ -312,7 +312,7 @@
     },
     {
       "id": 10,
-      "category": "camisas-camisetas",
+      "category": "camisas",
       "categoryDisplay": "Camisetas",
       "title": "Camisa",
       "description": "Camisas y Camisetas - Mujer",
@@ -323,7 +323,7 @@
     },
     {
       "id": 11,
-      "category": "camisas-camisetas",
+      "category": "camisas",
       "categoryDisplay": "Camisetas",
       "title": "Camiseta Casual",
       "description": "Camisas y Camisetas - Mujer",
@@ -334,7 +334,7 @@
     },
     {
       "id": 12,
-      "category": "camisas-camisetas",
+      "category": "camisas",
       "categoryDisplay": "Camisetas",
       "title": "Blusa",
       "description": "Camisas y Camisetas - Mujer",
