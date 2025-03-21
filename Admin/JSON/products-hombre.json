@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "shoes",
-    "categoryDisplay": "shoes",
+    "categoryDisplay": "Zapatillas",
     "title": "Jordan Spizike Low",
     "description": "shoes - Hombre",
     "colors": "2 colores",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "category": "shoes",
-    "categoryDisplay": "shoes",
+    "categoryDisplay": "Zapatillas",
     "title": "Air Jordan 1 Mid",
     "description": "shoes - Hombre",
     "colors": "2 colores",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "category": "shoes",
-    "categoryDisplay": "shoes",
+    "categoryDisplay": "Zapatillas",
     "title": "Air Jordan 1 Low",
     "description": "shoes - Hombre",
     "colors": "2 colores",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "category": "shoes",
-    "categoryDisplay": "shoes",
+    "categoryDisplay": "Zapatillas",
     "title": "Nike Air Max 95",
     "description": "shoes - Hombre",
     "colors": "2 colores",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "category": "shoes",
-    "categoryDisplay": "shoes",
+    "categoryDisplay": "Zapatillas",
     "title": "Nike Blazer Mid '77 Vintage",
     "description": "shoes - Hombre",
     "colors": "2 colores",

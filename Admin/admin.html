@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Productos</title>
-    <link rel="stylesheet" href="/Hombre/Contenido/style.css"> <!-- CSS general -->
     <link rel="stylesheet" href="/Admin/admin.css"> <!-- CSS específico de admin -->
 </head>
 <body>
     <h1>Administración de Productos</h1>
+
+    <!-- Seleccionar categoría -->
+    <div>
+        <label for="category-select">Selecciona una categoría:</label>
+        <select id="category-select">
+            <!-- Las opciones se llenarán dinámicamente -->
+        </select>
+    </div>
+
     <!-- Lista de productos existentes -->
     <div id="admin-products-container">
-        <!-- Secciones por categoría se cargarán aquí -->
+        <!-- Las secciones y productos se cargarán aquí -->
     </div>
 
     <button id="save-visibility">Guardar Cambios</button>
 
-     <!-- Formulario para agregar nuevas secciones -->
+    <!-- Formulario para agregar nuevas secciones -->
     <div class="form-container">
         <h2>Agregar Nueva Sección</h2>
         <form id="add-section-form">

@@ -1,32 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Admin/JSON/products-hombre.json'; // Ruta al archivo JSON
     const adminContainer = document.getElementById('admin-products-container');
     const saveButton = document.getElementById('save-visibility');
     const addSectionForm = document.getElementById('add-section-form');
     const addProductForm = document.getElementById('add-product-form');
-    const productCategorySelect = document.getElementById('product-category');
+    const categorySelect = document.getElementById('category-select');  // Selección de categorías
+    const productCategorySelect = document.getElementById('product-category'); // Selección de categoría en el formulario de productos
 
     let products = [];
-    let categories = [];
+    let categories = ['hombre', 'mujer', 'niño']; // Categorías predeterminadas
+    let currentCategory = 'hombre'; // Categoría seleccionada por defecto
 
-    // Cargar productos desde el JSON
-    fetch(jsonPath)
-        .then(response => response.json())
-        .then(data => {
-            products = data;
-            categories = [...new Set(products.map(product => product.category))]; // Obtener categorías únicas
-            renderAdminProducts();
-            populateCategorySelect();
-        })
-        .catch(error => console.error('Error al cargar los productos:', error));
+    // Cargar productos desde el archivo JSON según la categoría seleccionada
+    function loadProducts(category) {
+        const jsonPath = `/Admin/JSON/products-${category}.json`; // Ruta al archivo JSON correspondiente
+        fetch(jsonPath)
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                renderAdminProducts();
+            })
+            .catch(error => console.error('Error al cargar los productos:', error));
+    }
+
+    // Cargar productos por defecto al cargar la página
+    loadProducts(currentCategory);
 
     // Función para renderizar los productos en la página de administración
     function renderAdminProducts() {
-        // Limpiar el contenedor
+        // Limpiar el contenedor de productos
         adminContainer.innerHTML = '';
-
-        // Recuperar la visibilidad guardada en localStorage
-        const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
 
         // Agrupar productos por categoría
         const groupedProducts = products.reduce((acc, product) => {
@@ -35,78 +37,82 @@ document.addEventListener("DOMContentLoaded", () => {
             return acc;
         }, {});
 
-        // Renderizar cada categoría
-        for (const [category, productsInCategory] of Object.entries(groupedProducts)) {
-            const categorySection = document.createElement('div');
-            categorySection.classList.add('category-section');
+        // Solo renderizamos los productos de la categoría seleccionada
+        const productsInCategory = groupedProducts[currentCategory] || [];
 
-            // Título de la categoría (clickeable)
-            const categoryTitle = document.createElement('h2');
-            categoryTitle.textContent = category;
-            categoryTitle.classList.add('category-title');
-            categoryTitle.addEventListener('click', () => {
-                const content = categorySection.querySelector('.category-content');
-                content.classList.toggle('visible');
-            });
+        // Crear la sección para la categoría seleccionada
+        const categorySection = document.createElement('div');
+        categorySection.classList.add('category-section');
 
-            // Contenedor del contenido (inicialmente oculto)
-            const categoryContent = document.createElement('div');
-            categoryContent.classList.add('category-content');
+        // Título de la categoría
+        const categoryTitle = document.createElement('h2');
+        categoryTitle.textContent = currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1); // Capitalizar primera letra
+        categoryTitle.classList.add('category-title');
 
-            // Renderizar productos de la categoría
-            productsInCategory.forEach(product => {
-                const productDiv = document.createElement('div');
-                productDiv.classList.add('admin-product');
+        // Contenedor del contenido (productos)
+        const categoryContent = document.createElement('div');
+        categoryContent.classList.add('category-content');
 
-                // Imagen del producto
-                const productImage = document.createElement('img');
-                productImage.src = product.image;
-                productImage.alt = product.title;
+        // Renderizar productos
+        productsInCategory.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('admin-product');
 
-                // Información del producto
-                const productInfo = document.createElement('div');
-                productInfo.classList.add('product-info');
-                productInfo.innerHTML = `
-                    <h3>${product.title}</h3>
-                    <p>${product.description}</p>
-                    <p>${product.colors}</p>
-                    <p class="price">${product.price}</p>
-                `;
+            const productImage = document.createElement('img');
+            productImage.src = product.image;
+            productImage.alt = product.title;
 
-                // Checkbox para visibilidad
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.checked = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
-                checkbox.id = `product-${product.id}`;
+            const productInfo = document.createElement('div');
+            productInfo.classList.add('product-info');
+            productInfo.innerHTML = `
+                <h3>${product.title}</h3>
+                <p>${product.description}</p>
+                <p>${product.colors}</p>
+                <p class="price">${product.price}</p>
+            `;
 
-                // Agregar elementos al contenedor del producto
-                productDiv.appendChild(productImage);
-                productDiv.appendChild(productInfo);
-                productDiv.appendChild(checkbox);
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = product.visible;
+            checkbox.id = `product-${product.id}`;
 
-                // Agregar el producto al contenedor de la categoría
-                categoryContent.appendChild(productDiv);
-            });
+            productDiv.appendChild(productImage);
+            productDiv.appendChild(productInfo);
+            productDiv.appendChild(checkbox);
+            categoryContent.appendChild(productDiv);
+        });
 
-            // Agregar título y contenido a la sección de la categoría
-            categorySection.appendChild(categoryTitle);
-            categorySection.appendChild(categoryContent);
-
-            // Agregar la sección de la categoría al contenedor principal
-            adminContainer.appendChild(categorySection);
-        }
+        categorySection.appendChild(categoryTitle);
+        categorySection.appendChild(categoryContent);
+        adminContainer.appendChild(categorySection);
     }
 
-    // Función para llenar el select de categorías
+    // Función para llenar el select de categorías tanto para administrar como para agregar productos
     function populateCategorySelect() {
+        // Llenar el select de categorías para administración
+        categorySelect.innerHTML = '';
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            categorySelect.appendChild(option);
+        });
+
+        // Llenar el select de categorías para agregar productos
         productCategorySelect.innerHTML = '<option value="">Selecciona una categoría</option>';
         categories.forEach(category => {
             const option = document.createElement('option');
             option.value = category;
-            option.textContent = category;
+            option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
             productCategorySelect.appendChild(option);
         });
     }
+
+    // Cargar productos de la categoría seleccionada
+    categorySelect.addEventListener('change', (e) => {
+        currentCategory = e.target.value;
+        loadProducts(currentCategory);
+    });
 
     // Agregar nueva sección
     addSectionForm.addEventListener('submit', (e) => {
@@ -127,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addProductForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const newProduct = {
-            id: Date.now(), // ID único basado en la fecha
+            id: Date.now(),
             category: document.getElementById('product-category').value,
             title: document.getElementById('product-title').value.trim(),
             description: document.getElementById('product-description').value.trim(),
@@ -140,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (newProduct.category && newProduct.title && newProduct.image) {
             products.push(newProduct);
             localStorage.setItem('products', JSON.stringify(products));
-            renderAdminProducts();
+            loadProducts(currentCategory); // Recargar los productos después de agregar uno nuevo
             addProductForm.reset();
             alert('Producto agregado correctamente.');
         } else {
@@ -148,19 +154,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Guardar cambios en localStorage
+    // Guardar cambios en visibilidad y productos
     saveButton.addEventListener('click', () => {
         const visibilityMap = {};
 
-        // Recorrer todos los checkboxes y guardar su estado
+        // Recorrer los checkboxes y guardar el estado
         products.forEach(product => {
             const checkbox = document.getElementById(`product-${product.id}`);
             visibilityMap[product.id] = checkbox.checked;
         });
 
-        // Guardar en localStorage
+        // Guardar visibilidad y productos
         localStorage.setItem('productsVisibility', JSON.stringify(visibilityMap));
         localStorage.setItem('products', JSON.stringify(products));
         alert('Cambios guardados correctamente.');
     });
+
+    // Inicializar categorías en el select
+    populateCategorySelect();
 });
