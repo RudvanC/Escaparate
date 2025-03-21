@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para cargar los datos desde el JSON
     function loadData() {
-        const jsonPath = `/Admin/JSON/products.json`;
+        const jsonPath = `/Admin/JSON/json-general.json`;
         fetch(jsonPath)
             .then(response => response.json())
             .then(json => {
