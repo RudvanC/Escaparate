@@ -1,12 +1,8 @@
 :root {
-    --color-primario: #DDD0C8;
-    /* beige */
-    --color-secundario: #323232;
-    /* gris oscuro */
-    --color-terciario: #000000;
-    /* negro */
-    --color-quinto: #ddd;
-     
+    --color-primario: #DDD0C8; /* beige */
+    --color-secundario: #323232; /* gris oscuro */
+    --color-terciario: #000000; /* negro */
+    --color-cuarto: #ffef09;
 }
 
 * {
@@ -60,13 +56,6 @@ a {
     z-index: 5;
 }
 
-
-#menu-toggle {
-    /* Checkbox oculto para controlar el menú */
-    display: none;
-}
-
-
 .menu-button {
     /* Botón estilo hamburguesa */
     display: block;
@@ -94,10 +83,17 @@ a {
 }
 
 
-#menu-toggle:checked+.menu-button+.menu {
-    /* Mostrar menú cuando se activa el checkbox */
-    max-height: 200px;
-    /* Ajusta según el contenido */
+#menu-toggle-hombres:checked + .menu-button + .menu,
+#menu-toggle-mujeres:checked + .menu-button + .menu,
+#menu-toggle-ninos:checked + .menu-button + .menu {
+    max-height: 200px; /* Ajusta según el contenido */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+#menu-toggle-hombres,
+#menu-toggle-mujeres,
+#menu-toggle-ninos {
+    display: none;
 }
 
 
@@ -195,29 +191,21 @@ a {
     color: #323232;
     font-weight: bold;
 }
-
-html, body {
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-    height: 100vh;
-    margin: 0;
-    scroll-behavior: smooth;
-    
-    
-}
-
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 50vh;
-    background: linear-gradient(150deg, #ffffff, #d6c9c9);
+    flex-direction: column;    
+   
+   
 }
 
 .contenedor-login {
-    background-color: #fff;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    
+    padding: 20px 200px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -226,9 +214,15 @@ main {
   }
   
   h1 {
-    margin-bottom: 20px;
+    
+    max-width: 600px;
+    width: 100%;
+    text-align: center;    
     font-size: 24px;
     color: #333;
+    padding-bottom: 10px;
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
   .campo-formulario {
@@ -243,7 +237,9 @@ main {
   }
   
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
