@@ -1,0 +1,619 @@
+:root {
+    --color-primario: #DDD0C8;
+    /* beige */
+    --color-secundario: #323232;
+    /* gris oscuro */
+    --color-terciario: #000000;
+    /* negro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.montserrat-montserratfont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: bold;
+}
+
+/* Estilo para todo el documento en general */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fffefe;
+    padding: 1rem;
+    border-bottom: 2px solid #000000;
+}
+
+a {
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/* Inicio de menu para desplegar al dar click en mujer */
+.menu-container {
+    position: relative; /* Cambiado a relative para el posicionamiento correcto */
+    display: inline-block; /* Permite que el contenedor se ajuste al contenido */
+    z-index: 1000;
+    width: auto; /* Permite que el ancho se ajuste al contenido */
+}
+
+#menu-toggle-hombres,
+#menu-toggle-mujeres,
+#menu-toggle-ninos {
+    display: none;
+}
+
+.menu-button {
+    display: block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    z-index: 1001; /* Asegura que el menú esté encima del botón */
+}
+
+#menu-toggle-hombres:checked + .menu-button + .menu,
+#menu-toggle-mujeres:checked + .menu-button + .menu,
+#menu-toggle-ninos:checked + .menu-button + .menu {
+    max-height: 200px; /* Ajusta según el contenido */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu a:hover {
+    background: #f4f4f4;
+}
+
+/* final del estilo del menu desplegable */
+.announcements {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background-color: #DDD0C8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.announcements p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: textChange 20s infinite;
+}
+
+/* Definimos la animación */
+@keyframes textChange {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+}
+
+/* Aplicamos el retraso a cada párrafo */
+.announcements p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.announcements p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.announcements p:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.announcements p:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Ajustado a 100% para ocupar el ancho completo */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.home-logo img {
+    width: 30px;
+    height: 30px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-category {
+    width: 20%;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+.carousel-container {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: max-content
+  }
+  
+  .carousel-track img {
+    width: 100px;
+    height: 120px; /* Agregado alto fijo */
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+  }
+}
+
+/*tienda*/
+
+/* Estilos generales para las secciones */
+
+#cart {
+    padding: 20px;
+    font-family: sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 100%; /* Hace que el carrito sea redondo */
+    width: 200px; /* Ajusta el ancho para que coincida con el alto */
+    height: 200px; /* Ajusta el alto para que coincida con el ancho */
+    display: flex; /* Para centrar el contenido */
+    flex-direction:column-reverse; /* Para alinear el contenido en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+#cart h2 {
+    margin-bottom: 15px;
+    color: #333; /* Color del título */
+    text-align: center; /* Centra el título */
+}
+
+
+#cart h2 img { /* Para imágenes SVG */
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+
+#cart-total {
+    font-weight: bold;
+    color: #39b12edf; /* Color del total */
+}
+
+#print-budget {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: block; /* Para que el botón ocupe todo el ancho */
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#print-budget:hover {
+    background-color: #1e7e34;
+}
+
+section[id] {
+    margin-bottom: 30px;
+    padding: 20px;
+    display: block; /* Asegura que cada sección sea un bloque */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+section[id] .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los contenedores de artículos */
+section[class] > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para los artículos */
+section[class] > section article {
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+section[class] > section img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto descriptivo */
+section[class] > section .desc-text {
+    flex-grow: 1;
+}
+
+/* Estilos para todos los h2 dentro de las secciones con id */
+section[id] .title h2 {
+    position: relative;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+section[id] .title h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+section[class] > section h3 {
+    margin-bottom: 5px;
+}
+
+section[class] > section p {
+    margin-bottom: 5px;
+}
+
+section[class] > section h5 {
+    font-weight: bold;
+}
+
+.product button {
+    background-color: #919191;
+    color: rgb(241, 247, 242);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Tahoma, sans-serif, Verdana, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+
+/*tienda*/
+
+
+/*footer*/
+
+footer {
+    background-color: var(--color-primario);
+    border-top: 1px solid #000000;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-columna {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-columna h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 10px;
+}
+
+.footer-columna ul li a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-columna ul li a:hover {
+    text-decoration: underline;
+}
+
+.after-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.after-footer p {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-footer {
+    width: 25px;
+    height: 25px;
+}
+
+/*footer*/
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .product-category {
+        width: 100%; /* Cada categoría ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .carousel-track img {
+        width: 50%; /* Imágenes más grandes en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track img {
+        width: 75%; /* Imágenes aún más grandes en pantallas muy pequeñas */
+    }
+}
+
+
+.chaquetas-items,
+.pantalones-items,
+.camisas-items,
+.faldas-items,
+.vestidos-items,
+.deporte-items,
+.conjuntos-items,
+.lenceria-items {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.chaquetas,
+.pantalones,
+.camisas,
+.faldas,
+.vestidos,
+.deporte,
+.conjuntos,
+.lenceria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 2rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: montserrat;
+    color: #000000;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 85%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.desc-text {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: montserrat;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 85%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.pantalones-items,
+.camisetas-items,
+.shorts-items,
+.zapatos-items {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.pantalones,
+.camisetas,
+.shorts,
+.zapatos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+}
+
+.carousel-track img {
+    width: 25%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
