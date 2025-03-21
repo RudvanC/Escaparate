@@ -349,9 +349,12 @@ section[class] > section .desc-text {
 section[id] .title h2 {
     position: relative;
     padding-bottom: 10px;
+<<<<<<< HEAD
     font-family: sans-serif;
     font-weight: bold;
     text-transform: capitalize;
+=======
+>>>>>>> 964c5b6 (creacion articulos y carro mjr)
 }
 
 section[id] .title h2::after {
