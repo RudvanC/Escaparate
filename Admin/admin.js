@@ -1,142 +1,143 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const jsonPath = '/Admin/JSON/json-general.json';
+    let productsData = {};
+    let currentCategory = 'hombre';
+    let currentSubcategory = '';
+
     // Elementos del DOM
-    const adminContainer = document.getElementById('admin-products-container');
-    const saveButton = document.getElementById('save-visibility');
-    const addSectionForm = document.getElementById('add-section-form');
-    const addProductForm = document.getElementById('add-product-form');
-    const categorySelect = document.getElementById('category-select');  // Selector principal: hombre, mujer, niño
-    const productCategorySelect = document.getElementById('product-category'); // Selector de sección para agregar producto
+    const elements = {
+        mainCategory: document.getElementById('main-category'),
+        subCategory: document.getElementById('sub-category'),
+        productsList: document.getElementById('products-list'),
+        newSectionInput: document.getElementById('new-section-name'),
+        productForm: document.getElementById('product-form'),
+        sectionForm: document.getElementById('section-form')
+    };
 
-    // Lista de categorías principales
-    let categories = ['hombre', 'mujer', 'niño'];
-    let currentCategory = 'hombre'; // Categoría seleccionada por defecto
-    let data = {}; // Datos cargados desde el JSON
-
-    // Función para cargar los datos desde el JSON
-    function loadData() {
-        const jsonPath = `/Admin/JSON/json-general.json`;
-        fetch(jsonPath)
-            .then(response => response.json())
-            .then(json => {
-                data = json;
-                updateSectionSelect(); // Actualizar el select de secciones
-                renderAdminProducts(); // Renderizar los productos
-            })
-            .catch(error => console.error('Error al cargar los datos:', error));
-    }
-
-    // Función para actualizar el select de secciones según la categoría seleccionada
-    function updateSectionSelect() {
-        productCategorySelect.innerHTML = '<option value="">Selecciona una sección</option>';
-        if (data[currentCategory] && data[currentCategory].secciones) {
-            data[currentCategory].secciones.forEach(seccion => {
-                const option = document.createElement('option');
-                option.value = seccion;
-                option.textContent = seccion.charAt(0).toUpperCase() + seccion.slice(1);
-                productCategorySelect.appendChild(option);
-            });
+    // Cargar datos iniciales
+    const loadData = async () => {
+        try {
+            const response = await fetch(jsonPath);
+            productsData = await response.json();
+            initCategories();
+            loadSubcategories();
+        } catch (error) {
+            console.error('Error loading data:', error);
         }
-        // Opción para crear una nueva sección
-        const newOption = document.createElement('option');
-        newOption.value = 'new';
-        newOption.textContent = 'Crear nueva sección';
-        productCategorySelect.appendChild(newOption);
-    }
+    };
 
-    // Función para renderizar los productos en la página de administración
-    function renderAdminProducts() {
-        adminContainer.innerHTML = ''; // Limpiar el contenedor
-        if (data[currentCategory] && data[currentCategory].productos) {
-            data[currentCategory].productos.forEach(producto => {
-                const card = document.createElement('article');
-                card.classList.add('product-card');
-                card.innerHTML = `
-                    <img src="${producto.imagen}" alt="${producto.titulo}">
-                    <div class="desc-text">
-                        <h3>${producto.titulo}</h3>
-                        <p>${producto.descripcion}</p>
-                        <p>${producto.colores}</p>
-                        <h5>${producto.precio}</h5>
-                        <button class="add-to-cart" data-title="${producto.titulo}" data-price="${producto.precio}">
-                            Añadir al carrito
-                        </button>
+    // Inicializar categorías principales
+    const initCategories = () => {
+        elements.mainCategory.innerHTML = Object.keys(productsData)
+            .map(category => `<option value="${category}">${category.toUpperCase()}</option>`)
+            .join('');
+    };
+
+    // Cargar subcategorías
+    const loadSubcategories = () => {
+        const categories = [...new Set(productsData[currentCategory].map(p => p.category))];
+        elements.subCategory.innerHTML = categories
+            .map(cat => `<option value="${cat}">${cat.toUpperCase()}</option>`)
+            .join('');
+        currentSubcategory = categories[0] || '';
+        loadProducts();
+    };
+
+    // Cargar productos
+    const loadProducts = () => {
+        elements.productsList.innerHTML = productsData[currentCategory]
+            .filter(p => p.category === currentSubcategory)
+            .map((product, index) => `
+                <div class="product-card ${product.visible ? 'visible' : 'hidden'}" data-index="${index}">
+                    <img src="${product.image.startsWith('//') ? 'https:' + product.image : product.image}" alt="${product.title}">
+                    <div class="product-info">
+                        <h3>${product.title}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-controls">
+                            <label>
+                                <input type="checkbox" ${product.visible ? 'checked' : ''}>
+                                Visible
+                            </label>
+                            <button class="delete-product">Eliminar</button>
+                        </div>
                     </div>
-                `;
-                adminContainer.appendChild(card);
-            });
-        }
-    }
+                </div>
+            `).join('');
+    };
 
-    // Llenar el select de categorías principales
-    function populateCategorySelect() {
-        categorySelect.innerHTML = '';
-        categories.forEach(category => {
-            const option = document.createElement('option');
-            option.value = category;
-            option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-            categorySelect.appendChild(option);
-        });
-        categorySelect.value = currentCategory;
-    }
-
-    // Evento para cambiar la categoría principal
-    categorySelect.addEventListener('change', (e) => {
+    // Event Listeners
+    elements.mainCategory.addEventListener('change', (e) => {
         currentCategory = e.target.value;
-        updateSectionSelect(); // Actualizar el select de secciones
-        renderAdminProducts(); // Renderizar los productos
+        loadSubcategories();
     });
 
-    // Agregar nueva sección
-    addSectionForm.addEventListener('submit', (e) => {
+    elements.subCategory.addEventListener('change', (e) => {
+        currentSubcategory = e.target.value;
+        loadProducts();
+    });
+
+    elements.sectionForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const sectionName = document.getElementById('section-name').value.trim();
-        if (sectionName && data[currentCategory]) {
-            if (!data[currentCategory].secciones.includes(sectionName)) {
-                data[currentCategory].secciones.push(sectionName);
-                localStorage.setItem('products', JSON.stringify(data));
-                updateSectionSelect(); // Actualizar el select de secciones
-                addSectionForm.reset();
-                alert(`Sección "${sectionName}" creada en ${currentCategory}.`);
-            } else {
-                alert('La sección ya existe.');
-            }
-        } else {
-            alert('Nombre de sección inválido.');
+        const newCategory = elements.newSectionInput.value.trim().toLowerCase();
+        if (newCategory && !productsData[currentCategory].some(p => p.category === newCategory)) {
+            productsData[currentCategory].push({
+                id: Date.now(),
+                category: newCategory,
+                categoryDisplay: newCategory.charAt(0).toUpperCase() + newCategory.slice(1),
+                title: `Nuevo Producto ${newCategory}`,
+                description: "Descripción temporal",
+                colors: "2 colores",
+                price: "00.00€",
+                image: "/Imagenes/placeholder.jpg",
+                visible: false
+            });
+            elements.newSectionInput.value = '';
+            loadSubcategories();
         }
     });
 
-    // Agregar nuevo producto
-    addProductForm.addEventListener('submit', (e) => {
+    elements.productForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const selectedSection = document.getElementById('product-category').value;
+        const formData = new FormData(e.target);
         const newProduct = {
             id: Date.now(),
-            seccion: selectedSection,
-            titulo: document.getElementById('product-title').value.trim(),
-            descripcion: document.getElementById('product-description').value.trim(),
-            colores: document.getElementById('product-colors').value.trim(),
-            precio: document.getElementById('product-price').value.trim(),
-            imagen: document.getElementById('product-image').value.trim(),
+            category: currentSubcategory,
+            categoryDisplay: currentSubcategory.charAt(0).toUpperCase() + currentSubcategory.slice(1),
+            title: formData.get('title'),
+            description: formData.get('description'),
+            colors: formData.get('colors'),
+            price: formData.get('price'),
+            image: formData.get('image'),
             visible: true
         };
+        
+        productsData[currentCategory].push(newProduct);
+        e.target.reset();
+        loadProducts();
+    });
 
-        if (newProduct.titulo && newProduct.imagen && selectedSection && selectedSection !== 'new') {
-            if (!data[currentCategory].productos) {
-                data[currentCategory].productos = [];
-            }
-            data[currentCategory].productos.push(newProduct);
-            localStorage.setItem('products', JSON.stringify(data));
-            renderAdminProducts(); // Renderizar los productos actualizados
-            addProductForm.reset();
-            alert('Producto agregado correctamente.');
-        } else if (selectedSection === 'new') {
-            alert('Por favor, crea la nueva sección primero.');
-        } else {
-            alert('Por favor, completa todos los campos.');
+    // Delegación de eventos para controles dinámicos
+    elements.productsList.addEventListener('change', (e) => {
+        if (e.target.type === 'checkbox') {
+            const index = e.target.closest('.product-card').dataset.index;
+            productsData[currentCategory][index].visible = e.target.checked;
         }
+    });
+
+    elements.productsList.addEventListener('click', (e) => {
+        if (e.target.classList.contains('delete-product')) {
+            const index = e.target.closest('.product-card').dataset.index;
+            productsData[currentCategory].splice(index, 1);
+            loadProducts();
+        }
+    });
+
+    // Botón Guardar
+    document.getElementById('save-changes').addEventListener('click', () => {
+        localStorage.setItem('productsData', JSON.stringify(productsData));
+        alert('Cambios guardados exitosamente');
     });
 
     // Inicialización
-    populateCategorySelect();
     loadData();
 });
