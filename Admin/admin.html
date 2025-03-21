@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Administración de Productos</h1>
-
+    
     <!-- Seleccionar categoría -->
     <div>
         <label for="category-select">Selecciona una categoría:</label>
@@ -16,14 +16,14 @@
             <!-- Las opciones se llenarán dinámicamente -->
         </select>
     </div>
-
+    
     <!-- Lista de productos existentes -->
     <div id="admin-products-container">
         <!-- Las secciones y productos se cargarán aquí -->
     </div>
-
+    
     <button id="save-visibility">Guardar Cambios</button>
-
+    
     <!-- Formulario para agregar nuevas secciones -->
     <div class="form-container">
         <h2>Agregar Nueva Sección</h2>
@@ -32,13 +32,13 @@
             <button type="submit">Agregar Sección</button>
         </form>
     </div>
-
+    
     <!-- Formulario para agregar nuevos productos -->
     <div class="form-container">
         <h2>Agregar Nuevo Producto</h2>
         <form id="add-product-form">
             <select id="product-category" required>
-                <option value="">Selecciona una categoría</option>
+                <option value="">Selecciona una sección</option>
                 <!-- Las opciones se llenarán dinámicamente -->
             </select>
             <input type="text" id="product-title" placeholder="Título del producto" required>
@@ -49,7 +49,12 @@
             <button type="submit">Agregar Producto</button>
         </form>
     </div>
-
+    
+    <!-- Opcional: Contenedor para el carrito -->
+    <div id="cart" class="form-container">
+        <h2>Carrito</h2>
+        <!-- Los items del carrito se mostrarán aquí -->
+    </div>
     <script src="/Admin/admin.js"></script>
 </body>
 </html>
