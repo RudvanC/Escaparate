@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Productos</title>
-    <link rel="stylesheet" href="/Admin/admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Tienda de Ropa</title>
+  <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <h1>Administración de Productos</h1>
-    
-    <!-- Selectores principales -->
-    <div class="admin-controls">
-        <div>
-            <label for="main-category">Categoría Principal:</label>
-            <select id="main-category">
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-                <option value="niño">Niño</option>
-            </select>
-        </div>
-        
-        <div>
-            <label for="sub-category">Subcategoría:</label>
-            <select id="sub-category">
-                <!-- Subcategorías se cargarán dinámicamente -->
-            </select>
-        </div>
-    </div>
+  <header>
+    <h1>Administración de la Tienda</h1>
+  </header>
 
-    <!-- Lista de productos -->
-    <div id="products-list">
-        <!-- Productos se cargarán aquí -->
-    </div>
+  <main>
+    <!-- Formulario para agregar una nueva sección -->
+    <section id="seccion-crear">
+      <h2>Crear Sección</h2>
+      <form id="add-section-form">
+        <input type="text" id="new-section-input" placeholder="Nombre de la sección" required>
+        <button type="submit">Agregar Sección</button>
+      </form>
+    </section>
 
-    <!-- Controles de administración -->
-    <div class="admin-actions">
-        <button id="toggle-visibility">Alternar Visibilidad</button>
-        <button id="save-changes">Guardar Cambios</button>
-    </div>
+    <!-- Formulario para agregar un nuevo producto -->
+    <section id="producto-crear">
+      <h2>Agregar Producto</h2>
+      <form id="add-product-form">
+        <label for="product-section-select">Sección:</label>
+        <select id="product-section-select" required></select>
+        <br>
+        <input type="text" id="product-title" placeholder="Título" required>
+        <br>
+        <input type="text" id="product-description" placeholder="Descripción" required>
+        <br>
+        <input type="text" id="product-category" placeholder="Categoría (ej: shoes, shirts, etc.)" required>
+        <br>
+        <input type="text" id="product-price" placeholder="Precio" required>
+        <br>
+        <input type="text" id="product-image" placeholder="URL de la imagen" required>
+        <br>
+        <input type="text" id="product-colors" placeholder="Colores" required>
+        <br>
+        <button type="submit">Agregar Producto</button>
+      </form>
+    </section>
 
-    <!-- Formularios de gestión -->
-    <div class="admin-forms">
-        <div class="form-container">
-            <h2>Gestionar Secciones</h2>
-            <form id="section-form">
-                <input type="text" id="new-section-name" placeholder="Nueva sección" required>
-                <button type="submit">Crear Sección</button>
-                <button type="button" id="delete-section">Eliminar Sección</button>
-            </form>
-        </div>
+    <!-- Contenedor para visualizar las secciones y productos actuales -->
+    <section id="admin-container">
+      <h2>Secciones y Productos</h2>
+      <!-- Aquí se listarán las secciones con sus productos -->
+    </section>
+  </main>
 
-        <div class="form-container">
-            <h2>Gestionar Productos</h2>
-            <form id="product-form">
-                <input type="text" id="product-name" placeholder="Nombre del producto" required>
-                <input type="text" id="product-price" placeholder="Precio" required>
-                <input type="text" id="product-image" placeholder="URL de imagen" required>
-                <select id="product-section"></select>
-                <button type="submit">Añadir Producto</button>
-                <button type="button" id="delete-product">Eliminar Producto</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="/Admin/admin.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>
