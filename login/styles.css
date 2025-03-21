@@ -21,6 +21,8 @@
 /* Estilo para todo el documento en general */
 html,
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     overflow-x: hidden;
     background: #ffffff;
@@ -195,9 +197,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;    
-   
-   
+    flex-direction: column;  
+    flex-grow: 1; /* Hace que el main ocupe el espacio disponible */
 }
 
 .contenedor-login {
@@ -289,6 +290,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    bottom: 0;
 }
 
 .footer-columna {

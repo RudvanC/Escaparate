@@ -206,6 +206,13 @@ a {
     height: 30px;
 }
 
+.home-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+}
+
 footer {
     background-color: var(--color-primario);
     border-top: 1px solid #000000;
