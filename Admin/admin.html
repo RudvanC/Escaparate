@@ -3,74 +3,114 @@
 <head>
     <title>Admin Panel</title>
     <style>
-        .category-section { margin: 20px; padding: 15px; border: 1px solid #ccc; }
-        .product-item { margin: 10px; padding: 10px; background: #f5f5f5; }
+        .section-container { margin: 25px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .category-group { margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px; }
+        .product-item { display: flex; align-items: center; margin: 10px 0; padding: 12px; background: white; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .product-info { flex-grow: 1; margin-left: 15px; }
+        .product-image { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; }
+        h2 { color: #2c3e50; margin-bottom: 20px; }
+        h3 { color: #34495e; margin: 10px 0; }
+        button { background: #3498db; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2980b9; }
     </style>
 </head>
 <body>
     <h1>Panel de Administración</h1>
-    <div id="categories-container"></div>
-    <button onclick="saveChanges()">Guardar Cambios</button>
+    <div id="sections-container"></div>
+    <div style="text-align: center; margin: 30px;">
+        <button onclick="saveChanges()">Guardar Cambios</button>
+    </div>
 
     <script>
-        let currentData = {};
-        
+        let originalData = {
+            hombre: [],
+            mujer: [],
+            nino: []
+        };
+
         // Cargar datos iniciales
         fetch('/Admin/JSON/json-general.json')
             .then(res => res.json())
             .then(data => {
-                currentData = data;
-                renderCategories();
+                originalData = data;
+                renderSections();
             });
 
-        function renderCategories() {
-            const container = document.getElementById('categories-container');
+        function renderSections() {
+            const container = document.getElementById('sections-container');
             container.innerHTML = '';
 
-            Object.entries(currentData.categories).forEach(([categoryName, categoryData]) => {
-                const categorySection = document.createElement('div');
-                categorySection.className = 'category-section';
+            // Renderizar cada sección (hombre, mujer, nino)
+            Object.entries(originalData).forEach(([sectionName, products]) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'section-container';
                 
-                // Toggle para categoría
-                categorySection.innerHTML = `
-                    <h2>
-                        <input type="checkbox" ${categoryData.visible ? 'checked' : ''} 
-                            onchange="toggleCategoryVisibility('${categoryName}', this.checked)">
-                        ${categoryName.toUpperCase()}
-                    </h2>
-                    <div class="products-container" id="${categoryName}-products"></div>
+                // Agrupar productos por categoría
+                const categories = groupByCategory(products);
+                
+                sectionDiv.innerHTML = `
+                    <h2>${sectionName.toUpperCase()}</h2>
+                    <div class="categories-container" id="${sectionName}-categories"></div>
                 `;
 
-                // Renderizar productos
-                const productsContainer = categorySection.querySelector(`#${categoryName}-products`);
-                categoryData.products.forEach((product, index) => {
-                    const productDiv = document.createElement('div');
-                    productDiv.className = 'product-item';
-                    productDiv.innerHTML = `
-                        <input type="checkbox" ${product.visible ? 'checked' : ''} 
-                            onchange="toggleProductVisibility('${categoryName}', ${index}, this.checked)">
-                        ${product.title}
-                    `;
-                    productsContainer.appendChild(productDiv);
+                const categoriesContainer = sectionDiv.querySelector(`#${sectionName}-categories`);
+                
+                // Renderizar cada categoría
+                Object.entries(categories).forEach(([categoryName, categoryProducts]) => {
+                    const categoryGroup = document.createElement('div');
+                    categoryGroup.className = 'category-group';
+                    categoryGroup.innerHTML = `<h3>${categoryProducts[0].categoryDisplay}</h3>`;
+                    
+                    // Renderizar productos
+                    categoryProducts.forEach((product, index) => {
+                        const productItem = document.createElement('div');
+                        productItem.className = 'product-item';
+                        productItem.innerHTML = `
+                            <label style="margin-right: 15px;">
+                                <input type="checkbox" ${product.visible ? 'checked' : ''} 
+                                    onchange="toggleProductVisibility('${sectionName}', '${categoryName}', ${index}, this.checked)">
+                            </label>
+                            <img src="${product.image}" class="product-image" alt="${product.title}">
+                            <div class="product-info">
+                                <div><strong>${product.title}</strong></div>
+                                <div>${product.description}</div>
+                                <div>Precio: ${product.price}</div>
+                            </div>
+                        `;
+                        categoryGroup.appendChild(productItem);
+                    });
+
+                    categoriesContainer.appendChild(categoryGroup);
                 });
 
-                container.appendChild(categorySection);
+                container.appendChild(sectionDiv);
             });
         }
 
-        function toggleCategoryVisibility(categoryName, isVisible) {
-            currentData.categories[categoryName].visible = isVisible;
+        function groupByCategory(products) {
+            return products.reduce((acc, product) => {
+                const category = product.category;
+                if (!acc[category]) acc[category] = [];
+                acc[category].push(product);
+                return acc;
+            }, {});
         }
 
-        function toggleProductVisibility(categoryName, productIndex, isVisible) {
-            currentData.categories[categoryName].products[productIndex].visible = isVisible;
+        function toggleProductVisibility(sectionName, categoryName, productIndex, isVisible) {
+            const categoryProducts = originalData[sectionName].filter(p => p.category === categoryName);
+            const globalIndex = originalData[sectionName].indexOf(categoryProducts[productIndex]);
+            originalData[sectionName][globalIndex].visible = isVisible;
         }
 
         function saveChanges() {
-            // Aquí necesitarías implementar la lógica para guardar en el servidor
-            // Esto es un ejemplo básico usando localStorage como temporal
-            localStorage.setItem('productsData', JSON.stringify(currentData));
-            alert('Cambios guardados temporalmente (necesitarás implementar el guardado en servidor)');
+            // Guardar en localStorage (solución temporal)
+            localStorage.setItem('productsData', JSON.stringify(originalData));
+            
+            // Aquí deberías implementar el guardado en servidor
+            alert('Cambios guardados (localStorage)');
+            
+            // Actualizar la vista
+            renderSections();
         }
     </script>
 </body>
