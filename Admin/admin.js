@@ -1,129 +1,114 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let data = {};
-  
-    const defaultDataPath = '/Admin/JSON/json-general.json'; // Ruta al JSON original
-  
-    // Cargar datos: primero desde localStorage o si no existe, desde el JSON original.
-    function loadData() {
-      const saved = localStorage.getItem("productos");
-      if (saved) {
-        data = JSON.parse(saved);
-        renderSections();
-        populateSectionDropdown();
-      } else {
-        fetch(defaultDataPath)
-          .then(res => res.json())
-          .then(json => {
-            data = json;
-            renderSections();
-            populateSectionDropdown();
-          })
-          .catch(err => console.error("Error al cargar el JSON:", err));
-      }
-    }
-  
-    // Guardar datos en localStorage
-    function saveData() {
-      localStorage.setItem("productos", JSON.stringify(data));
-    }
-  
-    // Renderizar secciones y sus productos en el contenedor de administración
-    function renderSections() {
-      const container = document.getElementById("admin-container");
-      container.innerHTML = ""; // Limpiar
-  
-      Object.keys(data).forEach(section => {
-        const sectionDiv = document.createElement("div");
-        sectionDiv.className = "section-admin";
-        sectionDiv.innerHTML = `<h3>${section}</h3>`;
-  
-        if (data[section].length > 0) {
-          const list = document.createElement("ul");
-          data[section].forEach(product => {
-            const li = document.createElement("li");
-            li.textContent = product.title;
-            list.appendChild(li);
-          });
-          sectionDiv.appendChild(list);
-        } else {
-          sectionDiv.innerHTML += "<p>No hay productos en esta sección.</p>";
-        }
-  
-        container.appendChild(sectionDiv);
-      });
-    }
-  
-    // Poblamos el dropdown de la sección en el formulario de agregar producto
-    function populateSectionDropdown() {
-      const dropdown = document.getElementById("product-section-select");
-      dropdown.innerHTML = "";
-      Object.keys(data).forEach(section => {
-        const option = document.createElement("option");
-        option.value = section;
-        option.textContent = section;
-        dropdown.appendChild(option);
-      });
-    }
-  
-    // Manejo del formulario para crear una nueva sección
-    document.getElementById("add-section-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const sectionInput = document.getElementById("new-section-input");
-      const newSection = sectionInput.value.trim().toLowerCase();
-      if (newSection === "") return;
-  
-      if (data.hasOwnProperty(newSection)) {
-        alert("La sección ya existe.");
-        return;
-      }
-  
-      data[newSection] = []; // Crea la sección vacía
-      saveData();
-      renderSections();
-      populateSectionDropdown();
-      sectionInput.value = "";
-    });
-  
-    // Manejo del formulario para agregar un producto
-    document.getElementById("add-product-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const section = document.getElementById("product-section-select").value;
-      const title = document.getElementById("product-title").value.trim();
-      const description = document.getElementById("product-description").value.trim();
-      const category = document.getElementById("product-category").value.trim().toLowerCase();
-      const price = document.getElementById("product-price").value.trim();
-      const image = document.getElementById("product-image").value.trim();
-      const colors = document.getElementById("product-colors").value.trim();
-  
-      if (!section || !title || !category) {
-        alert("Completa los campos obligatorios.");
-        return;
-      }
-  
-      // Creamos un objeto producto único
-      const newProduct = {
-        id: Date.now(),
-        section: section,  // Sección a la que pertenece (ya que lo tomamos del dropdown)
-        title,
-        description,
-        category,
-        price,
-        image,
-        colors,
-        visible: true
+  const jsonPath = '/Admin/JSON/json-general.json'; // Ruta al archivo JSON
+  const adminContainer = document.getElementById('admin-products-container');
+  const saveButton = document.getElementById('save-visibility');
+
+  let products = [];
+
+  // Cargar productos desde el JSON
+  fetch(jsonPath)
+      .then(response => response.json())
+      .then(data => {
+          products = data;
+          renderAdminProducts();
+      })
+      .catch(error => console.error('Error al cargar los productos:', error));
+
+  // Función para renderizar los productos en la página de administración
+  function renderAdminProducts() {
+      // Limpiar el contenedor
+      adminContainer.innerHTML = '';
+
+      // Recuperar la visibilidad guardada en localStorage
+      const savedVisibility = JSON.parse(localStorage.getItem('productsVisibility')) || {};
+
+      // Agrupar productos por categoría
+      const categories = {
+          shoes: [],
+          shirts: [],
+          pants: []
       };
-  
-      // Agregar producto a la sección correspondiente
-      if (!data[section]) {
-        data[section] = [];
+
+      products.forEach(product => {
+          categories[product.category].push(product);
+      });
+
+      // Renderizar cada categoría
+      for (const [category, productsInCategory] of Object.entries(categories)) {
+          const categorySection = document.createElement('div');
+          categorySection.classList.add('category-section');
+
+          // Título de la categoría (hacerlo clickeable)
+          const categoryTitle = document.createElement('h2');
+          categoryTitle.textContent = category === 'shoes' ? 'Zapatillas' :
+                                    category === 'shirts' ? 'Camisetas' :
+                                    'Pantalones';
+          categoryTitle.classList.add('category-title');
+          categoryTitle.addEventListener('click', () => {
+              // Alternar la visibilidad del contenido
+              const content = categorySection.querySelector('.category-content');
+              content.classList.toggle('visible');
+          });
+
+          // Contenedor del contenido (inicialmente oculto)
+          const categoryContent = document.createElement('div');
+          categoryContent.classList.add('category-content');
+
+          // Renderizar productos de la categoría
+          productsInCategory.forEach(product => {
+              const productDiv = document.createElement('div');
+              productDiv.classList.add('admin-product');
+
+              // Imagen del producto
+              const productImage = document.createElement('img');
+              productImage.src = product.image;
+              productImage.alt = product.title;
+
+              // Información del producto
+              const productInfo = document.createElement('div');
+              productInfo.classList.add('product-info');
+              productInfo.innerHTML = `
+                  <h3>${product.title}</h3>
+                  <p>${product.description}</p>
+                  <p class="price">${product.price}</p>
+              `;
+
+              // Checkbox para visibilidad
+              const checkbox = document.createElement('input');
+              checkbox.type = 'checkbox';
+              checkbox.checked = savedVisibility[product.id] !== undefined ? savedVisibility[product.id] : product.visible;
+              checkbox.id = `product-${product.id}`;
+
+              // Agregar elementos al contenedor del producto
+              productDiv.appendChild(productImage);
+              productDiv.appendChild(productInfo);
+              productDiv.appendChild(checkbox);
+
+              // Agregar el producto al contenedor de la categoría
+              categoryContent.appendChild(productDiv);
+          });
+
+          // Agregar título y contenido a la sección de la categoría
+          categorySection.appendChild(categoryTitle);
+          categorySection.appendChild(categoryContent);
+
+          // Agregar la sección de la categoría al contenedor principal
+          adminContainer.appendChild(categorySection);
       }
-      data[section].push(newProduct);
-      saveData();
-      renderSections();
-      e.target.reset();
-    });
-  
-    // Inicializar la carga de datos
-    loadData();
+  }
+
+  // Guardar cambios en localStorage
+  saveButton.addEventListener('click', () => {
+      const visibilityMap = {};
+
+      // Recorrer todos los checkboxes y guardar su estado
+      products.forEach(product => {
+          const checkbox = document.getElementById(`product-${product.id}`);
+          visibilityMap[product.id] = checkbox.checked;
+      });
+
+      // Guardar en localStorage
+      localStorage.setItem('productsVisibility', JSON.stringify(visibilityMap));
+      alert('Cambios guardados correctamente.');
   });
-  
+});
