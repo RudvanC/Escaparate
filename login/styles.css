@@ -193,6 +193,20 @@ a {
     color: #323232;
     font-weight: bold;
 }
+
+.home-logo img {
+    width: 30px;
+    height: 30px;
+ }
+    
+.home-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+        
+}
+
+
 main {
     display: flex;
     justify-content: center;

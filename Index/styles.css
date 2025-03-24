@@ -327,8 +327,12 @@ footer {
         font-size: 1em;/* Tamaño de la fuente ajustable */
         text-decoration: underline;
     }
+    p:hover {
+        color: rgb(3, 255, 129);
+    }
 
 }
+
 
 .image-text .image-text .image-container img {
     width: 100%;
