@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const jsonPath = '/Admin/JSON/json-general.json';
+    const jsonPath = '/Escaparate/Admin/JSON/json-general.json';
 
     fetch(jsonPath)
         .then(response => response.json())
