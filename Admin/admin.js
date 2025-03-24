@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const jsonPath = '../products.json'; // Ruta al archivo JSON
+  const jsonPath = '/Admin/JSON/json-general.json'; // Ruta al archivo JSON
   const adminContainer = document.getElementById('admin-products-container');
   const saveButton = document.getElementById('save-visibility');
 

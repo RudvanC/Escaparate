@@ -1,77 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Productos</title>
-
-    <link rel="stylesheet" href="/Admin/admin.css"> <!-- CSS específico de admin -->
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Tienda de Ropa</title>
-  <link rel="stylesheet" href="admin.css">
-
+    <title>Admin Panel</title>
+    <style>
+        .category-section { margin: 20px; padding: 15px; border: 1px solid #ccc; }
+        .product-item { margin: 10px; padding: 10px; background: #f5f5f5; }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Administración de la Tienda</h1>
-  </header>
+    <h1>Panel de Administración</h1>
+    <div id="categories-container"></div>
+    <button onclick="saveChanges()">Guardar Cambios</button>
 
-  <main>
-    <!-- Formulario para agregar una nueva sección -->
-    <section id="seccion-crear">
-      <h2>Crear Sección</h2>
-      <form id="add-section-form">
-        <input type="text" id="new-section-input" placeholder="Nombre de la sección" required>
-        <button type="submit">Agregar Sección</button>
-      </form>
-    </section>
+    <script>
+        let currentData = {};
+        
+        // Cargar datos iniciales
+        fetch('/Admin/JSON/json-general.json')
+            .then(res => res.json())
+            .then(data => {
+                currentData = data;
+                renderCategories();
+            });
 
+        function renderCategories() {
+            const container = document.getElementById('categories-container');
+            container.innerHTML = '';
 
-    <link rel="stylesheet" href="/Hombre/Contenido/style.css"> <!-- CSS general -->
-    <link rel="stylesheet" href="/Hombre/Admin/admin.css"> <!-- CSS específico de admin -->
-</head>
-<body>
-    <h1>Administración de Productos</h1>
+            Object.entries(currentData.categories).forEach(([categoryName, categoryData]) => {
+                const categorySection = document.createElement('div');
+                categorySection.className = 'category-section';
+                
+                // Toggle para categoría
+                categorySection.innerHTML = `
+                    <h2>
+                        <input type="checkbox" ${categoryData.visible ? 'checked' : ''} 
+                            onchange="toggleCategoryVisibility('${categoryName}', this.checked)">
+                        ${categoryName.toUpperCase()}
+                    </h2>
+                    <div class="products-container" id="${categoryName}-products"></div>
+                `;
 
-    <!-- Lista de productos existentes -->
-    <div id="admin-products-container">
-        <!-- Las secciones y productos se cargarán aquí -->
-    </div>
+                // Renderizar productos
+                const productsContainer = categorySection.querySelector(`#${categoryName}-products`);
+                categoryData.products.forEach((product, index) => {
+                    const productDiv = document.createElement('div');
+                    productDiv.className = 'product-item';
+                    productDiv.innerHTML = `
+                        <input type="checkbox" ${product.visible ? 'checked' : ''} 
+                            onchange="toggleProductVisibility('${categoryName}', ${index}, this.checked)">
+                        ${product.title}
+                    `;
+                    productsContainer.appendChild(productDiv);
+                });
 
-    <!-- Formulario para agregar un nuevo producto -->
-    <section id="producto-crear">
-      <h2>Agregar Producto</h2>
-      <form id="add-product-form">
-        <label for="product-section-select">Sección:</label>
-        <select id="product-section-select" required></select>
-        <br>
-        <input type="text" id="product-title" placeholder="Título" required>
-        <br>
-        <input type="text" id="product-description" placeholder="Descripción" required>
-        <br>
-        <input type="text" id="product-category" placeholder="Categoría (ej: shoes, shirts, etc.)" required>
-        <br>
-        <input type="text" id="product-price" placeholder="Precio" required>
-        <br>
-        <input type="text" id="product-image" placeholder="URL de la imagen" required>
-        <br>
-        <input type="text" id="product-colors" placeholder="Colores" required>
-        <br>
-        <button type="submit">Agregar Producto</button>
-      </form>
-    </section>
+                container.appendChild(categorySection);
+            });
+        }
 
+        function toggleCategoryVisibility(categoryName, isVisible) {
+            currentData.categories[categoryName].visible = isVisible;
+        }
 
-    <!-- Contenedor para visualizar las secciones y productos actuales -->
-    <section id="admin-container">
-      <h2>Secciones y Productos</h2>
-      <!-- Aquí se listarán las secciones con sus productos -->
-    </section>
-  </main>
+        function toggleProductVisibility(categoryName, productIndex, isVisible) {
+            currentData.categories[categoryName].products[productIndex].visible = isVisible;
+        }
 
-  <script src="admin.js"></script>
+        function saveChanges() {
+            // Aquí necesitarías implementar la lógica para guardar en el servidor
+            // Esto es un ejemplo básico usando localStorage como temporal
+            localStorage.setItem('productsData', JSON.stringify(currentData));
+            alert('Cambios guardados temporalmente (necesitarás implementar el guardado en servidor)');
+        }
+    </script>
 </body>
 </html>
