@@ -32,6 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement('article');
             card.className = 'product-item';
             card.dataset.productId = product.id; // Agregar el atributo data-product-id
+              
+            
+            // let esImagenRemota = false
+            // if (product.image.startsWith('http')) {
+            //     esImagenRemota = true
+            // }
+            // const imagePath = (!esImagenRemota ? '../Imagenes/' : '' ) + product.image 
+
+            // let imagePath = product.image
+            // if (!imagePath.startsWith('http')) {
+            //     imagePath = `../Imagenes/${imagePath}`
+            // }
+
+
+            
+            const imagePath = (!product.image.startsWith('http') ? '../Imagenes/' : '') +  product.image
             card.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
                 <div class="desc-text">
