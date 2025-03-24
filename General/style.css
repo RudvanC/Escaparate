@@ -101,7 +101,6 @@
         transition: max-height 0.7s ease-out;
     }
 
-
     #menu-toggle-hombres:checked+.menu-button+.menu,
     #menu-toggle-mujeres:checked+.menu-button+.menu,
     #menu-toggle-ninos:checked+.menu-button+.menu {
