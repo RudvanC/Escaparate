@@ -87,6 +87,12 @@
         user-select: none;
     }
 
+    .header{
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
     .menu {
         /* Estilo del menú desplegable */
         position: absolute;
