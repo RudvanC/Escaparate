@@ -219,7 +219,7 @@
             "description": "Chaquetas - Mujer",
             "colors": "2 colores",
             "price": "25.00€",
-            "image": "/Imagenes/chaqueta.jpg",
+            "image": "../Imagenes/chaqueta.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -232,7 +232,7 @@
             "description": "Chaquetas - Mujer",
             "colors": "2 colores",
             "price": "70.00€",
-            "image": "/Imagenes/chaqueta2.jpg",
+            "image": "../Imagenes/chaqueta2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -245,7 +245,7 @@
             "description": "Chaquetas - Mujer",
             "colors": "2 colores",
             "price": "30.00€",
-            "image": "/Imagenes/chaqueta3.jpg",
+            "image": "../Imagenes/chaqueta3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -258,7 +258,7 @@
             "description": "Chaquetas - Mujer",
             "colors": "2 colores",
             "price": "30.00€",
-            "image": "/Imagenes/chaqueta4.jpg",
+            "image": "../Imagenes/chaqueta4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -271,7 +271,7 @@
             "description": "Pantalones - Mujer",
             "colors": "2 colores",
             "price": "25.00€",
-            "image": "/Imagenes/pantalon.jpg",
+            "image": "../Imagenes/pantalon.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -284,7 +284,7 @@
             "description": "Pantalones - Mujer",
             "colors": "2 colores",
             "price": "25.00€",
-            "image": "/Imagenes/pantalon2.jpg",
+            "image": "../Imagenes/pantalon2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -297,7 +297,7 @@
             "description": "Pantalones - Mujer",
             "colors": "2 colores",
             "price": "35.00€",
-            "image": "/Imagenes/pantalon3.jpg",
+            "image": "../Imagenes/pantalon3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -310,7 +310,7 @@
             "description": "Pantalones - Mujer",
             "colors": "2 colores",
             "price": "15.00€",
-            "image": "/Imagenes/pantalon4.jpg",
+            "image": "../Imagenes/pantalon4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -323,7 +323,7 @@
             "description": "Camisas y Camisetas - Mujer",
             "colors": "2 colores",
             "price": "35.00€",
-            "image": "/Imagenes/camiseta.jpg",
+            "image": "../Imagenes/camiseta.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -336,7 +336,7 @@
             "description": "Camisas y Camisetas - Mujer",
             "colors": "2 colores",
             "price": "15.00€",
-            "image": "/Imagenes/camiseta2.jpg",
+            "image": "../Imagenes/camiseta2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -349,7 +349,7 @@
             "description": "Camisas y Camisetas - Mujer",
             "colors": "2 colores",
             "price": "15.00€",
-            "image": "/Imagenes/camiseta3.jpg",
+            "image": "../Imagenes/camiseta3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -362,7 +362,7 @@
             "description": "Camisas y Camisetas - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/camiseta4.jpg",
+            "image": "../Imagenes/camiseta4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -375,7 +375,7 @@
             "description": "Faldas - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/falda.jpg",
+            "image": "../Imagenes/falda.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -388,7 +388,7 @@
             "description": "Faldas - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/falda2.jpg",
+            "image": "../Imagenes/falda2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -401,7 +401,7 @@
             "description": "Faldas - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/falda3.jpg",
+            "image": "../Imagenes/falda3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -414,7 +414,7 @@
             "description": "Faldas - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/falda4.jpg",
+            "image": "../Imagenes/falda4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -427,7 +427,7 @@
             "description": "Vestidos - Mujer",
             "colors": "2 colores",
             "price": "25.00€",
-            "image": "/Imagenes/vestido.jpg",
+            "image": "../Imagenes/vestido.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -440,7 +440,7 @@
             "description": "Vestidos - Mujer",
             "colors": "2 colores",
             "price": "30.00€",
-            "image": "/Imagenes/vestido2.jpg",
+            "image": "../Imagenes/vestido2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -453,7 +453,7 @@
             "description": "Vestidos - Mujer",
             "colors": "2 colores",
             "price": "40.00€",
-            "image": "/Imagenes/vestido3.jpg",
+            "image": "../Imagenes/vestido3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -466,7 +466,7 @@
             "description": "Vestidos - Mujer",
             "colors": "2 colores",
             "price": "50.00€",
-            "image": "/Imagenes/vestido4.jpg",
+            "image": "../Imagenes/vestido4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -479,7 +479,7 @@
             "description": "Deporte - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/deporte.jpg",
+            "image": "../Imagenes/deporte.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -492,7 +492,7 @@
             "description": "Deporte - Mujer",
             "colors": "2 colores",
             "price": "25.00€",
-            "image": "/Imagenes/deporte2.jpg",
+            "image": "../Imagenes/deporte2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -505,7 +505,7 @@
             "description": "Deporte - Mujer",
             "colors": "2 colores",
             "price": "30.00€",
-            "image": "/Imagenes/deporte3.jpg",
+            "image": "../Imagenes/deporte3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -518,7 +518,7 @@
             "description": "Deporte - Mujer",
             "colors": "2 colores",
             "price": "15.00€",
-            "image": "/Imagenes/deporte4.jpg",
+            "image": "../Imagenes/deporte4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -531,7 +531,7 @@
             "description": "Conjuntos - Mujer",
             "colors": "2 colores",
             "price": "40.00€",
-            "image": "/Imagenes/conjunto.jpg",
+            "image": "../Imagenes/conjunto.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -544,7 +544,7 @@
             "description": "Conjuntos - Mujer",
             "colors": "2 colores",
             "price": "20.00€",
-            "image": "/Imagenes/conjunto2.jpg",
+            "image": "../Imagenes/conjunto2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -557,7 +557,7 @@
             "description": "Conjuntos - Mujer",
             "colors": "2 colores",
             "price": "35.00€",
-            "image": "/Imagenes/conjunto3.jpg",
+            "image": "../Imagenes/conjunto3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -570,7 +570,7 @@
             "description": "Conjuntos - Mujer",
             "colors": "2 colores",
             "price": "40.00€",
-            "image": "/Imagenes/conjunto4.jpg",
+            "image": "../Imagenes/conjunto4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -583,7 +583,7 @@
             "description": "Lencería - Mujer",
             "colors": "2 colores",
             "price": "50.00€",
-            "image": "/Imagenes/lenceria.jpg",
+            "image": "../Imagenes/lenceria.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -596,7 +596,7 @@
             "description": "Lencería - Mujer",
             "colors": "2 colores",
             "price": "50.00€",
-            "image": "/Imagenes/lenceria2.jpg",
+            "image": "../Imagenes/lenceria2.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -609,7 +609,7 @@
             "description": "Lencería - Mujer",
             "colors": "2 colores",
             "price": "50.00€",
-            "image": "/Imagenes/lenceria3.jpg",
+            "image": "../Imagenes/lenceria3.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -622,7 +622,7 @@
             "description": "Lencería - Mujer",
             "colors": "2 colores",
             "price": "50.00€",
-            "image": "/Imagenes/lenceria4.jpg",
+            "image": "../Imagenes/lenceria4.jpg",
             "visible": true,
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
@@ -637,7 +637,7 @@
             "description": "Pantalones - Niño",
             "colors": "2 colores",
             "price": "$25.00",
-            "image": "/Imagenes/pantalon-niño1.jpeg",
+            "image": "../Imagenes/pantalon-niño1.jpeg",
             "visible": true
           },
           {
@@ -648,7 +648,7 @@
             "description": "Pantalones - Niño",
             "colors": "2 colores",
             "price": "$30.00",
-            "image": "/Imagenes/pantalon-niño2.jpeg",
+            "image": "../Imagenes/pantalon-niño2.jpeg",
             "visible": true
           },
           {
@@ -659,7 +659,7 @@
             "description": "Pantalones - Niño",
             "colors": "2 colores",
             "price": "$35.00",
-            "image": "/Imagenes/pantalon-niño3.jpeg",
+            "image": "../Imagenes/pantalon-niño3.jpeg",
             "visible": true
           },
           {
@@ -670,7 +670,7 @@
             "description": "Pantalones - Niño",
             "colors": "2 colores",
             "price": "$40.00",
-            "image": "/Imagenes/pantalon-niño4.jpeg",
+            "image": "../Imagenes/pantalon-niño4.jpeg",
             "visible": true
           },
           {
@@ -681,7 +681,7 @@
             "description": "Pantalones - Niño",
             "colors": "2 colores",
             "price": "$45.00",
-            "image": "/Imagenes/pantalon-niño5.jpeg",
+            "image": "../Imagenes/pantalon-niño5.jpeg",
             "visible": true
           },
           {
@@ -692,7 +692,7 @@
             "description": "Camisetas - Niño",
             "colors": "2 colores",
             "price": "$27.00",
-            "image": "/Imagenes/camisa-niño1.jpeg",
+            "image": "../Imagenes/camisa-niño1.jpeg",
             "visible": true
           },
           {
@@ -703,7 +703,7 @@
             "description": "Camisetas - Niño",
             "colors": "2 colores",
             "price": "$30.00",
-            "image": "/Imagenes/camisa-niño2.jpeg",
+            "image": "../Imagenes/camisa-niño2.jpeg",
             "visible": true
           },
           {
@@ -714,7 +714,7 @@
             "description": "Camisetas - Niño",
             "colors": "2 colores",
             "price": "$25.00",
-            "image": "/Imagenes/camisa-niño3.jpeg",
+            "image": "../Imagenes/camisa-niño3.jpeg",
             "visible": true
           },
           {
@@ -725,7 +725,7 @@
             "description": "Camisetas - Niño",
             "colors": "2 colores",
             "price": "$22.00",
-            "image": "/Imagenes/camisa-niño4.jpeg",
+            "image": "../Imagenes/camisa-niño4.jpeg",
             "visible": true
           },
           {
@@ -736,7 +736,7 @@
             "description": "Camisetas - Niño",
             "colors": "2 colores",
             "price": "$20.00",
-            "image": "/Imagenes/camisa-niño5.jpeg",
+            "image": "../Imagenes/camisa-niño5.jpeg",
             "visible": true
           },
           {
@@ -747,7 +747,7 @@
             "description": "Shorts - Niño",
             "colors": "2 colores",
             "price": "$20.00",
-            "image": "/Imagenes/short-niño1.jpeg",
+            "image": "../Imagenes/short-niño1.jpeg",
             "visible": true
           },
           {
@@ -758,7 +758,7 @@
             "description": "Shorts - Niño",
             "colors": "2 colores",
             "price": "$25.00",
-            "image": "/Imagenes/short-niño2.jpeg",
+            "image": "../Imagenes/short-niño2.jpeg",
             "visible": true
           },
           {
@@ -769,7 +769,7 @@
             "description": "Shorts - Niño",
             "colors": "2 colores",
             "price": "$30.00",
-            "image": "/Imagenes/short-niño3.jpeg",
+            "image": "../Imagenes/short-niño3.jpeg",
             "visible": true
           },
           {
@@ -780,7 +780,7 @@
             "description": "Shorts - Niño",
             "colors": "2 colores",
             "price": "$35.00",
-            "image": "/Imagenes/short-niño4.jpeg",
+            "image": "../Imagenes/short-niño4.jpeg",
             "visible": true
           },
           {
@@ -791,7 +791,7 @@
             "description": "Shorts - Niño",
             "colors": "2 colores",
             "price": "$35.00",
-            "image": "/Imagenes/short-niño5.jpeg",
+            "image": "../Imagenes/short-niño5.jpeg",
             "visible": true
           },
           {
@@ -802,7 +802,7 @@
             "description": "Zapatos - Niño",
             "colors": "2 colores",
             "price": "$65.00",
-            "image": "/Imagenes/zapatos-niño1.jpeg",
+            "image": "../Imagenes/zapatos-niño1.jpeg",
             "visible": true
           },
           {
@@ -813,7 +813,7 @@
             "description": "Zapatos - Niño",
             "colors": "2 colores",
             "price": "$50.00",
-            "image": "/Imagenes/zapatos-niño2.jpeg",
+            "image": "../Imagenes/zapatos-niño2.jpeg",
             "visible": true
           },
           {
@@ -824,7 +824,7 @@
             "description": "Zapatos - Niño",
             "colors": "2 colores",
             "price": "$70.00",
-            "image": "/Imagenes/zapatos-niño3.jpeg",
+            "image": "../Imagenes/zapatos-niño3.jpeg",
             "visible": true
           },
           {
@@ -835,7 +835,7 @@
             "description": "Zapatos - Niño",
             "colors": "2 colores",
             "price": "$60.00",
-            "image": "/Imagenes/zapatos-niño4.jpeg",
+            "image": "../Imagenes/zapatos-niño4.jpeg",
             "visible": true
           },
           {
@@ -846,7 +846,7 @@
             "description": "Zapatos - Niño",
             "colors": "2 colores",
             "price": "$55.00",
-            "image": "/Imagenes/zapatos-niño5.jpg",
+            "image": "../Imagenes/zapatos-niño5.jpg",
             "visible": true
           }
     ]
