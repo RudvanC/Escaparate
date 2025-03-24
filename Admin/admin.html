@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Productos</title>
-<<<<<<< HEAD:Admin/admin.html
+
     <link rel="stylesheet" href="/Admin/admin.css"> <!-- CSS específico de admin -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Tienda de Ropa</title>
+  <link rel="stylesheet" href="admin.css">
+
 </head>
 <body>
-    <h1>Administración de Productos</h1>
+  <header>
+    <h1>Administración de la Tienda</h1>
+  </header>
 
-    <!-- Seleccionar categoría -->
-    <div>
-        <label for="category-select">Selecciona una categoría:</label>
-        <select id="category-select">
-            <!-- Las opciones se llenarán dinámicamente -->
-        </select>
-    </div>
+  <main>
+    <!-- Formulario para agregar una nueva sección -->
+    <section id="seccion-crear">
+      <h2>Crear Sección</h2>
+      <form id="add-section-form">
+        <input type="text" id="new-section-input" placeholder="Nombre de la sección" required>
+        <button type="submit">Agregar Sección</button>
+      </form>
+    </section>
 
-=======
+
     <link rel="stylesheet" href="/Hombre/Contenido/style.css"> <!-- CSS general -->
     <link rel="stylesheet" href="/Hombre/Admin/admin.css"> <!-- CSS específico de admin -->
 </head>
 <body>
     <h1>Administración de Productos</h1>
->>>>>>> a638452 (Redireccion de la página principal corregida y video página hombre):Hombre/Admin/admin.html
+
     <!-- Lista de productos existentes -->
     <div id="admin-products-container">
         <!-- Las secciones y productos se cargarán aquí -->
     </div>
 
-    <button id="save-visibility">Guardar Cambios</button>
+    <!-- Formulario para agregar un nuevo producto -->
+    <section id="producto-crear">
+      <h2>Agregar Producto</h2>
+      <form id="add-product-form">
+        <label for="product-section-select">Sección:</label>
+        <select id="product-section-select" required></select>
+        <br>
+        <input type="text" id="product-title" placeholder="Título" required>
+        <br>
+        <input type="text" id="product-description" placeholder="Descripción" required>
+        <br>
+        <input type="text" id="product-category" placeholder="Categoría (ej: shoes, shirts, etc.)" required>
+        <br>
+        <input type="text" id="product-price" placeholder="Precio" required>
+        <br>
+        <input type="text" id="product-image" placeholder="URL de la imagen" required>
+        <br>
+        <input type="text" id="product-colors" placeholder="Colores" required>
+        <br>
+        <button type="submit">Agregar Producto</button>
+      </form>
+    </section>
 
-    <!-- Formulario para agregar nuevas secciones -->
-    <div class="form-container">
-        <h2>Agregar Nueva Sección</h2>
-        <form id="add-section-form">
-            <input type="text" id="section-name" placeholder="Nombre de la sección" required>
-            <button type="submit">Agregar Sección</button>
-        </form>
-    </div>
 
-    <!-- Formulario para agregar nuevos productos -->
-    <div class="form-container">
-        <h2>Agregar Nuevo Producto</h2>
-        <form id="add-product-form">
-            <select id="product-category" required>
-                <option value="">Selecciona una categoría</option>
-                <!-- Las opciones se llenarán dinámicamente -->
-            </select>
-            <input type="text" id="product-title" placeholder="Título del producto" required>
-            <input type="text" id="product-description" placeholder="Descripción del producto" required>
-            <input type="text" id="product-colors" placeholder="Colores disponibles" required>
-            <input type="text" id="product-price" placeholder="Precio del producto" required>
-            <input type="text" id="product-image" placeholder="URL de la imagen" required>
-            <button type="submit">Agregar Producto</button>
-        </form>
-    </div>
+    <!-- Contenedor para visualizar las secciones y productos actuales -->
+    <section id="admin-container">
+      <h2>Secciones y Productos</h2>
+      <!-- Aquí se listarán las secciones con sus productos -->
+    </section>
+  </main>
 
-    <script src="/Admin/admin.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>

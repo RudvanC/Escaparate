@@ -1,0 +1,643 @@
+    :root {
+        --color-primario: #DDD0C8;
+        /* beige */
+        --color-secundario: #323232;
+        /* gris oscuro */
+        --color-terciario: #000000;
+        /* negro */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .montserrat-montserratfont {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 1rem;
+        font-style: bold;
+    }
+
+    .hombre-section,
+    .mujer-section {
+        margin-bottom: 8rem;
+    }
+
+    .section-title {
+        width: 100%;
+        background-color: var(--color-primario);
+        color: white;
+        font-weight: bold;
+        border: 2px solid black;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    /* Estilo para todo el documento en general */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background: #ffffff;
+        font-family: 'Lato', sans-serif;
+        height: 100vh;
+        margin: 0 auto;
+        scroll-behavior: smooth;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fffefe;
+        padding: 1rem;
+        border-bottom: 2px solid #000000;
+        position: fixed;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: montserrat;
+        font-weight: bold;
+        color: #000000;
+    }
+
+
+    /*Inicio de menu paar desplegar al dar click en hombre*/
+
+    .menu-container {
+        position: relative;
+        display: inline-block;
+        z-index: 5;
+    }
+
+    .menu-button {
+        /* Botón estilo hamburguesa */
+        display: block;
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5px;
+        user-select: none;
+    }
+
+    .menu {
+        /* Estilo del menú desplegable */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.7s ease-out;
+    }
+
+
+    #menu-toggle-hombres:checked+.menu-button+.menu,
+    #menu-toggle-mujeres:checked+.menu-button+.menu,
+    #menu-toggle-ninos:checked+.menu-button+.menu {
+        max-height: 200px;
+        /* Ajusta según el contenido */
+        overflow-y: auto;
+        /* Habilita el desplazamiento vertical */
+    }
+
+    #menu-toggle-hombres,
+    #menu-toggle-mujeres,
+    #menu-toggle-ninos {
+        display: none;
+    }
+
+
+    .menu ul {
+        /* Estilos de los enlaces del menú */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background: #f4f4f4;
+    }
+
+    /*final del estilo del menu desplegable*/
+
+    .announcements {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: #DDD0C8;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .announcements p {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        animation: textChange 20s infinite;
+    }
+
+    /* Definimos la animación */
+    @keyframes textChange {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        20% {
+            opacity: 1;
+        }
+
+        25% {
+            opacity: 0;
+        }
+    }
+
+    /* Aplicamos el retraso a cada párrafo */
+    .announcements p:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .announcements p:nth-child(2) {
+        animation-delay: 5s;
+    }
+
+    .announcements p:nth-child(3) {
+        animation-delay: 10s;
+    }
+
+    .announcements p:nth-child(4) {
+        animation-delay: 15s;
+    }
+
+    .search {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        color: #323232;
+        font-weight: bold;
+    }
+
+    /* Contenedor principal */
+    main {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .shoes-items,
+    .shirts-items,
+    .pants-items,
+    .pantalones-items,
+    .camisas-items,
+    .shorts-items,
+    .zapatos-items,
+    .chaquetas-items,
+    .pantalones-items,
+    .camisetas-items,
+    .faldas-items,
+    .vestidos-items,
+    .deporte-items,
+    .conjuntos-items,
+    .lenceria-items {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .pants-items {
+        flex-wrap: wrap;
+        width: 1400px;
+    }
+
+    .shoes,
+    .shirts,
+    .pants,
+    .pantalones,
+    .camisas,
+    .shorts,
+    .zapatos,
+    .chaquetas,
+    .pantalones,
+    .camisetas,
+    .faldas,
+    .vestidos,
+    .deporte,
+    .conjuntos,
+    .lenceria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-card {
+        height: 100%;
+    }
+
+    .title {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: montserrat;
+        color: #000000;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desc-text {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    h3 {
+        text-align: left;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: montserrat;
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--color-primario);
+        border-top: 1px solid #000000;
+        padding: 20px 0;
+        margin-top: 50px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-columna {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .footer-columna h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .footer-columna ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-columna ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-columna ul li a {
+        color: var(--color-secundario);
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-columna ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .after-footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .after-footer p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-footer {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Caja de video */
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+    }
+
+    /* Botón 2 */
+    .btn-2 {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn-2 a {
+        text-decoration: none;
+        border: 2px solid #010100;
+        padding: 15px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        display: inline-block;
+    }
+
+    span {
+        position: relative;
+        z-index: 3;
+    }
+
+    .btn-2 a:hover::before {
+        transform: scaleY(0);
+    }
+
+    .btn-2 a:hover::after {
+        transform: scaleX(0);
+    }
+
+    .btn-2 a {
+        color: #ffffff;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn-2 a:hover {
+        color: #000000;
+        transition: all 0.5s ease-in-out;
+        background-color: white;
+    }
+
+    .btn-2 a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        transition: all 0.5s ease-in-out;
+        transform: scaleY(1);
+    }
+
+    .btn-2 a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: all 0.5s ease-in-out;
+        transform: scaleX(1);
+    }
+
+    .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .admin-controls {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #toggle-visibility {
+        padding: 10px 20px;
+        background-color: var(--color-secundario);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    #toggle-visibility:hover {
+        background-color: var(--color-terciario);
+    }
+
+    /* Añade estas reglas al final de tu CSS */
+
+
+    /* Tarjeta de producto - Ajuste universal */
+    .product-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-20px);
+    }
+
+    /* Contenedor de imagen */
+
+    /* Ajuste específico para imágenes */
+    .product-card img {
+        width: 100%;
+        height: 260px;
+        /* Altura fija para todas las imágenes */
+        object-fit: cover;
+        /* Mantiene la relación de aspecto */
+        object-position: center;
+        flex-shrink: 0;
+        /* Evita que la imagen se encoja */
+    }
+
+    /* Contenido textual */
+    .desc-text {
+        padding: 15px;
+        background: white;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+        .product-card img {
+            height: 250px;
+        }
+
+        .chaquetas-items,
+        .pantalones-items,
+        .camisetas-items {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-card img {
+            height: 200px;
+        }
+    }
+
+
+    .product-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-category {
+        width: 20%;
+        min-width: 200px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .carousel-container {
+        width: 500px;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .carousel-track {
+        display: flex;
+        animation: scroll 20s linear infinite;
+        width: max-content
+    }
+
+    .carousel-track img {
+        width: 100px;
+        height: 120px;
+        /* Agregado alto fijo */
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+
+    .nino-product-section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .nino-product-category {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .nino-carousel-container {
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .nino-carousel-track {
+        display: flex;
+        animation: scroll 20s linear infinite;
+        width: max-content
+    }
+
+    .nino-carousel-track img {
+        width: 100px;
+        height: 120px;
+        /* Agregado alto fijo */
+        object-fit: cover;
+        flex-shrink: 0;
+    }
