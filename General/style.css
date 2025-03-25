@@ -116,7 +116,38 @@
     }
       /*Sección derecha del header*/
       .right{
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
        
+       
+        .img-navbar{
+            
+            width: 3rem;
+            height: 3rem;
+            justify-content: space-between;
+        }
+
+        .nino-navbar-imagen{
+            margin-right: 8px;
+        }
+
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a:hover{
+            background-color: rgba(0, 0, 0, 0.137);
+            border-radius: 20px;
+            border: 2px solid rgb(39, 150, 72);
+            padding: 5px;
+
+            img{
+                color: white;
+            }
+        }
 
     }
 
