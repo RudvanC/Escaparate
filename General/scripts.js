@@ -144,3 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = 'pago.html';
 }
 });
+
+
+const headerMenu = document.getElementById('header-menu');
+const sidebar = document.getElementById('sidebar');
+const main =document.getElementById('main')
+
+headerMenu.addEventListener('click',()=>{
+    sidebar.classList.toggle('menu-toggle')
+    headerMenu.classList.toggle('menu-toggle');
+})
