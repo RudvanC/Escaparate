@@ -70,10 +70,24 @@
             </div>
 
             <div class="home-logo">
-                <a href="../login/login.html"><img src="../Imagenes/iniciar-sesion.png" alt="iniciar" title="Iniciar Sesion"></a>
-                <a href="/Index/home.html"><img src="../Imagenes/bx--home.svg" alt="Home"></a>   
-                <span id="user-name" style="display: none;"></span>             
+                <!-- Mostrar solo cuando NO hay sesión -->
+                <a href="../login/login.html" id="login-link" class="login-button">
+                    <img src="../Imagenes/iniciar-sesion.png" alt="Iniciar sesión">
+                </a>
+                
+                <!-- Siempre visible -->
+                <a href="/Index/home.html" class="home-button">
+                    <img src="../Imagenes/bx--home.svg" alt="Home">
+                </a>
+                
+                <!-- Contenedor para usuario logueado -->
+                <div id="user-container" class="user-container hidden">
+                    <span id="user-name" class="user-greeting"></span>
+                    <a href="#" id="cerrar-sesion" class="logout-button">(Cerrar sesión)</a>
+                </div>
             </div>
+            
+            
         </nav>
     </header>
 
@@ -195,6 +209,8 @@
             </div>
         </footer>
         <script src="/Index/scripts.js"></script>
+        <script src="../login/login.js"></script>
+
     </body>
 
 </html>

@@ -11,7 +11,7 @@ function validarContrasena(contrasena) {
 }
 
 // Manejar el envío del formulario de registro
-document.getElementById('formulario-registro').addEventListener('submit', function (e) {
+document.getElementById('formulario-registro').addEventListener('submit', function(e) {
     e.preventDefault();
 
     // Obtener valores del formulario
@@ -59,12 +59,11 @@ document.getElementById('formulario-registro').addEventListener('submit', functi
         contrasena
     };
 
-    // Guardar usuario
+    // Guardar usuario (SOLO registro, SIN iniciar sesión)
     usuarios.push(nuevoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    localStorage.setItem('usuarioActual', JSON.stringify(nuevoUsuario));
 
     // Feedback y redirección
-    alert(`Registro exitoso. Bienvenido ${nombre}!`);
-    window.location.href = '/login/login.html';
+    alert(`Registro exitoso ${nombre}! Ahora puedes iniciar sesión`);
+    window.location.href = 'login.html'; // Redirigir a login
 });

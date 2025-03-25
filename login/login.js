@@ -1,10 +1,12 @@
 /**
- * login.js - Manejo de autenticación y sesión de usuario
+ * login.js - Sistema de autenticación mejorado
  * Funcionalidades:
- * 1. Validación de login
- * 2. Mostrar nombre de usuario en navbar
- * 3. Cierre de sesión
+ * 1. Redirige a home.html después de login
+ * 2. Permanece en la misma página al cerrar sesión
  */
+
+// ==================== CONFIGURACIÓN ====================
+const RUTA_HOME = '../Index/home.html';
 
 // ==================== FUNCIONES PRINCIPALES ====================
 
@@ -23,30 +25,27 @@ function actualizarNavbar() {
             <a href="#" id="cerrar-sesion" style="margin-left: 10px; color: #666;">(Cerrar sesión)</a>
         `;
         
-        // Agrega el evento de cierre de sesión aquí
+        // Evento de cierre de sesión modificado
         document.getElementById('cerrar-sesion').addEventListener('click', function(e) {
             e.preventDefault();
             localStorage.removeItem('usuarioActual');
-            window.location.href = 'login.html';
+            actualizarNavbar(); // Actualiza la UI sin redirección
         });
+    } else if (homeLogo) {
+        // Estado cuando no hay usuario logueado
+        homeLogo.innerHTML = `
+            <a href="../login/login.html">
+                <img src="../Imagenes/iniciar-sesion.png" alt="Iniciar sesión">
+            </a>
+        `;
     }
-}
-
-function configurarCerrarSesion() {
-    document.getElementById('cerrar-sesion').addEventListener('click', function(e) {
-        e.preventDefault();
-        localStorage.removeItem('usuarioActual');
-        window.location.href = 'login.html';
-    });
 }
 
 // ==================== MANEJADORES DE EVENTOS ====================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar sesión al cargar la página
-    if (document.querySelector('.home-logo')) {
-        actualizarNavbar();
-    }
+    // Actualizar navbar al cargar
+    actualizarNavbar();
 
     // Manejar formulario de login si existe
     const formularioLogin = document.getElementById('formulario-login');
@@ -68,9 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('usuarioActual', JSON.stringify(usuario));
                 alert(`Bienvenido ${usuario.nombre}!`);
                 
-                // Pequeño retraso para mejor experiencia de usuario
                 setTimeout(() => {
-                    window.location.href = '../Index/.html';
+                    window.location.href = RUTA_HOME; // Redirige a home.html
                 }, 800);
             } else {
                 alert('Credenciales incorrectas. Por favor intente nuevamente.');
@@ -80,9 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ==================== FUNCIONALIDAD ADICIONAL ====================
-
-// Verificar autenticación en páginas protegidas
+// ==================== PROTECCIÓN DE RUTAS ====================
 function verificarAutenticacion() {
     if (!JSON.parse(localStorage.getItem('usuarioActual')) && 
         !window.location.pathname.includes('login.html')) {
@@ -90,6 +86,5 @@ function verificarAutenticacion() {
     }
 }
 
-// Ejecutar verificación en páginas que lo requieran
-// (Agrega esto al inicio de otros archivos JS de páginas protegidas)
+// Descomenta si necesitas protección automática
 // verificarAutenticacion();
