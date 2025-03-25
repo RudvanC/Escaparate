@@ -1,7 +1,7 @@
 {
     "hombre": [
         {
-            "id": 1,
+            "id": "h-1",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Jordan Spizike Low",
@@ -9,10 +9,11 @@
             "colors": "2 colores",
             "price": "120.00€",
             "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4ad06167-fb6c-47d7-b594-aa140c4ca041/JORDAN+SPIZIKE+LOW.png",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 2,
+            "id": "h-2",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Air Jordan 1 Mid",
@@ -20,10 +21,11 @@
             "colors": "2 colores",
             "price": "149.99€",
             "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9161d4e2-db39-4bca-8d02-d58abe6cfc18/AIR+JORDAN+1+MID.png",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 3,
+            "id": "h-3",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Air Jordan 1 Low",
@@ -31,10 +33,11 @@
             "colors": "2 colores",
             "price": "80.00€",
             "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ab3ec819-7808-4cd8-ba1c-b1e9386c8540/AIR+JORDAN+1+LOW.png",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 4,
+            "id": "h-4",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Nike Air Max 95",
@@ -42,10 +45,11 @@
             "colors": "2 colores",
             "price": "130.00€",
             "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fc50c2c5-a30b-4de7-970f-a1525baf13bd/NIKE+AIR+MAX+95.png",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 5,
+            "id": "h-5",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Nike Blazer Mid '77 Vintage",
@@ -53,10 +57,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/389b709e-5102-4e55-aa5d-07099b500831/BLAZER+MID+%2777+VNTG.png",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 6,
+            "id": "h-6",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Classic",
@@ -64,10 +69,11 @@
             "colors": "2 colores",
             "price": "89.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/09/14/f1/1726310497fa27930e2bfce3d5abb34d76361ecb11_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 7,
+            "id": "h-7",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Modern",
@@ -75,10 +81,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/11/23/ee/17323550999c7fba5d550e5d1ee466f6240ebba389_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 8,
+            "id": "h-8",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Urban",
@@ -86,10 +93,11 @@
             "colors": "2 colores",
             "price": "79.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/11/26/73/1732606119f7a8c06a432ff067ca8f9eb4b32d0ed6_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 9,
+            "id": "h-9",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Retro",
@@ -97,10 +105,11 @@
             "colors": "2 colores",
             "price": "69.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/12/31/db/1735629290748f7af7379bfbbbd17979ed15521c69_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 10,
+            "id": "h-10",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Vintage",
@@ -108,10 +117,11 @@
             "colors": "2 colores",
             "price": "109.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2025/02/17/16/1739759678840c8648e2c89668e6702b3401377ce8_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 11,
+            "id": "h-11",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Slim Fit",
@@ -119,10 +129,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2025/01/20/60/1737361406b60b62f751892cfcb59beda96a5fd4bc_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 12,
+            "id": "h-12",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Casual",
@@ -130,10 +141,11 @@
             "colors": "2 colores",
             "price": "89.99€",
             "image": "https://img.ltwebstatic.com/images3_spmp/2024/08/20/d7/1724147088de29b6089ef8e1e4d1ad8cebbd7a55b5_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 13,
+            "id": "h-13",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Deportivo",
@@ -141,10 +153,11 @@
             "colors": "2 colores",
             "price": "79.99€",
             "image": "https://img.ltwebstatic.com/images3_spmp/2024/11/13/fb/1731477152b18b2a396af1e1e9e176e424d7304493_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 14,
+            "id": "h-14",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Cargo",
@@ -152,10 +165,11 @@
             "colors": "2 colores",
             "price": "109.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2025/02/08/8d/17389909307dcf4aff6da990dbc2f3176166498db6_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 15,
+            "id": "h-15",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -163,10 +177,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2025/02/28/fc/1740706121293c7d737a1116f0eca8d70e3a73e7c0_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 16,
+            "id": "h-16",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -174,10 +189,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2022/04/08/164938253473119bd8d65e59fa38e0d3ba5191a38e_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 17,
+            "id": "h-17",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -185,10 +201,11 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/06/13/5b/171824193337879431dc8cf6cf8483534299207fa0_thumbnail_900x.webp",
-            "visible": true
+            "visible": true,
+            "stock" : "100 unidades"
           },
           {
-            "id": 18,
+            "id": "h-18",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -196,23 +213,13 @@
             "colors": "2 colores",
             "price": "99.99€",
             "image": "https://img.ltwebstatic.com/images3_pi/2024/12/23/f3/17349257573909b4547944dc988c78fb9164e1d0d1_thumbnail_900x.jpg",
-            "visible": true
-          },
-          {
-            "id": 19,
-            "category": "pants",
-            "categoryDisplay": "Pantalones",
-            "title": "Pantalón Clásico",
-            "description": "Pantalón - Hombre",
-            "colors": "2 colores",
-            "price": "99.99€",
-            "image": "https://img.ltwebstatic.com/images3_pi/2025/02/12/21/1739333146b2c1b70edd526dfb1369ba96f57a132d_thumbnail_900x.webp",
-            "visible": true
-            }
+            "visible": true,
+            "stock" : "100 unidades"
+          }
     ],
     "mujer": [
         {
-            "id": 1,
+            "id": "m-1",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Casual Style",
@@ -221,11 +228,12 @@
             "price": "25.00€",
             "image": "chaqueta.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 2,
+            "id": "m-2",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Larga",
@@ -234,11 +242,12 @@
             "price": "70.00€",
             "image": "chaqueta2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 3,
+            "id": "m-3",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Corta",
@@ -247,11 +256,12 @@
             "price": "30.00€",
             "image": "chaqueta3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 4,
+            "id": "m-4",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Blazer",
@@ -260,11 +270,12 @@
             "price": "30.00€",
             "image": "chaqueta4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 5,
+            "id": "m-5",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalones Chinos",
@@ -273,11 +284,12 @@
             "price": "25.00€",
             "image": "pantalon.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 6,
+            "id": "m-6",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Jeans",
@@ -286,11 +298,12 @@
             "price": "25.00€",
             "image": "pantalon2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 7,
+            "id": "m-7",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalones Anchos",
@@ -299,11 +312,12 @@
             "price": "35.00€",
             "image": "pantalon3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 8,
+            "id": "m-8",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Shores",
@@ -312,11 +326,12 @@
             "price": "15.00€",
             "image": "pantalon4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 9,
+            "id": "m-9",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta LV",
@@ -325,11 +340,12 @@
             "price": "35.00€",
             "image": "camiseta.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 10,
+            "id": "m-10",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camisa",
@@ -338,11 +354,12 @@
             "price": "15.00€",
             "image": "camiseta2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 11,
+            "id": "m-11",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Casual",
@@ -351,11 +368,12 @@
             "price": "15.00€",
             "image": "camiseta3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 12,
+            "id": "m-12",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Blusa",
@@ -364,11 +382,12 @@
             "price": "20.00€",
             "image": "camiseta4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 13,
+            "id": "m-13",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda larga verano",
@@ -377,11 +396,12 @@
             "price": "20.00€",
             "image": "falda.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 14,
+            "id": "m-14",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda Corta",
@@ -390,11 +410,12 @@
             "price": "20.00€",
             "image": "falda2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 15,
+            "id": "m-15",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda corta lisa",
@@ -403,11 +424,12 @@
             "price": "20.00€",
             "image": "falda3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 16,
+            "id": "m-16",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda traje",
@@ -416,11 +438,12 @@
             "price": "20.00€",
             "image": "falda4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 17,
+            "id": "m-17",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido verano",
@@ -429,11 +452,12 @@
             "price": "25.00€",
             "image": "vestido.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 18,
+            "id": "m-18",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido Fiesta",
@@ -442,11 +466,12 @@
             "price": "30.00€",
             "image": "vestido2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 19,
+            "id": "m-19",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido noche",
@@ -455,11 +480,12 @@
             "price": "40.00€",
             "image": "vestido3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 20,
+            "id": "m-20",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido Casual",
@@ -468,11 +494,12 @@
             "price": "50.00€",
             "image": "vestido4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 21,
+            "id": "m-21",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Mallas",
@@ -481,11 +508,12 @@
             "price": "20.00€",
             "image": "deporte.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 22,
+            "id": "m-22",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Falda Deporte",
@@ -494,11 +522,12 @@
             "price": "25.00€",
             "image": "deporte2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 23,
+            "id": "m-23",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Sudadera Sport",
@@ -507,11 +536,12 @@
             "price": "30.00€",
             "image": "deporte3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 24,
+            "id": "m-24",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Sujetador Deportivo",
@@ -520,11 +550,12 @@
             "price": "15.00€",
             "image": "deporte4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 25,
+            "id": "m-25",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto traje",
@@ -533,11 +564,12 @@
             "price": "40.00€",
             "image": "conjunto.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 26,
+            "id": "m-26",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto verano",
@@ -546,11 +578,12 @@
             "price": "20.00€",
             "image": "conjunto2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 27,
+            "id": "m-27",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto Chandal",
@@ -559,11 +592,12 @@
             "price": "35.00€",
             "image": "conjunto3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 28,
+            "id": "m-28",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Enterizo",
@@ -572,11 +606,12 @@
             "price": "40.00€",
             "image": "conjunto4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 29,
+            "id": "m-29",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 1",
@@ -585,11 +620,12 @@
             "price": "50.00€",
             "image": "lenceria.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 30,
+            "id": "m-30",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 2",
@@ -598,11 +634,12 @@
             "price": "50.00€",
             "image": "lenceria2.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 31,
+            "id": "m-31",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 3",
@@ -611,11 +648,12 @@
             "price": "50.00€",
             "image": "lenceria3.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
           },
           {
-            "id": 32,
+            "id": "m-32",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 4",
@@ -624,13 +662,14 @@
             "price": "50.00€",
             "image": "lenceria4.jpg",
             "visible": true,
+            "stock" : "100 unidades",
             "buttonText": "Añadir al carrito",
             "buttonClass": "btn-add"
             }
     ],
     "nino": [
         {
-            "id": 1,
+            "id": "n-1",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Jogger Niño",
@@ -638,10 +677,11 @@
             "colors": "2 colores",
             "price": "$25.00",
             "image": "pantalon-niño1.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 2,
+            "id": "n-2",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 1 Niño",
@@ -649,10 +689,11 @@
             "colors": "2 colores",
             "price": "$30.00",
             "image": "pantalon-niño2.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 3,
+            "id": "n-3",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 2 Niño",
@@ -660,10 +701,11 @@
             "colors": "2 colores",
             "price": "$35.00",
             "image": "pantalon-niño3.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 4,
+            "id": "n-4",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 3 Niño",
@@ -671,10 +713,11 @@
             "colors": "2 colores",
             "price": "$40.00",
             "image": "pantalon-niño4.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 5,
+            "id": "n-5",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Jogger 2 Niño",
@@ -682,10 +725,11 @@
             "colors": "2 colores",
             "price": "$45.00",
             "image": "pantalon-niño5.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 6,
+            "id": "n-6",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta california",
@@ -693,10 +737,11 @@
             "colors": "2 colores",
             "price": "$27.00",
             "image": "camisa-niño1.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 7,
+            "id": "n-7",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta roblox",
@@ -704,10 +749,11 @@
             "colors": "2 colores",
             "price": "$30.00",
             "image": "camisa-niño2.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 8,
+            "id": "n-8",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta dinosaurio",
@@ -715,10 +761,11 @@
             "colors": "2 colores",
             "price": "$25.00",
             "image": "camisa-niño3.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 9,
+            "id": "n-9",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta peluche",
@@ -726,10 +773,11 @@
             "colors": "2 colores",
             "price": "$22.00",
             "image": "camisa-niño4.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 10,
+            "id": "n-10",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Pow patrol",
@@ -737,10 +785,11 @@
             "colors": "2 colores",
             "price": "$20.00",
             "image": "camisa-niño5.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 11,
+            "id": "n-11",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short multicolor",
@@ -748,10 +797,11 @@
             "colors": "2 colores",
             "price": "$20.00",
             "image": "short-niño1.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 12,
+            "id": "n-12",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short azul",
@@ -759,10 +809,11 @@
             "colors": "2 colores",
             "price": "$25.00",
             "image": "short-niño2.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 13,
+            "id": "n-13",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short verde",
@@ -770,10 +821,11 @@
             "colors": "2 colores",
             "price": "$30.00",
             "image": "short-niño3.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 14,
+            "id": "n-14",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short negro",
@@ -781,10 +833,11 @@
             "colors": "2 colores",
             "price": "$35.00",
             "image": "short-niño4.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 15,
+            "id": "n-15",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short Paw patrol",
@@ -792,10 +845,11 @@
             "colors": "2 colores",
             "price": "$35.00",
             "image": "short-niño5.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 16,
+            "id": "n-16",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos converse",
@@ -803,10 +857,11 @@
             "colors": "2 colores",
             "price": "$65.00",
             "image": "zapatos-niño1.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 17,
+            "id": "n-17",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos deportivos",
@@ -814,10 +869,11 @@
             "colors": "2 colores",
             "price": "$50.00",
             "image": "zapatos-niño2.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 18,
+            "id": "n-18",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos fashion",
@@ -825,10 +881,11 @@
             "colors": "2 colores",
             "price": "$70.00",
             "image": "zapatos-niño3.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 19,
+            "id": "n-19",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos deportivos 2",
@@ -836,10 +893,11 @@
             "colors": "2 colores",
             "price": "$60.00",
             "image": "zapatos-niño4.jpeg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           },
           {
-            "id": 20,
+            "id": "n-20",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos con luces",
@@ -847,7 +905,8 @@
             "colors": "2 colores",
             "price": "$55.00",
             "image": "zapatos-niño5.jpg",
-            "visible": true
+            "visible": true,
+            "stock" :"100 unidades"
           }
     ]
   }

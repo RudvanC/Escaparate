@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(jsonPath)
         .then(response => response.json())
         .then(data => {
-            // Convertir JSON a array plano
             const products = Object.entries(data).flatMap(([section, items]) =>
                 items.map(product => ({
                     ...product,
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }))
             );
             renderProducts(products);
-            addAddToCartButtons(products); // Llamar a la función después de renderizar los productos.
+            addAddToCartButtons(products);
         })
         .catch(error => console.error('Error:', error));
 
@@ -20,33 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
         products.forEach(product => {
             if (!product.visible) return;
 
-            // 1. Buscar la sección (hombre, mujer, nino)
             const section = document.getElementById(`${product.section}-section`);
             if (!section) return;
 
-            // 2. Buscar el contenedor dentro de la sección
             const container = section.querySelector(`#products-container-${product.category}`);
             if (!container) return;
 
-            // 3. Crear tarjeta
             const card = document.createElement('article');
             card.className = 'product-item';
             card.dataset.productId = product.id; // Agregar el atributo data-product-id
               
             
-            let esImagenRemota = false
-            if (product.image.startsWith('http')) {
-                esImagenRemota = true
-            }
-            const imagePath = (!esImagenRemota ? '../Imagenes/' : '' ) + product.image 
-
-            // let imagePath = product.image
-            // if (!imagePath.startsWith('http')) {
-            //     imagePath = `../Imagenes/${imagePath}`
+            // let esImagenRemota = false
+            // if (product.image.startsWith('http')) {
+            //     esImagenRemota = true
             // }
+           
+
+            let imagePath = product.image
+            if (!imagePath.startsWith('http')) {
+                imagePath = `../Imagenes/${imagePath}`
+            }
 
             // const imagePath = (!product.image.startsWith('http') ? '../Imagenes/' : '') +  product.image
 
+        
+         
 
             card.innerHTML = `
                 <img src="${imagePath}" alt="${product.title}">
@@ -55,86 +53,124 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${product.description}</p>
                     <p>${product.colors}</p>
                     <h5>${product.price}</h5>
+                    <h6>${product.stock}</h6>
                 </div>
             `;
             container.appendChild(card);
         });
     }
 
-    const cartIcon = document.getElementById('cart-icon');
-    const cartContainer = document.getElementById('cart-container');
-    const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const checkoutButton = document.getElementById('checkout-button');
-    const cartCount = document.getElementById('cart-count');
 
-    let cart = [];
 
-    // Función para agregar un producto al carrito
-    function addToCart(product) {
-        cart.push(product);
-        updateCart();
-    }
+    //CARRITO
+   // Elementos del DOM para el carrito
+const cartIcon = document.getElementById('cart-icon');
+const cartContainer = document.getElementById('cart-container');
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+let checkoutButton = document.getElementById('checkout-button');
 
-    // Función para actualizar la visualización del carrito
-    function updateCart() {
-        cartItems.innerHTML = '';
-        let total = 0;
+let cart = [];
 
-        cart.forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.classList.add('cart-item');
-            itemDiv.innerHTML = `
-                <img src="${item.image}" alt="${item.title}" style="width: 50px; height: 50px;">
-                <span>${item.title} - ${item.price}</span>
-            `;
-            cartItems.appendChild(itemDiv);
-            total += parseFloat(item.price.replace('€', ''));
-        });
+// Función para agregar un producto al carrito
+function addToCart(product) {
+  // Soporta precios en € y $
+  const precioNumerico = parseFloat(
+    product.price.replace('€', '').replace('$', '').replace(',', '.')
+  );
+  if (!isNaN(precioNumerico)) {
+    cart.push({ ...product, price: precioNumerico });
+    updateCart();
+  } else {
+    console.error('Precio inválido:', product.price);
+  }
+}
 
-        cartTotal.textContent = `Total: ${total.toFixed(2)}€`;
-        cartCount.textContent = cart.length;
-    }
+// Función para actualizar la visualización del carrito
+function updateCart() {
+  let total = 0;
+  cartItems.innerHTML = '';
 
-    // Evento para mostrar/ocultar el carrito
-    cartIcon.addEventListener('click', () => {
-        if (cartContainer.style.display === 'block') {
-            cartContainer.style.display = 'none';
-        } else {
-            cartContainer.style.display = 'block';
-        }
-    });
+  cart.forEach(item => {
+    total += item.price;
+    const itemElement = document.createElement('div');
+    itemElement.textContent = `${item.title} - ${item.price.toFixed(2)}€`;
+    cartItems.appendChild(itemElement);
+  });
 
-    // Evento para finalizar la compra (puedes personalizar esto)
+  cartTotal.textContent = `Total: ${total.toFixed(2)}€`;
+
+  if (!document.getElementById('checkout-button')) {
+    checkoutButton = document.createElement('button');
+    checkoutButton.id = 'checkout-button';
+    checkoutButton.textContent = 'Finalizar Compra';
     checkoutButton.addEventListener('click', () => {
-        alert('Compra finalizada. Total: ' + cartTotal.textContent);
-        cart = [];
-        updateCart();
-        cartContainer.style.display = 'none';
+      alert('Compra finalizada. Total: ' + cartTotal.textContent);
+      cart = [];
+      updateCart();
+      cartContainer.style.display = 'none';
     });
+    cartContainer.appendChild(checkoutButton);
+  }
+}
 
-    // Agregar eventos de clic a los botones "Agregar al carrito"
-    function addAddToCartButtons(products) {
-        const productSections = document.querySelectorAll('.shoes-items, .shirts-items, .pants-items, .chaquetas-items, .pantalones-items, .camisas-items, .faldas-items, .vestidos-items, .deporte-items, .conjuntos-items, .lenceria-items, .camisetas-items, .shorts-items, .zapatos-items');
+// Mostrar u ocultar el contenedor del carrito
+cartIcon.addEventListener('click', () => {
+  cartContainer.style.display = (cartContainer.style.display === 'block') ? 'none' : 'block';
+});
 
-        productSections.forEach(section => {
-            section.querySelectorAll('.product-item').forEach(productItem => {
-                const addButton = document.createElement('button');
-                addButton.textContent = 'Agregar al carrito';
-                addButton.addEventListener('click', () => {
-                    const productId = productItem.dataset.productId;
-                    const product = findProductById(productId, products);
-                    if (product) {
-                        addToCart(product);
-                    }
-                });
-                productItem.appendChild(addButton);
-            });
+// Función de búsqueda: ahora los IDs son únicos, por lo que basta compararlos
+function findProductById(id, products) {
+  return products.find(product => product.id === id);
+}
+
+/* 
+  Función para agregar el botón "Agregar al carrito" a cada producto.
+  Se recorre cada contenedor con la clase .items-general-container y se asume que cada producto
+  ya está renderizado en el HTML con la clase "product-item" y el atributo data-product-id.
+*/
+function addAddToCartButtons(products) {
+  const containers = document.querySelectorAll('.items-general-container');
+  
+  containers.forEach(container => {
+    Array.from(container.children).forEach(productItem => {
+      // Si el producto no tiene la clase 'product-item', se la asignamos
+      if (!productItem.classList.contains('product-item')) {
+        productItem.classList.add('product-item');
+      }
+      
+      // Evitar duplicar el botón
+      if (!productItem.querySelector('.btn-add')) {
+        const addButton = document.createElement('button');
+        addButton.textContent = 'Agregar al carrito';
+        addButton.classList.add('btn-add');
+        addButton.addEventListener('click', () => {
+          const productId = productItem.dataset.productId;
+          const product = findProductById(productId, products);
+          if (product) {
+            addToCart(product);
+          } else {
+            console.error('Producto no encontrado:', productId);
+          }
         });
-    }
+        productItem.appendChild(addButton);
+      }
+    });
+  });
+}
 
-    // Función para encontrar un producto por su ID
-    function findProductById(id, products) {
-        return products.find(product => product.id == id);
-    }
+/*
+  Se combinan los productos de todas las categorías.
+  Se asume que 'data' es el objeto JSON con las propiedades "hombre", "mujer" y "nino".
+*/
+const allProducts = [
+  ...data.hombre,
+  ...data.mujer,
+  ...data.nino
+];
+
+// Llamamos a la función para agregar los botones una vez que los productos se hayan renderizado en el HTML.
+addAddToCartButtons(allProducts);
+
+    
 });

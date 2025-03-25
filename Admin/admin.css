@@ -196,3 +196,13 @@ input, select {
     border-radius: 4px;
 }
 
+.section-container { margin: 25px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+.category-group { margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px; }
+.product-item { display: flex; align-items: center; margin: 10px 0; padding: 12px; background: white; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.product-info { flex-grow: 1; margin-left: 15px; }
+.product-image { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; }
+h2 { color: #2c3e50; margin-bottom: 20px; }
+h3 { color: #34495e; margin: 10px 0; }
+button { background: #3498db; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+button:hover { background: #2980b9; }
+
