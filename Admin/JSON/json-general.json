@@ -215,19 +215,7 @@
             "image": "https://img.ltwebstatic.com/images3_pi/2024/12/23/f3/17349257573909b4547944dc988c78fb9164e1d0d1_thumbnail_900x.jpg",
             "visible": true,
             "stock" : "100 unidades"
-          },
-          {
-            "id": 19,
-            "category": "pants",
-            "categoryDisplay": "Pantalones",
-            "title": "Pantalón Clásico",
-            "description": "Pantalón - Hombre",
-            "colors": "2 colores",
-            "price": "99.99€",
-            "image": "https://img.ltwebstatic.com/images3_pi/2025/02/12/21/1739333146b2c1b70edd526dfb1369ba96f57a132d_thumbnail_900x.webp",
-            "visible": true,
-            "stock" : "100 unidades"
-            }
+          }
     ],
     "mujer": [
         {

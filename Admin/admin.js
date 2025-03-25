@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Renderizar productos de la categoría
           productsInCategory.forEach(product => {
+
+            
               const productDiv = document.createElement('div');
               productDiv.classList.add('admin-product');
 
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const productImage = document.createElement('img');
               productImage.src = product.image;
               productImage.alt = product.title;
+              
 
               // Información del producto
               const productInfo = document.createElement('div');

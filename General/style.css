@@ -227,21 +227,11 @@
         flex-wrap: wrap;
     }
 
-    .shoes-items,
-    .shirts-items,
-    .pants-items,
-    .pantalones-items,
-    .camisas-items,
-    .shorts-items,
-    .zapatos-items,
-    .chaquetas-items,
-    .pantalones-items,
-    .camisetas-items,
-    .faldas-items,
-    .vestidos-items,
-    .deporte-items,
-    .conjuntos-items,
-    .lenceria-items {
+    button{
+        margin-bottom: 20px;
+    }
+
+    .items-general-container{
         display: flex;
         gap: 20px;
         justify-content: center;
@@ -251,7 +241,7 @@
 
     .pants-items {
         flex-wrap: wrap;
-        width: 1400px;
+        width: 1200px;
     }
 
     .shoes,
@@ -298,6 +288,8 @@
         justify-content: center;
         align-items: center;
         width: 15rem;
+        height: 440px;
+        margin-bottom: 20px;
     }
 
     img {
@@ -702,4 +694,170 @@
     align-items: center;
     width: 30px;
     height: 40px;
+}
+
+
+
+
+
+/*Responsive*/
+
+@media (width < 1400px){
+
+    .items-general-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+        flex-wrap: wrap;
+    }
+
+    .pants-items {
+        flex-wrap: wrap;
+        width: 1200px;
+    }
+
+    .shoes,
+    .shirts,
+    .pants,
+    .pantalones,
+    .camisas,
+    .shorts,
+    .zapatos,
+    .chaquetas,
+    .pantalones,
+    .camisetas,
+    .faldas,
+    .vestidos,
+    .deporte,
+    .conjuntos,
+    .lenceria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (width < 1200px){
+
+    .items-general-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        flex-wrap: wrap;
+    }
+
+    .pants-items {
+        flex-wrap: wrap;
+        width: 800px;
+    }
+
+    .shoes,
+    .shirts,
+    .pants,
+    .pantalones,
+    .camisas,
+    .shorts,
+    .zapatos,
+    .chaquetas,
+    .pantalones,
+    .camisetas,
+    .faldas,
+    .vestidos,
+    .deporte,
+    .conjuntos,
+    .lenceria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (width < 900px){
+
+    .items-general-container  {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        flex-wrap: wrap;
+    }
+
+    .pants-items {
+        flex-wrap: wrap;
+        width: 500px;
+    }
+
+    .shoes,
+    .shirts,
+    .pants,
+    .pantalones,
+    .camisas,
+    .shorts,
+    .zapatos,
+    .chaquetas,
+    .pantalones,
+    .camisetas,
+    .faldas,
+    .vestidos,
+    .deporte,
+    .conjuntos,
+    .lenceria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (width < 600px){
+
+    .items-general-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        flex-wrap: wrap;
+    }
+
+    .pants-items {
+        flex-wrap: wrap;
+        width: 300px;
+    }
+
+    .shoes,
+    .shirts,
+    .pants,
+    .pantalones,
+    .camisas,
+    .shorts,
+    .zapatos,
+    .chaquetas,
+    .pantalones,
+    .camisetas,
+    .faldas,
+    .vestidos,
+    .deporte,
+    .conjuntos,
+    .lenceria {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
