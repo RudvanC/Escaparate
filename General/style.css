@@ -139,9 +139,9 @@
         }
 
         a:hover{
-            background-color: rgba(0, 0, 0, 0.137);
+            background-color: var(--color-primario);
             border-radius: 20px;
-            border: 2px solid rgb(39, 150, 72);
+            border: 2px solid var(--color-secundario);
             padding: 5px;
 
             img{
