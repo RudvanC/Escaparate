@@ -1,7 +1,7 @@
 {
     "hombre": [
         {
-            "id": 1,
+            "id": "h-1",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Jordan Spizike Low",
@@ -13,7 +13,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 2,
+            "id": "h-2",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Air Jordan 1 Mid",
@@ -25,7 +25,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 3,
+            "id": "h-3",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Air Jordan 1 Low",
@@ -37,7 +37,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 4,
+            "id": "h-4",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Nike Air Max 95",
@@ -49,7 +49,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 5,
+            "id": "h-5",
             "category": "shoes",
             "categoryDisplay": "Zapatillas",
             "title": "Nike Blazer Mid '77 Vintage",
@@ -61,7 +61,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 6,
+            "id": "h-6",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Classic",
@@ -73,7 +73,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 7,
+            "id": "h-7",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Modern",
@@ -85,7 +85,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 8,
+            "id": "h-8",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Urban",
@@ -97,7 +97,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 9,
+            "id": "h-9",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Retro",
@@ -109,7 +109,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 10,
+            "id": "h-10",
             "category": "shirts",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Vintage",
@@ -121,7 +121,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 11,
+            "id": "h-11",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Slim Fit",
@@ -133,7 +133,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 12,
+            "id": "h-12",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Casual",
@@ -145,7 +145,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 13,
+            "id": "h-13",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Deportivo",
@@ -157,7 +157,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 14,
+            "id": "h-14",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Cargo",
@@ -169,7 +169,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 15,
+            "id": "h-15",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -181,7 +181,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 16,
+            "id": "h-16",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -193,7 +193,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 17,
+            "id": "h-17",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -205,7 +205,7 @@
             "stock" : "100 unidades"
           },
           {
-            "id": 18,
+            "id": "h-18",
             "category": "pants",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Clásico",
@@ -219,7 +219,7 @@
     ],
     "mujer": [
         {
-            "id": 1,
+            "id": "m-1",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Casual Style",
@@ -233,7 +233,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 2,
+            "id": "m-2",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Larga",
@@ -247,7 +247,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 3,
+            "id": "m-3",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Chaqueta Corta",
@@ -261,7 +261,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 4,
+            "id": "m-4",
             "category": "chaquetas",
             "categoryDisplay": "Chaquetas",
             "title": "Blazer",
@@ -275,7 +275,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 5,
+            "id": "m-5",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalones Chinos",
@@ -289,7 +289,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 6,
+            "id": "m-6",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Jeans",
@@ -303,7 +303,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 7,
+            "id": "m-7",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalones Anchos",
@@ -317,7 +317,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 8,
+            "id": "m-8",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Shores",
@@ -331,7 +331,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 9,
+            "id": "m-9",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta LV",
@@ -345,7 +345,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 10,
+            "id": "m-10",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camisa",
@@ -359,7 +359,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 11,
+            "id": "m-11",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Casual",
@@ -373,7 +373,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 12,
+            "id": "m-12",
             "category": "camisas",
             "categoryDisplay": "Camisetas",
             "title": "Blusa",
@@ -387,7 +387,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 13,
+            "id": "m-13",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda larga verano",
@@ -401,7 +401,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 14,
+            "id": "m-14",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda Corta",
@@ -415,7 +415,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 15,
+            "id": "m-15",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda corta lisa",
@@ -429,7 +429,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 16,
+            "id": "m-16",
             "category": "faldas",
             "categoryDisplay": "Faldas",
             "title": "Falda traje",
@@ -443,7 +443,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 17,
+            "id": "m-17",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido verano",
@@ -457,7 +457,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 18,
+            "id": "m-18",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido Fiesta",
@@ -471,7 +471,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 19,
+            "id": "m-19",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido noche",
@@ -485,7 +485,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 20,
+            "id": "m-20",
             "category": "vestidos",
             "categoryDisplay": "Vestidos",
             "title": "Vestido Casual",
@@ -499,7 +499,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 21,
+            "id": "m-21",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Mallas",
@@ -513,7 +513,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 22,
+            "id": "m-22",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Falda Deporte",
@@ -527,7 +527,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 23,
+            "id": "m-23",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Sudadera Sport",
@@ -541,7 +541,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 24,
+            "id": "m-24",
             "category": "deporte",
             "categoryDisplay": "Deporte",
             "title": "Sujetador Deportivo",
@@ -555,7 +555,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 25,
+            "id": "m-25",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto traje",
@@ -569,7 +569,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 26,
+            "id": "m-26",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto verano",
@@ -583,7 +583,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 27,
+            "id": "m-27",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Conjunto Chandal",
@@ -597,7 +597,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 28,
+            "id": "m-28",
             "category": "conjuntos",
             "categoryDisplay": "Conjuntos",
             "title": "Enterizo",
@@ -611,7 +611,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 29,
+            "id": "m-29",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 1",
@@ -625,7 +625,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 30,
+            "id": "m-30",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 2",
@@ -639,7 +639,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 31,
+            "id": "m-31",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 3",
@@ -653,7 +653,7 @@
             "buttonClass": "btn-add"
           },
           {
-            "id": 32,
+            "id": "m-32",
             "category": "lenceria",
             "categoryDisplay": "Lencería",
             "title": "Lenceria Encaje 4",
@@ -669,7 +669,7 @@
     ],
     "nino": [
         {
-            "id": 1,
+            "id": "n-1",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Jogger Niño",
@@ -681,7 +681,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 2,
+            "id": "n-2",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 1 Niño",
@@ -693,7 +693,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 3,
+            "id": "n-3",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 2 Niño",
@@ -705,7 +705,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 4,
+            "id": "n-4",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Chandal 3 Niño",
@@ -717,7 +717,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 5,
+            "id": "n-5",
             "category": "pantalones",
             "categoryDisplay": "Pantalones",
             "title": "Pantalón Jogger 2 Niño",
@@ -729,7 +729,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 6,
+            "id": "n-6",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta california",
@@ -741,7 +741,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 7,
+            "id": "n-7",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta roblox",
@@ -753,7 +753,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 8,
+            "id": "n-8",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta dinosaurio",
@@ -765,7 +765,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 9,
+            "id": "n-9",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta peluche",
@@ -777,7 +777,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 10,
+            "id": "n-10",
             "category": "camisetas",
             "categoryDisplay": "Camisetas",
             "title": "Camiseta Pow patrol",
@@ -789,7 +789,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 11,
+            "id": "n-11",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short multicolor",
@@ -801,7 +801,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 12,
+            "id": "n-12",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short azul",
@@ -813,7 +813,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 13,
+            "id": "n-13",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short verde",
@@ -825,7 +825,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 14,
+            "id": "n-14",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short negro",
@@ -837,7 +837,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 15,
+            "id": "n-15",
             "category": "shorts",
             "categoryDisplay": "Shorts",
             "title": "Short Paw patrol",
@@ -849,7 +849,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 16,
+            "id": "n-16",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos converse",
@@ -861,7 +861,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 17,
+            "id": "n-17",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos deportivos",
@@ -873,7 +873,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 18,
+            "id": "n-18",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos fashion",
@@ -885,7 +885,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 19,
+            "id": "n-19",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos deportivos 2",
@@ -897,7 +897,7 @@
             "stock" :"100 unidades"
           },
           {
-            "id": 20,
+            "id": "n-20",
             "category": "zapatos",
             "categoryDisplay": "Zapatos",
             "title": "Zapatos con luces",

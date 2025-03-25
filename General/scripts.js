@@ -60,74 +60,117 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const cartIcon = document.getElementById('cart-icon');
-    const cartContainer = document.getElementById('cart-container');
-    const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const checkoutButton = document.getElementById('checkout-button');
 
-    let cart = [];
 
-    function addToCart(product) {
-        const precioNumerico = parseFloat(product.price.replace('€', ''));
-        if (!isNaN(precioNumerico)) {
-            cart.push({ ...product, price: precioNumerico });
-            updateCart();
-        } else {
-            console.error('Precio inválido:', product.price);
-        }
-    }
+    //CARRITO
+   // Elementos del DOM para el carrito
+const cartIcon = document.getElementById('cart-icon');
+const cartContainer = document.getElementById('cart-container');
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+let checkoutButton = document.getElementById('checkout-button');
 
-    function updateCart() {
-        let total = 0;
+let cart = [];
 
-        cart.forEach(item => {
-            if (typeof item.price === 'number') {
-                total += item.price;
-            } else {
-                console.error('Precio no numérico en el carrito:', item.price);
-            }
-        });
+// Función para agregar un producto al carrito
+function addToCart(product) {
+  // Soporta precios en € y $
+  const precioNumerico = parseFloat(
+    product.price.replace('€', '').replace('$', '').replace(',', '.')
+  );
+  if (!isNaN(precioNumerico)) {
+    cart.push({ ...product, price: precioNumerico });
+    updateCart();
+  } else {
+    console.error('Precio inválido:', product.price);
+  }
+}
 
-        cartTotal.textContent = `Total: ${total.toFixed(2)}€`;
-        cartItems.innerHTML = `<span>Artículos: ${cart.length}</span><div id="cart-total">Total: ${total.toFixed(2)}€</div><button id="checkout-button">Finalizar Compra</button>`;
-    }
+// Función para actualizar la visualización del carrito
+function updateCart() {
+  let total = 0;
+  cartItems.innerHTML = '';
 
-    cartIcon.addEventListener('click', () => {
-        if (cartContainer.style.display === 'block') {
-            cartContainer.style.display = 'none';
-        } else {
-            cartContainer.style.display = 'block';
-        }
-    });
+  cart.forEach(item => {
+    total += item.price;
+    const itemElement = document.createElement('div');
+    itemElement.textContent = `${item.title} - ${item.price.toFixed(2)}€`;
+    cartItems.appendChild(itemElement);
+  });
 
+  cartTotal.textContent = `Total: ${total.toFixed(2)}€`;
+
+  if (!document.getElementById('checkout-button')) {
+    checkoutButton = document.createElement('button');
+    checkoutButton.id = 'checkout-button';
+    checkoutButton.textContent = 'Finalizar Compra';
     checkoutButton.addEventListener('click', () => {
-        alert('Compra finalizada. Total: ' + cartTotal.textContent);
-        cart = [];
-        updateCart();
-        cartContainer.style.display = 'none';
+      alert('Compra finalizada. Total: ' + cartTotal.textContent);
+      cart = [];
+      updateCart();
+      cartContainer.style.display = 'none';
     });
+    cartContainer.appendChild(checkoutButton);
+  }
+}
 
-    function addAddToCartButtons(products) {
-        const productSections = document.querySelectorAll('.shoes-items, .shirts-items, .pants-items, .chaquetas-items, .pantalones-items, .camisas-items, .faldas-items, .vestidos-items, .deporte-items, .conjuntos-items, .lenceria-items, .camisetas-items, .shorts-items, .zapatos-items');
+// Mostrar u ocultar el contenedor del carrito
+cartIcon.addEventListener('click', () => {
+  cartContainer.style.display = (cartContainer.style.display === 'block') ? 'none' : 'block';
+});
 
-        productSections.forEach(section => {
-            section.querySelectorAll('.product-item').forEach(productItem => {
-                const addButton = document.createElement('button');
-                addButton.textContent = 'Agregar al carrito';
-                addButton.addEventListener('click', () => {
-                    const productId = productItem.dataset.productId;
-                    const product = findProductById(productId, products);
-                    if (product) {
-                        addToCart(product);
-                    }
-                });
-                productItem.appendChild(addButton);
-            });
+// Función de búsqueda: ahora los IDs son únicos, por lo que basta compararlos
+function findProductById(id, products) {
+  return products.find(product => product.id === id);
+}
+
+/* 
+  Función para agregar el botón "Agregar al carrito" a cada producto.
+  Se recorre cada contenedor con la clase .items-general-container y se asume que cada producto
+  ya está renderizado en el HTML con la clase "product-item" y el atributo data-product-id.
+*/
+function addAddToCartButtons(products) {
+  const containers = document.querySelectorAll('.items-general-container');
+  
+  containers.forEach(container => {
+    Array.from(container.children).forEach(productItem => {
+      // Si el producto no tiene la clase 'product-item', se la asignamos
+      if (!productItem.classList.contains('product-item')) {
+        productItem.classList.add('product-item');
+      }
+      
+      // Evitar duplicar el botón
+      if (!productItem.querySelector('.btn-add')) {
+        const addButton = document.createElement('button');
+        addButton.textContent = 'Agregar al carrito';
+        addButton.classList.add('btn-add');
+        addButton.addEventListener('click', () => {
+          const productId = productItem.dataset.productId;
+          const product = findProductById(productId, products);
+          if (product) {
+            addToCart(product);
+          } else {
+            console.error('Producto no encontrado:', productId);
+          }
         });
-    }
+        productItem.appendChild(addButton);
+      }
+    });
+  });
+}
 
-    function findProductById(id, products) {
-        return products.find(product => product.id == id);
-    }
+/*
+  Se combinan los productos de todas las categorías.
+  Se asume que 'data' es el objeto JSON con las propiedades "hombre", "mujer" y "nino".
+*/
+const allProducts = [
+  ...data.hombre,
+  ...data.mujer,
+  ...data.nino
+];
+
+// Llamamos a la función para agregar los botones una vez que los productos se hayan renderizado en el HTML.
+addAddToCartButtons(allProducts);
+
+    
 });
