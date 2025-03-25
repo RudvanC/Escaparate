@@ -229,14 +229,24 @@
 
     button {
         margin-bottom: 20px;
+        margin-bottom: 20px;
+        padding: 12px;
+        background-color: #DDD0C8;
+        color: black;
+        font-weight: bold;
+        border-radius: 20px;
+        border: 2px solid;
+        max-width: 200px;
+        width: 150px;
     }
 
     .items-general-container {
         display: flex;
+        flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 1200px;
     }
 
     .pants-items {
@@ -274,7 +284,6 @@
         justify-content: center;
         align-items: center;
         width: 15rem;
-        height: 440px;
         margin-bottom: 20px;
     }
 
@@ -628,61 +637,45 @@
     /* ... tus estilos existentes ... */
 
     .cart-icon {
-        position: relative;
+        position: fixed;
+        bottom: 20px;
+        /* Fijo desde abajo */
+        left: 20px;
+        /* Fijo desde la izquierda */
         cursor: pointer;
-        margin-left: 20px;
-        margin-right: 10px;
-        margin-bottom: 30px;
-        border: 1px, blanchedalmond solid;
+        margin: 0;
+        border: 1px solid blanchedalmond;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        /* Se asegura de estar por encima */
     }
-
 
     .cart-icon img {
         width: 30px;
         height: 30px;
-        display: flex;
-    }
-
-    #cart-count {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        background-color: red;
-        color: white;
-        border-radius: 50%;
-        padding: 5px;
-        font-size: 12px;
+        margin-bottom: 10px;
     }
 
     .cart-container {
-        position: fixed;
-        top: 50px;
-        right: 20px;
         background-color: white;
         border: 1px solid #ccc;
-        padding: 20px;
-        display: table-row;
-        align-items: end;
-        position: static;
-        z-index: 1000;
-        /* Asegura que esté sobre otros elementos */
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
 
     .cart-items {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
     }
-
-    .cart-item img {
-        display: flex;
-        align-items: center;
-        width: 30px;
-        height: 40px;
-    }
-
 
 
 
