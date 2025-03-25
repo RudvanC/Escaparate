@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Pequeño retraso para mejor experiencia de usuario
                 setTimeout(() => {
-                    window.location.href = 'bienvenido.html';
+                    window.location.href = '../Index/.html';
                 }, 800);
             } else {
                 alert('Credenciales incorrectas. Por favor intente nuevamente.');
