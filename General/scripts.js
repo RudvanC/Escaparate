@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${product.description}</p>
                     <p>${product.colors}</p>
                     <h5>${product.price}</h5>
+                    <h6>${product.stock}</h6>
                 </div>
             `;
             container.appendChild(card);
