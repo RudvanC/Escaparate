@@ -144,11 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'pago.html';
     } else {
         // Usuario no logueado, redirigir a la página de inicio de sesión
-        localStorage.setItem('../login/login.html', 'pago.html'); // Guardar la URL de pago
+        localStorage.setItem('urlRedireccion', 'pago.html'); // Guardar la URL de pago CORRECTAMENTE
         window.location.href = '../login/login.html';
     }
 }
-
 });
 
 
