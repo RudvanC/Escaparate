@@ -138,11 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
   addAddToCartButtons(allProducts);
 
   function openCheckoutWindow() {
-    // Guardar los datos del carrito en el almacenamiento local
-    localStorage.setItem('cart', JSON.stringify(cart));
-    // Redirigir a la página de pago
-    window.location.href = 'pago.html';
+    if (localStorage.getItem('usuarioLogueado')) {
+        // Usuario logueado, redirigir a la página de pago
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = 'pago.html';
+    } else {
+        // Usuario no logueado, redirigir a la página de inicio de sesión
+        localStorage.setItem('../login/login.html', 'pago.html'); // Guardar la URL de pago
+        window.location.href = '../login/login.html';
+    }
 }
+
 });
 
 
