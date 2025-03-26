@@ -22,7 +22,9 @@ function actualizarNavbar() {
     if (usuarioActual && homeLogo) {
         homeLogo.innerHTML = `
             <span style="color: #333; font-weight: bold;">¡Hola, ${usuarioActual.nombre}!</span>
-            <a href="#" id="cerrar-sesion" style="margin-left: 10px; color: #666;">(Cerrar sesión)</a>
+            <a href="#" id="cerrar-sesion" style="margin-left: 10px;">
+                <img src="../Imagenes/cerrar-sesion.png" alt="Cerrar sesión" style="vertical-align: middle;">
+            </a>
         `;
         
         // Evento de cierre de sesión modificado
