@@ -103,6 +103,19 @@
         gap: 0.6rem,
     }
 
+    .home-logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .home-logo {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+        
+    }
+    
     .logo{
         width: 8rem;
     }

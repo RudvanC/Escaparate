@@ -29,11 +29,29 @@
         </div>
     </div>
 
-    <div class="right">
+    <div class="right">   
+
       <a href="#hombre-section"><img src="../Imagenes/hombre-joven.png" alt="" class="img-navbar" >HOMBRE</a>
       <a href="#mujer-section"><img src="../Imagenes/mujer.png" alt="" class="img-navbar">MUJER</a>
       <a href="#nino-section"><img src="../Imagenes/ninos.png" alt="" class="img-navbar nino-navbar-imagen">NIÑO</a>
     </div>
+
+    <div class="home-logo">
+      <!-- Mostrar solo cuando NO hay sesión -->
+      <a href="../login/login.html" id="login-link" class="login-button">
+          <img src="../Imagenes/iniciar-sesion.png" alt="Iniciar sesión">
+      </a>
+      
+      <!-- Siempre visible -->
+      <a href="/Index/home.html" class="home-button">
+          <img src="../Imagenes/bx--home.svg" alt="Home">
+      </a>
+      
+      <!-- Contenedor para usuario logueado -->
+      <div id="user-container" class="user-container hidden">
+          <span id="user-name" class="user-greeting"></span>
+          <a href="#" id="cerrar-sesion" class="logout-button"><img src="../Imagenes/cerrar-sesion.png" alt="Iniciar Sesion"></a>
+      </div>
 
     
 
@@ -472,6 +490,7 @@
     </div>
   </footer>
   <script src="./scripts.js"></script>
+  <script src="../login/login.js"></script>
 
 </body>
 
