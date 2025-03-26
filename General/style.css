@@ -84,6 +84,7 @@
 
         header {
     
+        height: 4rem;
         z-index:200;
         width: 100%;
         display: flex;
@@ -230,7 +231,7 @@
     flex-direction: column;
     display: flex;
     height: 100%;
-    width: 80%;
+    width: 100%;
     gap:30px
 }
 
@@ -259,6 +260,7 @@
             color:white;
             font-weight: bold;
             font-size: xx-large;
+            margin-left: 10px;
         }
     }
 
@@ -937,4 +939,9 @@
             .sidebar{
                 width: 0px;
             }
+        }
+
+        .hombre-sidebar a:hover{
+            background-color: rgba(0, 0, 0, 0.219);
+            transition: 0.5s ease;
         }
