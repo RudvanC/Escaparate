@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Página de Pago</title>
     <link rel="stylesheet" href="pago-style.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
+
 <body>
     <div class="container">
         <h2>Resumen de la Compra</h2>
         <div id="resumen-compra">
-            </div>
+        </div>
         <h2>Método de Pago</h2>
         <div id="metodo-pago">
+            <div id="tarjeta-form" style="display: none;">
+                <form id="payment-form">
+                    <div id="card-element">
+                        <div id="tarjeta-form" style="display: none;">
+                            <form id="payment-form">
+                                <div id="card-element">
+                                    </div>
+                        
+                                <div id="card-errors" role="alert"></div>
+                        
+                                <button>Pagar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="card-errors" role="alert"></div>
+
+                    <button>Pagar</button>
+                </form>
             </div>
+        </div>
         <button id="imprimir-ticket">Imprimir Ticket</button>
     </div>
     <script src="pago.js"></script>
 </body>
+
 </html>
