@@ -1,5 +1,5 @@
 # Ignorar el archivo de credenciales
-./Admin/JSON/key_serive_account.json
+Admin/JSON/key_serive_account.json
 
 # Ignorar la carpeta node_modules (si tienes un proyecto Node.js)
-./node_modules/
+node_modules/
